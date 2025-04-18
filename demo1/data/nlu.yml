@@ -1,0 +1,1416 @@
+version: "3.1"
+
+nlu:
+
+
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    
+
+- intent: out_of_scope
+  examples: |
+    - This is a joke
+    - What date is today?
+
+- intent: director_iitjammu
+  examples: |
+    - who is director
+    - who is the director of iit jammu
+
+- intent: goodbye
+  examples: |
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: about_yourself
+  examples: |
+    - tell me about yourself
+    - are you a human
+    - am I talking to a bot
+    - am I talking to a human
+    - who are you
+
+
+- intent: about iit jammu
+  examples: |
+    - what is iit jammu?
+    -describe iit jammu?
+    -iit jammu elaborate?
+
+
+- intent: finance_and_accounts
+  examples: |
+    - Finance and accounts
+    - account management at iit jammu
+    - Can you explain tell me about finance and accounts?
+    - Details about finance and accounts
+    - Financial transactions at IIT Jammu
+    - about finance and accounts
+
+- intent: assistant_registrar_message
+  examples: |
+    - What do you know about message from assistant registrar?
+    - message from assistant registrar
+    - Message from Assistant Registrar
+    - who is the assistant registrar?
+    - I want to learn about message from assistant registrar
+    - Can you explain who is the assistant registrar??
+    - Who is the Assistant Registrar?
+    - Can you explain message from assistant registrar?
+    - What do you know about who is the assistant registrar??
+    - Details about finance message
+    - I want to learn about who is the assistant registrar?
+    - Details about who is the assistant registrar?
+    - Accounts message
+    - Details about message from assistant registrar
+    - What do you know about accounts message?
+    - What do you know about finance message?
+    - Details about accounts message
+    - I want to learn about accounts message
+    - finance message
+    - Can you explain finance message?
+    - Can you explain accounts message?
+    - accounts message
+    - I want to learn about finance message
+    - Finance message
+
+- intent: finance_and_accounts_team
+  examples: |
+    - I want to learn about list of finance team members
+    - What do you know about finance and accounts team at iit jammu?
+    - Details about who is on the finance team?
+    - Finance and accounts team at IIT Jammu
+    - Details about list of finance team members
+    - I want to learn about who is on the finance team?
+    - Can you explain who is on the finance team??
+    - Can you explain list of finance team members?
+    - What do you know about list of finance team members?
+    - finance and accounts team at iit jammu
+    - Can you explain finance and accounts team at iit jammu?
+    - I want to learn about finance and accounts team at iit jammu
+    - Details about finance and accounts team at iit jammu
+    - who is on the finance team?
+    - What do you know about who is on the finance team??
+    - list of finance team members
+    - Who is on the finance team?
+    - List of finance team members
+    - team finance and accounts
+
+- intent: faculty_vinit_jakhetiya
+  examples: |
+    - Where is the office of Vinit Jakhetiya?
+
+- intent: faculty_durai_prabhakaran_r_t
+  examples: |
+    - Where is the office of Durai Prabhakaran R T?
+
+- intent: faculty_vinit_jakhetiya
+  examples: |
+    - Where is the office of Vinit Jakhetiya?
+
+- intent: faculty_durai_prabhakaran_r_t
+  examples: |
+    - Where is the office of Durai Prabhakaran R T?
+
+- intent: faculty_shantanu_vijay_madge
+  examples: |
+    - Where is the office of Shantanu Vijay Madge?
+
+- intent: faculty_pervaiz_fathima_khatoon_m
+  examples: |
+    - Where is the office of Pervaiz Fathima Khatoon M?
+
+- intent: faculty_navneet_kumar
+  examples: |
+    - Where is the office of Navneet Kumar?
+
+- intent: faculty_ankit_tyagi
+  examples: |
+    - Where is the office of Ankit Tyagi?
+
+- intent: faculty_shiva_s
+  examples: |
+    - Where is the office of Shiva S?
+
+- intent: faculty_shanmugadas_k_p
+  examples: |
+    - Where is the office of Shanmugadas K P?
+
+- intent: faculty_divyesh_varade
+  examples: |
+    - Where is the office of Divyesh Varade?
+
+- intent: faculty_roshan_udaram_pal
+  examples: |
+    - Where is the office of Roshan Udaram Pal?
+
+- intent: faculty_samaresh_bera
+  examples: |
+    - Where is the office of Samaresh Bera?
+
+
+- intent: faculty_dharitri_rath
+  examples: |
+    - Where is the office of Dharitri Rath?
+
+- intent: faculty_rajkumar_v
+  examples: |
+    - Where is the office of Rajkumar V?
+
+- intent: faculty_rani_rohini
+  examples: |
+    - Where is the office of Rani Rohini?
+
+- intent: faculty_ankit_dubey
+  examples: |
+    - Where is the office of Ankit Dubey?
+
+- intent: faculty_padmini_singh
+  examples: |
+    - Where is the office of Padmini Singh?
+
+- intent: faculty_gaurav_ashok_bhaduri
+  examples: |
+    - Where is the office of Gaurav Ashok Bhaduri?
+
+- intent: faculty_sudhakar_modem
+  examples: |
+    - Where is the office of Sudhakar Modem?
+
+- intent: faculty_pothukuchi_harish
+  examples: |
+    - Where is the office of Pothukuchi Harish?
+
+- intent: faculty_satya_sekhar_bhogilla
+  examples: |
+    - Where is the office of Satya Sekhar Bhogilla?
+
+
+- intent: faculty_satyadev_ahlawat
+  examples: |
+    - Where is the office of Satyadev Ahlawat?
+
+- intent: faculty_subhasis_bhattacharjee
+  examples: |
+    - Where is the office of Subhasis Bhattacharjee?
+
+- intent: faculty_arvind_kumar_rajput
+  examples: |
+    - Where is the office of Arvind Kumar Rajput?
+
+- intent: faculty_ankit_kathuria
+  examples: |
+    - Where is the office of Ankit Kathuria?
+
+- intent: faculty_rohit_buddhiram_chourasiya
+  examples: |
+    - Where is the office of Rohit Buddhiram Chourasiya?
+
+- intent: faculty_ravi_kumar_arun
+  examples: |
+    - Where is the office of Ravi Kumar Arun?
+
+- intent: faculty_chandan_yadav
+  examples: |
+    - Where is the office of Chandan Yadav?
+
+- intent: faculty_sumit_kumar_pandey
+  examples: |
+    - Where is the office of Sumit Kumar Pandey?
+
+- intent: faculty_sarah_mariam_abraham
+  examples: |
+    - Where is the office of Sarah Mariam Abraham?
+
+- intent: faculty_bidhan_biswas
+  examples: |
+    - Where is the office of Bidhan Biswas?
+
+- intent: faculty_yogesh_madhukarrao_nimdeo
+  examples: |
+    - Where is the office of Yogesh Madhukarrao Nimdeo?
+
+- intent: faculty_sunil_kumar_kashyap
+  examples: |
+    - Where is the office of Sunil Kumar Kashyap?
+
+- intent: faculty_kankat_ghosh
+  examples: |
+    - Where is the office of Kankat Ghosh?
+
+- intent: faculty_vijay_kumar_pal
+  examples: |
+    - Where is the office of Vijay Kumar Pal?
+
+- intent: faculty_sidharath_maheshwari
+  examples: |
+    - Where is the office of Sidharath Maheshwari?
+
+- intent: faculty_shaifu_gupta
+  examples: |
+    - Where is the office of Shaifu Gupta?
+
+- intent: faculty_surendra_beniwal
+  examples: |
+    - Where is the office of Surendra Beniwal?
+
+- intent: faculty_gaurav_varshney
+  examples: |
+    - Where is the office of Gaurav Varshney?
+    - office of gaurav varshney?
+
+- intent: faculty_sarada_prasad_gochhayat
+  examples: |
+    - Where is the office of Sarada Prasad Gochhayat?
+
+- intent: faculty_shiv_kumar
+  examples: |
+    - Where is the office of Shiv Kumar?
+
+- intent: faculty_devi_lal
+  examples: |
+    - Where is the office of Devi Lal?
+
+- intent: faculty_harkeerat_kaur
+  examples: |
+    - Where is the office of Harkeerat Kaur?
+
+- intent: faculty_deepak_yadav
+  examples: |
+    - Where is the office of Deepak Yadav?
+
+- intent: faculty_samrat_rao
+  examples: |
+    - Where is the office of Samrat Rao?
+
+- intent: faculty_saurabh_biswas
+  examples: |
+    - Where is the office of Saurabh Biswas?
+
+- intent: faculty_pragat_srivastava
+  examples: |
+    - Where is the office of Pragat Srivastava?
+
+- intent: faculty_nitesh_kumar
+  examples: |
+    - Where is the office of Nitesh Kumar?
+
+- intent: faculty_archana_rajput
+  examples: |
+    - Where is the office of Archana Rajput?
+
+- intent: faculty_anand_kumar_subramaniyan
+  examples: |
+    - Where is the office of Anand Kumar Subramaniyan?
+
+- intent: faculty_ajay_singh
+  examples: |
+    - Where is the office of Ajay Singh?
+
+- intent: faculty_badri_narayan_subudhi
+  examples: |
+    - Where is the office of Badri Narayan Subudhi?
+
+- intent: faculty_alok_kumar_saxena
+  examples: |
+    - Where is the office of Alok Kumar Saxena?
+
+- intent: faculty_rajendra_kumar_varma
+  examples: |
+    - Where is the office of Rajendra Kumar Varma?
+
+- intent: faculty_sayantam_mukherjee
+  examples: |
+    - Where is the office of Sayantam Mukherjee?
+
+- intent: faculty_aditya_shankar_sandupatla
+  examples: |
+    - Where is the office of Aditya Shankar Sandupatla?
+
+- intent: faculty_anup_shukla
+  examples: |
+    - Where is the office of Anup Shukla?
+
+- intent: faculty_srishilan_c
+  examples: |
+    - Where is the office of Srishilan C?
+
+- intent: faculty_ashutosh_yadav
+  examples: |
+    - Where is the office of Ashutosh Yadav?
+
+- intent: faculty_suman_sarkar
+  examples: |
+    - Where is the office of Suman Sarkar?
+
+- intent: faculty_mir_faizan_ul_haq
+  examples: |
+    - Where is the office of Mir Faizan Ul Haq?
+
+- intent: faculty_yamuna_prasad
+  examples: |
+    - Where is the office of Yamuna Prasad?
+
+- intent: faculty_akash_awale
+  examples: |
+    - Where is the office of Akash Awale?
+
+- intent: faculty_karan_nathwani
+  examples: |
+    - Where is the office of Karan Nathwani?
+
+- intent: faculty_rimen_jamata
+  examples: |
+    - Where is the office of Rimen Jamata?
+
+- intent: faculty_ankur_bansal
+  examples: |
+    - Where is the office of Ankur Bansal?
+
+- intent: faculty_dr_arun_kumar_verma
+  examples: |
+    - Where is the office of Dr. Arun Kumar Verma?
+
+- intent: faculty_kanchrala_harikrishna
+  examples: |
+    - Where is the office of Kanchrala Harikrishna?
+
+- intent: faculty_nitin_joshi
+  examples: |
+    - Where is the office of Nitin Joshi?
+
+- intent: faculty_srinivasan_n
+  examples: |
+    - Where is the office of Srinivasan N?
+
+- intent: faculty_sameer_kumar_sarma_pachalla
+  examples: |
+    - Where is the office of Sameer Kumar Sarma Pachalla?
+
+- intent: faculty_pratik_kumar
+  examples: |
+    - Where is the office of Pratik Kumar?
+
+- intent: faculty_sahil_kalra
+  examples: |
+    - Where is the office of Sahil Kalra?
+
+- intent: faculty_ravikant_saini
+  examples: |
+    - Where is the office of Ravikant Saini?
+
+- intent: faculty_suman_banerjee
+  examples: |
+    - Where is the office of Suman Banerjee?
+
+- intent: faculty_nalin_kumar_sharma
+  examples: |
+    - Where is the office of Nalin Kumar Sharma?
+
+- intent: faculty_chembolu_vinay
+  examples: |
+    - Where is the office of Chembolu Vinay?
+
+- intent: faculty_kushmanda_saurav
+  examples: |
+    - Where is the office of Kushmanda Saurav?
+
+
+- intent: shikha_malhotra
+  examples: |
+    - Can you explain who is Shikha Malhotra??
+    - Assistant Registrar contact
+    - What do you know about who is Shikha Malhotra??
+    - Can you explain contact Shikha Malhotra?
+    - Who is Shikha Malhotra?
+    - Assistant Registrar contact details
+    - shikha malhotra
+
+- intent: meena_sharma
+  examples: |
+    - Contact Meena Sharma
+    - What do you know about contact Meena Sharma?
+    - Details about contact Meena Sharma
+    - Who is Meena Sharma?
+    - Senior Assistant contact details
+    - meena sharma
+
+- intent: ripul_vaid
+  examples: |
+    - Who is Ripul Vaid?
+    - What do you know about who is Ripul Vaid??
+    - Details about section officer contact
+    - Contact Ripul Vaid
+    - Section Officer contact details
+    - ripul vaid
+
+- intent: sahil_dogra
+  examples: |
+    - Contact Sahil Dogra
+    - Who is Sahil Dogra?
+    - Senior Assistant contact details
+    - What do you know about Sahil Dogra?
+    - Can you explain contact Sahil Dogra?
+    - sahil dogra
+
+- intent: shubham_gupta
+  examples: |
+    - Contact Shubham Gupta
+    - Who is Shubham Gupta?
+    - Senior Assistant contact details
+    - What do you know about Shubham Gupta?
+    - Can you explain contact Shubham Gupta?
+    - shubham gupta
+
+- intent: alumni_news_events
+  examples: |
+    - I want to learn about what are the latest alumni events?
+    - Give me recent alumni updates from IIT Jammu
+    - Tell me about the latest alumni news
+    - Any recent alumni news?
+    - Share some alumni news updates
+    - alumni events
+
+- intent: alumni_dean_message
+  examples: |
+    - Can you explain what does the Dean say about alumni relations??
+    - Message from the Dean regarding alumni
+    - Who is the Dean of Alumni Affairs?
+    - What is the Dean's message for alumni?
+    - Share the Dean's message for alumni relations
+    
+
+- intent: alumni_associate_dean_message
+  examples: |
+    - Who is the Associate Dean of Alumni Affairs?
+    - What is the Associate Dean's message for alumni?
+    - Can you explain what is the Associate Dean's message for alumni??
+    - Message from the Associate Dean for alumni
+    - Share the Associate Dean's note about alumni
+
+- intent: alumni_team
+  examples: |
+    - Who manages alumni relations at IIT Jammu?
+    - List the members of the Alumni Affairs Office
+    - Tell me about the Alumni Affairs team
+    - Who is on the alumni relations team?
+    - Alumni Affairs Office team
+    - alumni team
+
+- intent: alumni_services
+  examples: |
+    - What services are available for alumni?
+    - Are there any alumni assistance programs?
+    - How can alumni request support?
+    - List the services offered to alumni
+    - Alumni support services
+    - alumni services
+
+- intent: alumni_contact
+  examples: |
+    - Where is the alumni office located?
+    - How do I contact the Alumni Office?
+    - What is the contact information for alumni relations?
+    - How can I reach the Alumni Affairs Office?
+    - Contact details for alumni support
+    - alumni contact
+
+- intent: academic_affairs_dean
+  examples: |
+    - Who is the Dean of Academic Affairs at IIT Jammu?
+    - What is the Dean's contact information?
+    - Name of the Dean of Academics at IIT Jammu
+    - Contact information for the Dean of Academic Affairs
+    - Details about the Dean of Academic Affairs
+    - dean academic affairs
+
+- intent: academic_affairs_associate_dean_research
+  examples: |
+    - Who is the Associate Dean for Research Programs at IIT Jammu?
+    - Contact details for Associate Dean of Research and Interdisciplinary Programs
+    - Details about the Associate Dean for Research
+    - How can I contact the Associate Dean for Research?
+    - Information about the Associate Dean for Research Programs
+    - academic affairs research dean
+
+  
+- intent: academic_affairs_associate_dean_curriculum
+  examples: |
+    - Who is the Associate Dean for Curriculum at IIT Jammu?
+    - Contact information for Associate Dean Curriculum (UG, PG)
+    - What do you know about the Associate Dean for Curriculum?
+    - Details about the Associate Dean for Curriculum
+    - I want to learn about who is the Associate Dean for Curriculum at IIT Jammu
+
+- intent: academic_affairs_deputy_registrar
+  examples: |
+    - Who is the Deputy Registrar at IIT Jammu?
+    - Contact details of the Deputy Registrar
+    - What do you know about the Deputy Registrar for Academic Affairs?
+    - Name of the Deputy Registrar for Academic Affairs
+    - Details about the Deputy Registrar at IIT Jammu
+    - deputy registrar
+
+- intent: academic_affairs_staff_abhishek
+  examples: |
+    - Who is Abhishek at IIT Jammu?
+    - Contact details for Abhishek in Academic Affairs
+    - What do you know about Abhishek at IIT Jammu?
+    - I want to learn about Abhishek in Academic Affairs
+    - Details about who is Abhishek at IIT Jammu
+
+- intent: btech_civil_engineering_courses
+  examples: |
+    - What are the courses for B.Tech Civil Engineering?
+    - Can you provide the semester-wise course structure for B.Tech Civil?
+    - Which subjects are covered in B.Tech Civil Engineering each semester?
+    - What is the curriculum of B.Tech Civil Engineering?
+    - Tell me the subject distribution for B.Tech Civil Engineering.
+    - Give me the syllabus for Civil Engineering B.Tech program.
+    - btech civil courses
+
+- intent: btech_chemical_engineering_courses
+  examples: |
+    - What are the courses for B.Tech Chemical Engineering?
+    - Can you provide the semester-wise course structure for B.Tech Chemical?
+    - Which subjects are covered in B.Tech Chemical Engineering each semester?
+    - What is the curriculum of B.Tech Chemical Engineering?
+    - Tell me the subject distribution for B.Tech Chemical Engineering.
+    - Give me the syllabus for Chemical Engineering B.Tech program.
+    - btech chemical courses
+
+- intent: btech_cse_engineering_courses
+  examples: |
+    - What are the courses for B.Tech Computer Science Engineering?
+    - Can you provide the semester-wise course structure for B.Tech CSE?
+    - Which subjects are covered in B.Tech Computer Science each semester?
+    - What is the curriculum of B.Tech Computer Science Engineering?
+    - Tell me the subject distribution for B.Tech Computer Science Engineering.
+    - Give me the syllabus for Computer Science Engineering B.Tech program.
+    - cse course structure semester wise
+
+
+- intent: mechanical_btech_courses
+  examples: |
+    - What are the courses in mechanical engineering?
+    - mechanical courses
+
+- intent: mathematics_btech_courses
+  examples: |
+    - What are the courses in mathematics and computing?
+    - mathematics courses btech
+    - mathematics courses 
+
+
+- intent: ee_btech_courses_semester_wise
+  examples: |
+    - What are the courses offered in BTech Electrical Engineering semester-wise?
+    - Can you provide a semester-wise breakdown of EE BTech courses?
+    - What subjects are included in each semester of EE BTech?
+    - How are the EE BTech courses structured semester-wise?
+    - List of EE BTech courses semester-wise?
+    - btech electrical courses
+
+- intent: materials_btech_courses_semester_wise
+  examples: |
+    - What are the courses offered in BTech Materials Engineering semester-wise?
+    - Can you provide a semester-wise breakdown of Materials BTech courses?
+    - What subjects are included in each semester of Materials BTech?
+    - How are the Materials BTech courses structured semester-wise?
+    - List of Materials BTech courses semester-wise?
+    - materials btech courses
+
+
+- intent: btech_fullform
+  examples: |
+    - What does BTech stand for?
+    - Explain BTech full form.
+
+- intent: cgpa_fullform
+  examples: |
+    - What is the full form of CGPA?
+    - Explain CGPA full form.
+
+- intent: ug_programmes
+  examples: |
+    - What undergraduate programmes are offered by IIT Jammu?
+    - List the UG programmes at IIT Jammu.
+    - What are the BTech programmes available at IIT Jammu?
+    - Tell me about the UG courses at IIT Jammu.
+    - ug programmes
+
+- intent: pg_programmes
+  examples: |
+    - What postgraduate programmes are offered by IIT Jammu?
+    - List the PG courses at IIT Jammu.
+    - What are the MTech programmes available at IIT Jammu?
+    - Tell me about the MSc and MS(R) courses at IIT Jammu.
+    - What PG Diploma does IIT Jammu offer?
+    - pg programmes
+
+- intent: phd_programmes
+  examples: |
+    - What PhD programmes are offered by IIT Jammu?
+    - List the departments offering PhD at IIT Jammu.
+    - What are the research areas for PhD at IIT Jammu?
+    - Tell me about the PhD courses at IIT Jammu.
+    - phd programmes
+
+- intent: academic_administration
+  examples: |
+    - Who oversees academic affairs at IIT Jammu?
+    - What is the structure of academic administration at IIT Jammu?
+    - Who are the key personnel in academic administration at IIT Jammu?
+    - Explain the academic affairs administration at IIT Jammu.
+    - academic affairs adminisration
+
+- intent: btech_programmes_admission
+  examples: |
+    - How does the BTech admission procedure work at IIT Jammu?
+    - Tell me about the BTech programmes and admission process at IIT Jammu.
+    - What is the admission process for BTech at IIT Jammu?
+    - admission process btech
+
+- intent: semester_system
+  examples: |
+    - Tell me about the semester system at IIT Jammu.
+    - How many semesters are there in a year at IIT Jammu?
+    - What is the duration of a semester at IIT Jammu?
+    - Does IIT Jammu have a summer term?
+    - Explain the academic calendar of IIT Jammu.
+    - academic calendar
+    - semester system
+
+- intent: schedule_and_hostel
+  examples: |
+    - When does the academic year start at IIT Jammu?
+    - Do students have to vacate hostels during summer vacation?
+    - Can undergraduate students stay in the hostel during summer vacation?
+    - Are postgraduate students required to vacate hostels during summer break?
+    - What are the hostel rules during summer vacation at IIT Jammu?
+    - hostel guidelines
+
+- intent: timetable
+  examples: |
+    - Where can I find the IIT Jammu timetable?
+    - When is the timetable for each semester released at IIT Jammu?
+    - Is the IIT Jammu semester timetable available online?
+    - How can I check my class schedule at IIT Jammu?
+    - timetable 
+
+- intent: fees
+  examples: |
+    - What is the fee structure?
+    - How can I pay my fees?
+    - Where can I find fee details?
+    - Is fee payment required for course registration?
+    - What are the payment methods for fees?
+    - How to update my payment status after paying fees?
+    - fee structure
+
+- intent: departmental_ug_committees
+  examples: |
+    - What is the Departmental Undergraduate Committee?
+    - What does DUGC do at IIT Jammu?
+    - Who oversees undergraduate courses in a department?
+    - What is the role of the UG committee in departments?
+    - Who manages undergraduate academic matters?
+
+- intent: senate_undergraduate_board
+  examples: |
+    - What is the Senate Undergraduate Board?
+    - What does SUGB do?
+    - Who are the members of the SUGB?
+    - What is the role of the SUGB in undergraduate academics?
+    - Who oversees UG academic matters?
+
+- intent: faculty_advisor
+  examples: |
+    - Who is the Faculty Advisor?
+    - What is the role of a Faculty Advisor?
+    - What does a Faculty Advisor do?
+    - Who helps students with course registration?
+    - Who provides academic guidance to students?
+
+- intent: new_undergraduate_courses
+  examples: |
+    - How are new undergraduate courses introduced?
+    - Who approves new UG courses?
+    - What is the process for adding a new undergraduate course?
+    - How are curricular modifications made?
+    - Who reviews new UG course proposals?
+
+- intent: undergraduate_student_requests
+  examples: |
+    - How can undergraduate students submit requests?
+    - Where can students appeal academic matters?
+    - Who handles undergraduate student appeals?
+    - How do students approach SUGB?
+    - What is the process for student requests and appeals?
+
+- intent: undergraduate_issue_escalation
+  examples: |
+    - What happens if SUGB cannot resolve a student issue?
+    - Where are unresolved academic issues sent?
+    - Who handles complex undergraduate academic issues?
+    - What if there is no clarity on a student issue?
+    - How are student issues escalated?
+
+- intent: department_pg_committee
+  examples: |
+    - What is the Departmental Postgraduate Committee?
+    - What does DPGC do?
+    - Who oversees postgraduate courses?
+    - Who manages PG academic matters?
+    - How are postgraduate rules administered?
+
+- intent: senate_postgraduate_board
+  examples: |
+    - What is the Senate Postgraduate Board?
+    - What does SPGB do?
+    - Who are the members of the Senate Postgraduate Board?
+    - What is the role of the SPGB in postgraduate academics?
+    - Who oversees PG academic matters?
+
+- intent: programme_coordinator
+  examples: |
+    - What is the role of a Programme Coordinator?
+    - Who advises postgraduate students on their program?
+    - What does a Programme Coordinator do?
+    - Who helps PG students with academic matters?
+    - What is the responsibility of a Programme Coordinator?
+
+- intent: new_postgraduate_courses
+  examples: |
+    - How are new postgraduate courses introduced?
+    - Who approves new PG courses?
+    - What is the process for adding a new postgraduate course?
+    - How are curricular modifications made for postgraduate courses?
+    - Who reviews new PG course proposals?
+
+- intent: postgraduate_student_requests
+  examples: |
+    - How can postgraduate students submit requests?
+    - Where can PG students appeal academic matters?
+    - Who handles postgraduate student appeals?
+    - How do PG students approach SPGB?
+    - What is the process for student requests and appeals in PG programs?
+
+- intent: escalation_of_postgraduate_student_requests
+  examples: |
+    - What happens if SPGB cannot resolve a student issue?
+    - Where are unresolved postgraduate academic issues sent?
+    - Who handles complex postgraduate academic issues?
+    - What if there is no clarity on a PG student issue?
+    - How are postgraduate student issues escalated?
+
+- intent: postgraduate_semester_drop
+  examples: |
+    - Can a postgraduate student drop a semester?
+    - What is the process for a PG semester drop?
+    - Can a student take a break from their postgraduate program?
+    - Under what circumstances can a PG student drop a semester?
+    - What are the conditions for a postgraduate student to drop a semester?
+
+- intent: phd_students
+  examples: |
+    - What is the role of a PhD supervisor?
+    - How are PhD students advised?
+    - Who supervises PhD students?
+    - How do PhD students handle academic issues?
+    - What is the procedure for PhD students to resolve issues?
+
+- intent: curricular_credits
+  examples: |
+    - What is the total number of credits required for the B.Tech program?
+    - How many curricular credits are required for graduation?
+    - What are the categories of credits in the B.Tech program?
+    - Can you explain the credit distribution for the B.Tech program?
+    - What are the required credits for each semester?
+
+- intent: credit_load_flexibility
+  examples: |
+    - How does IIT Jammu manage credit load for students with different CGPA levels?
+    - What is the credit flexibility offered for high-performing students?
+    - How are credits managed for students with backlogs?
+    - What is the credit load allowed for students with a CGPA of less than 6?
+    - Can students take more credits than usual if they have a high CGPA?
+
+- intent: course_evaluation
+  examples: |
+    - How are students evaluated in UG 2022 curriculum courses?
+    - What is the evaluation method for undergraduate courses?
+    - What components contribute to the final grade in a course?
+    - How are class tests and assignments factored into the grade?
+    - What is the weightage of the end-semester exam in a course?
+
+- intent: course_registration
+  examples: |
+    - How do I register for courses at IIT Jammu?
+    - What is the process for course registration?
+    - When does course registration start at IIT Jammu?
+    - How do I add or drop a course?
+    - Where can I find course registration details?
+    - Can I audit a course at IIT Jammu?
+    - How do I withdraw from a course?
+    - course registration
+
+- intent: course_withdrawal
+  examples: |
+    - What is the process to withdraw from a course?
+    - How can I drop a course after registration?
+    - Can I withdraw from a course mid-semester?
+    - What are the rules for course withdrawal?
+    - Is there a penalty for dropping a course?
+
+- intent: backlog_courses
+  examples: |
+    - How do I clear my backlogs?
+    - What happens if I fail a course at IIT Jammu?
+    - Can I reattempt a failed course?
+    - What are the rules for backlog courses?
+    - How are backlog courses handled?
+
+- intent: summer_term
+  examples: |
+    - Does IIT Jammu offer summer courses?
+    - What is the summer term at IIT Jammu?
+    - Can I take backlog courses in the summer?
+    - Are elective courses available in the summer term?
+    - How long is the summer term at IIT Jammu?
+    - summer term
+
+- intent: attendance_policy
+  examples: |
+    - What is the attendance policy at IIT Jammu?
+    - How much attendance is required for a course?
+    - What happens if my attendance is low?
+    - Can I get relaxation in attendance?
+    - What is the minimum attendance requirement?
+    - attendance criteria
+
+- intent: grading_system
+  examples: |
+    - How does the grading system work at IIT Jammu?
+    - What are the grade points at IIT Jammu?
+    - How is CGPA calculated?
+    - What is the minimum passing grade?
+    - How are grades converted to CGPA?
+    - grading system
+
+- intent: semester_freeze
+  examples: |
+    - Can I take a semester break at IIT Jammu?
+    - What is the process for freezing a semester?
+    - How can I take a gap semester?
+    - What happens if I need to pause my studies?
+    - Can I take a medical break from IIT Jammu?
+
+- intent: change_branch
+  examples: |
+    - How can I change my branch at IIT Jammu?
+    - What are the criteria for branch change?
+    - When can I apply for a branch change?
+    - What is the CGPA requirement for branch change?
+    - Can I change from Mechanical to CSE at IIT Jammu?
+    - branch change
+
+- intent: internship_policy
+  examples: |
+    - What are the internship rules at IIT Jammu?
+    - How do I apply for an internship?
+    - Is an internship mandatory at IIT Jammu?
+    - When can students do an internship?
+    - Are internships counted for credits?
+    
+
+- intent: ug_merit_cum_means_scholarship
+  examples: |
+    - What is the Merit-cum-Means (MCM) scholarship at IIT Jammu?
+    - Who is eligible for the MCM scholarship?
+    - How much is the MCM scholarship amount?
+    - Can I apply for MCM if I have a backlog?
+    - Is MCM available for all categories?
+    - What is the income limit for the MCM scholarship?
+    - ug scholarship mcm
+
+- intent: ug_free_messing_scholarship
+  examples: |
+    - What is the Free Messing scholarship at IIT Jammu?
+    - Who is eligible for free messing?
+    - Does IIT Jammu provide free mess for SC/ST students?
+    - What are the benefits of free messing?
+    - Can I get free messing if my family income is above Rs. 4.50 lakh?
+    - Is there a CGPA requirement for Free Messing?
+    - ug free mess scholarship
+
+- intent: ug_freeship_scholarship
+  examples: |
+    - What is the Freeship scheme at IIT Jammu?
+    - Who is eligible for Freeship?
+    - Is tuition fee remission available for General/OBC/EWS students?
+    - How many students get tuition fee remission?
+    - Can I apply for both MCM and Freeship?
+
+- intent: ug_quest_fee_waiver
+  examples: |
+    - What is the QUEST fee waiver at IIT Jammu?
+    - Who is eligible for the QUEST tuition waiver?
+    - How much fee is waived under QUEST?
+    - Does IIT Jammu offer full tuition fee waivers?
+    - Is QUEST available for all UG students?
+    - Where can I find more details about QUEST at IIT Jammu?
+
+- intent: eligibility_mtech_fellowship
+  examples: |
+    - What is the fellowship amount for MTech students?
+    - How much stipend do MTech students get under the TA category?
+    - What is the duration of the MTech fellowship?
+    - Do MTech students under the RA category receive a higher stipend?
+    - Are sponsored MTech students eligible for fellowships?
+    - Is the MTech fellowship amount revised periodically?
+
+- intent: eligibility_phd_assistantship
+  examples: |
+    - What is the PhD assistantship for full-time students?
+    - How much teaching/research assistance is required for PhD students?
+    - What is the maximum duration for a PhD assistantship?
+    - Can a PhD student continue their programme without fellowship?
+    - What happens after submission of the PhD thesis?
+    - Are externally funded PhD students eligible for institute assistantship?
+    - Can PhD students extend their assistantship beyond 5 years?
+
+- intent: travel_allowance_contingency_grant
+  examples: |
+    - What is the Travel Allowance and Contingency Grant for students?
+    - Are students eligible for financial support for participating in conferences?
+    - How can students apply for travel allowance for extracurricular activities?
+    - What activities are covered under the Travel Allowance and Contingency Grant?
+    - Can PhD students avail financial support for workshops or internships?
+
+- intent: euler_earn_while_you_learn
+  examples: |
+    - What is the EULER scheme at IIT Jammu?
+    - Can students without scholarships apply for subsistence allowances?
+    - What tasks are available under the Earn While You Learn Scheme?
+    - How can I participate in the EULER program at IIT Jammu?
+    - Is financial assistance available for students working on institute tasks?
+    - euler programme
+
+- intent: president_gold_medal_ug_students
+  examples: |
+    - What is the President Gold Medal for UG students?
+    - How is the President Gold Medal awarded at IIT Jammu?
+    - What are the criteria for the President Gold Medal?
+    - Who receives the President Gold Medal at IIT Jammu?
+    - What is the process for awarding the President Gold Medal?
+    - ug president gold medal
+
+- intent: directors_gold_medal_ug_students
+  examples: |
+    - What is the Director’s Gold Medal for UG students?
+    - How is the Director’s Gold Medal awarded at IIT Jammu?
+    - Who receives the Director’s Gold Medal?
+    - What are the criteria for the Director’s Gold Medal?
+    - What is the process for awarding the Director’s Gold Medal?
+    - ug director gold medal
+
+- intent: institute_silver_medal_ug_students
+  examples: |
+    - What is the Institute Silver Medal for UG students?
+    - How is the Institute Silver Medal awarded at IIT Jammu?
+    - Who receives the Institute Silver Medal?
+    - What are the criteria for the Institute Silver Medal?
+    - What is the process for awarding the Institute Silver Medal?
+    - ug institute silver medal
+
+- intent: prof_ashok_ahuja_steel_structures_award
+  examples: |
+    - What is the Prof Ashok K Ahuja Steel Structures Award?
+    - Who receives the Prof Ashok K Ahuja Steel Structures Award?
+    - How is the Prof Ashok K Ahuja Steel Structures Award awarded?
+    - What are the criteria for the Prof Ashok K Ahuja Steel Structures Award?
+    - What is the process for awarding the Prof Ashok K Ahuja Steel Structures Award?
+    - steel structures award
+
+- intent: certificates_to_encourage_currently_enrolled_students
+  examples: |
+    - What is the certificate to encourage currently enrolled students?
+    - How are the certificates to encourage currently enrolled students awarded?
+    - Who receives the certificate to encourage currently enrolled students?
+    - What are the criteria for the certificate to encourage currently enrolled students?
+    - How do students earn the certificate to encourage currently enrolled students?
+    - academic certificate 
+
+- intent: institute_gold_silver_medal_mtech
+  examples: |
+    - What is the Institute Gold Medal for MTech students?
+    - How is the Institute Gold Medal awarded to MTech students?
+    - Who gets the Institute Gold Medal for MTech students?
+    - What are the criteria for the Institute Gold Medal for MTech students?
+    - What is the Institute Silver Medal for MTech students?
+    - How is the Institute Silver Medal awarded to MTech students?
+    - Who gets the Institute Silver Medal for MTech students?
+    - What are the criteria for the Institute Silver Medal for MTech students?
+  
+
+- intent: outstanding_doctoral_student_award_phd
+  examples: |
+    - What is the Outstanding Doctoral Student Award for PhD students?
+    - How is the Outstanding Doctoral Student Award for PhD students given?
+    - Who gets the Outstanding Doctoral Student Award for PhD students?
+    - What are the criteria for the Outstanding Doctoral Student Award for PhD students?
+    - How can a PhD student earn the Outstanding Doctoral Student Award?
+
+
+- intent: library_iit_jammu_location
+  examples: |
+    - What is the address of the library?
+    - Where is the library located?
+    - library location
+    - about library
+
+- intent: library_iit_jammu_contact
+  examples: |
+    - What is the contact number of the library?
+    - How can I contact the library?
+    - What is the library's email address?
+    - library contact
+
+- intent: library_iit_jammu_opening_hours
+  examples: |
+    - What are the library's opening hours?
+    - When is the library open?
+    - library open
+
+- intent: library_iit_jammu_circulation_timing
+  examples: |
+    - What are the library circulation timings?
+    - When can I borrow books?
+    - library circulation timing
+
+- intent: library_iit_jammu_faculty_borrowing_policy
+  examples: |
+    - What is the library borrowing policy for faculty?
+    - How many books can faculty borrow from library?
+    - faculty borrow policy library
+
+- intent: library_iit_jammu_phd_borrowing_policy
+  examples: |
+    - What is the library borrowing policy for PhD students?
+    - How many books can PhD students borrow from library?
+    - phd students borrow
+
+- intent: library_iit_jammu_mtech_borrowing_policy
+  examples: |
+    - What is the borrowing policy for M. Tech students in library?
+    - How many books can M. Tech students borrow from library?
+    - mtech students borrow
+    - mtech policy library
+
+- intent: library_iit_jammu_btech_borrowing_policy
+  examples: |
+    - What is the library borrowing policy for B. Tech students?
+    - How many books can B. Tech students borrow from library?
+    - btech students borrow policy
+
+- intent: library_iit_jammu_project_assistant_borrowing_policy
+  examples: |
+    - What is the library borrowing policy for Project or Teaching Assistants?
+    - How many library books can project assistants borrow?
+
+- intent: library_iit_jammu_staff_borrowing_policy
+  examples: |
+    - What is the library borrowing policy for staff members?
+    - How many library books can staff borrow?
+
+- intent: library_iit_jammu_hindi_books_policy
+  examples: |
+    - What is the library borrowing policy for Hindi books?
+    - How many Hindi books can I borrow from library?
+
+- intent: library_iit_jammu_resources
+  examples: |
+    - What e-resources does the library have?
+    - What online journals are available in library?
+    - What e-books can I access from library?
+
+- intent: library_iit_jammu_research_assistance_tools
+  examples: |
+    - What research assistance tools are available in the library?
+    - Does the library provide research tools?
+
+- intent: library_iit_jammu_seating_arrangements
+  examples: |
+    - When can I use the seating in the library?
+    - Is the seating arrangement ready at the library?
+    - library seating arrangement
+
+- intent: library_iit_jammu_updates
+  examples: |
+    - What are the latest updates in the library?
+    - Tell me about the library setup progress
+    - what are the latest updates in the library
+    - I want to know latest updates in the library
+
+
+- intent: medical_center_intro
+  examples: |
+    - Tell me about the Medical Centre
+    - What is the Medical Centre?
+    - Where is the Health and Wellness Center?
+    - Can you tell me about the Health and Wellness Center?
+    - What facilities does the Medical Centre offer?
+
+- intent: medical_center_contact
+  examples: |
+    - How can I contact the Medical Centre?
+    - What is the email of the Medical Centre?
+    - What is the phone number of the Medical Centre?
+    - How to reach out to the Medical Centre?
+    - medical center contact
+
+- intent: medical_center_facilities
+  examples: |
+    - What are the facilities at the Medical Centre?
+    - List the facilities offered at the Health and Wellness Center
+    - What services does the Medical Centre provide?
+    - medical facilities
+
+- intent: doctor_karunika
+  examples: |
+    - Tell me about Dr. Karunika
+    - Who is Dr. Karunika?
+    - What qualifications does Dr. Karunika have?
+    - How can I contact Dr. Karunika?
+
+- intent: doctor_vikram_singh
+  examples: |
+    - Tell me about Dr. Vikram Singh
+    - Who is Dr. Vikram Singh?
+    - What qualifications does Dr. Vikram Singh have?
+    - How can I contact Dr. Vikram Singh?
+
+- intent: doctor_priya
+  examples: |
+    - Tell me about Dr. Priya
+    - Who is Dr. Priya?
+    - What qualifications does Dr. Priya have?
+    - How can I contact Dr. Priya?
+
+- intent: doctor_bidisha
+  examples: |
+    - Tell me about Dr. Bidisha
+    - Who is Dr. Bidisha?
+    - What qualifications does Dr. Bidisha have?
+    - How can I contact Dr. Bidisha?
+
+- intent: doctor_pranav_gupta
+  examples: |
+    - Tell me about Dr. Pranav Gupta
+    - Who is Dr. Pranav Gupta?
+    - What qualifications does Dr. Pranav Gupta have?
+    - How can I contact Dr. Pranav Gupta?
+
+- intent: doctor_rohit_bhatiya
+  examples: |
+    - Who is Dr. Rohit Bhatiya?
+    - Tell me about Dr. Rohit Bhatiya
+    - What is the role of Dr. Rohit Bhatiya?
+
+- intent: medical_center_location
+  examples: |
+    - Where is the Medical Centre located?
+    - Tell me the address of the Medical Centre
+    - What is the address of the Health and Wellness Center?
+    - location medical center
+
+- intent: research_and_consultancy_section
+  examples: |
+    - Research and Consultancy at IIT Jammu
+    - What is the Research and Consultancy Section?
+    - Tell me about the Research and Consultancy Section
+
+- intent: research_and_consultancy_message
+  examples: |
+    - What is the message from Research and Consultancy?
+    - Tell me about the message for Research and Consultancy
+    - What does the Research and Consultancy section say?
+
+- intent: research_and_consultancy_deputy_registrar
+  examples: |
+    - Who is the Deputy Registrar for Research and Consultancy?
+    - Tell me about the Deputy Registrar
+    - Who heads the Research and Consultancy?
+
+- intent: research_and_consultancy_objectives
+  examples: |
+    - What are the objectives of the Research and Consultancy Section?
+    - Tell me about the objectives of Research and Consultancy
+    - What are the goals of the Research and Consultancy section?
+
+- intent: research_and_consultancy_main_functions
+  examples: |
+    - What are the main functions of the Research and Consultancy Section?
+    - Tell me about the main functions of Research and Consultancy
+    - What does the Research and Consultancy section handle?
+
+- intent: research_and_consultancy_team_deputy_registrar
+  examples: |
+    - Tell me about Cdr Avinash Barthwal
+    - Who is Cdr Avinash Barthwal?
+    - What is the role of Cdr Avinash Barthwal?
+
+
+- intent: security_staff
+  examples: |
+    - Who is the Security Officer?
+    - Tell me about the security officer
+    - Who is the head of the security team?
+    - What is the contact for the security officer?
+
+- intent: security_contact
+  examples: |
+    - What is the contact number for security?
+    - How can I contact the security team?
+    - Give me the security team's contact details.
+
+- intent: security_officer_email
+  examples: |
+    - What is the email of the security officer?
+    - How can I contact the security officer?
+    - What is the contact email for the Security Officer?
+
+- intent: student_affairs_section
+  examples: |
+    - Student Affairs at IIT Jammu
+    - What is the Student Affairs Section?
+    - Tell me about the Student Affairs Section
+
+- intent: student_affairs_message
+  examples: |
+    - What is the message from the Student Affairs Office?
+    - Tell me about the message for Student Affairs
+    - What does the Student Affairs section say?
+
+- intent: hostel_life
+  examples: |
+    - Tell me about the hostel life at IIT Jammu
+    - What is the hostel experience like?
+    - How is the campus hostel at IIT Jammu?
+    - hostel life
+
+- intent: mess_facilities
+  examples: |
+    - What are the mess facilities at IIT Jammu?
+    - Tell me about the mess at IIT Jammu
+    - What food options are available at IIT Jammu?
+    - mess facilities
+    - mess facility
+
+- intent: student_activities
+  examples: |
+    - What student activities are available at IIT Jammu?
+    - Tell me about student activities at IIT Jammu
+    - What extracurricular activities can students engage in?
+
+- intent: sports_facilities
+  examples: |
+    - What sports facilities are available at IIT Jammu?
+    - Tell me about sports at IIT Jammu
+    - What sports are offered at IIT Jammu?
+    - sport facility
+    - sport facilities
+
+- intent: student_affairs_office
+  examples: |
+    - What is the role of the Student Affairs Office?
+    - Tell me about the Student Affairs Office
+    - What does the Student Affairs Office do?
+
+- intent: student_affairs_team_sartaj_ul_hasan
+  examples: |
+    - Who is Sartaj Ul Hasan?
+    - Tell me about Sartaj Ul Hasan
+    - What is Sartaj Ul Hasan's role?
+
+
+- intent: semester_schedule
+  examples: |
+    - semester schedule
+    - timetable
+

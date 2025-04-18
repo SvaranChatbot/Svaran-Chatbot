@@ -1,0 +1,987 @@
+version: "3.1"
+
+stories:
+
+
+
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: describe iit jammu
+  steps:
+  - intent: about iit jammu
+  - action: action_out_of_scope
+# utter_about iit jammu
+- story: director
+  steps:
+  - intent: director_iitjammu
+  - action: action_fetch_data
+
+- story: out of scope
+  steps:
+  - intent: out_of_scope
+  - action: action_out_of_scope
+
+- story: about yourself
+  steps:
+  - intent: about_yourself
+  - action: utter_about_yourself
+
+
+- story: User asks about finance and accounts
+  steps:
+  - intent: finance_and_accounts
+  - action: utter_finance_and_accounts
+
+- story: User asks about assistant registrar message
+  steps:
+  - intent: assistant_registrar_message
+  - action: utter_assistant_registrar_message
+
+- story: User asks about finance and accounts team
+  steps:
+  - intent: finance_and_accounts_team
+  - action: utter_finance_and_accounts_team
+
+
+- story: User asks about Vinit Jakhetiya's office
+  steps:
+  - intent: faculty_vinit_jakhetiya
+  - action: utter_faculty_vinit_jakhetiya
+
+- story: User asks about Durai Prabhakaran R T's office
+  steps:
+  - intent: faculty_durai_prabhakaran_r_t
+  - action: utter_faculty_durai_prabhakaran_r_t
+
+- story: User asks about Shantanu Vijay Madge's office
+  steps:
+  - intent: faculty_shantanu_vijay_madge
+  - action: utter_faculty_shantanu_vijay_madge
+
+- story: User asks about Pervaiz Fathima Khatoon M's office
+  steps:
+  - intent: faculty_pervaiz_fathima_khatoon_m
+  - action: utter_faculty_pervaiz_fathima_khatoon_m
+
+- story: User asks about Navneet Kumar's office
+  steps:
+  - intent: faculty_navneet_kumar
+  - action: utter_faculty_navneet_kumar
+
+- story: User asks about Ankit Tyagi's office
+  steps:
+  - intent: faculty_ankit_tyagi
+  - action: utter_faculty_ankit_tyagi
+
+- story: User asks about Shiva S's office
+  steps:
+  - intent: faculty_shiva_s
+  - action: utter_faculty_shiva_s
+
+- story: User asks about Shanmugadas K P's office
+  steps:
+  - intent: faculty_shanmugadas_k_p
+  - action: utter_faculty_shanmugadas_k_p
+
+- story: User asks about Divyesh Varade's office
+  steps:
+  - intent: faculty_divyesh_varade
+  - action: utter_faculty_divyesh_varade
+
+- story: User asks about Roshan Udaram Pal's office
+  steps:
+  - intent: faculty_roshan_udaram_pal
+  - action: utter_faculty_roshan_udaram_pal
+
+- story: User asks about Samaresh Bera's office
+  steps:
+  - intent: faculty_samaresh_bera
+  - action: utter_faculty_samaresh_bera
+
+- story: User asks about Dharitri Rath's office
+  steps:
+  - intent: faculty_dharitri_rath
+  - action: utter_faculty_dharitri_rath
+
+- story: User asks about Rajkumar V's office
+  steps:
+  - intent: faculty_rajkumar_v
+  - action: utter_faculty_rajkumar_v
+
+- story: User asks about Rani Rohini's office
+  steps:
+  - intent: faculty_rani_rohini
+  - action: utter_faculty_rani_rohini
+
+- story: User asks about Ankit Dubey's office
+  steps:
+  - intent: faculty_ankit_dubey
+  - action: utter_faculty_ankit_dubey
+
+- story: User asks about Padmini Singh's office
+  steps:
+  - intent: faculty_padmini_singh
+  - action: utter_faculty_padmini_singh
+
+- story: User asks about Gaurav Ashok Bhaduri's office
+  steps:
+  - intent: faculty_gaurav_ashok_bhaduri
+  - action: utter_faculty_gaurav_ashok_bhaduri
+
+- story: User asks about Sudhakar Modem's office
+  steps:
+  - intent: faculty_sudhakar_modem
+  - action: utter_faculty_sudhakar_modem
+
+- story: User asks about Pothukuchi Harish's office
+  steps:
+  - intent: faculty_pothukuchi_harish
+  - action: utter_faculty_pothukuchi_harish
+
+- story: User asks about Satya Sekhar Bhogilla's office
+  steps:
+  - intent: faculty_satya_sekhar_bhogilla
+  - action: utter_faculty_satya_sekhar_bhogilla
+
+- story: User asks about Satyadev Ahlawat's office
+  steps:
+  - intent: faculty_satyadev_ahlawat
+  - action: utter_faculty_satyadev_ahlawat
+
+- story: User asks about Subhasis Bhattacharjee's office
+  steps:
+  - intent: faculty_subhasis_bhattacharjee
+  - action: utter_faculty_subhasis_bhattacharjee
+
+- story: User asks about Arvind Kumar Rajput's office
+  steps:
+  - intent: faculty_arvind_kumar_rajput
+  - action: utter_faculty_arvind_kumar_rajput
+
+- story: User asks about Ankit Kathuria's office
+  steps:
+  - intent: faculty_ankit_kathuria
+  - action: utter_faculty_ankit_kathuria
+
+- story: User asks about Rohit Buddhiram Chourasiya's office
+  steps:
+  - intent: faculty_rohit_buddhiram_chourasiya
+  - action: utter_faculty_rohit_buddhiram_chourasiya
+
+- story: User asks about Ravi Kumar Arun's office
+  steps:
+  - intent: faculty_ravi_kumar_arun
+  - action: utter_faculty_ravi_kumar_arun
+
+- story: User asks about Chandan Yadav's office
+  steps:
+  - intent: faculty_chandan_yadav
+  - action: utter_faculty_chandan_yadav
+
+- story: User asks about Sumit Kumar Pandey's office
+  steps:
+  - intent: faculty_sumit_kumar_pandey
+  - action: utter_faculty_sumit_kumar_pandey
+
+- story: User asks about Sarah Mariam Abraham's office
+  steps:
+  - intent: faculty_sarah_mariam_abraham
+  - action: utter_faculty_sarah_mariam_abraham
+
+- story: User asks about Bidhan Biswas's office
+  steps:
+  - intent: faculty_bidhan_biswas
+  - action: utter_faculty_bidhan_biswas
+
+- story: User asks about Yogesh Madhukarrao Nimdeo's office
+  steps:
+  - intent: faculty_yogesh_madhukarrao_nimdeo
+  - action: utter_faculty_yogesh_madhukarrao_nimdeo
+
+- story: User asks about Sunil Kumar Kashyap's office
+  steps:
+  - intent: faculty_sunil_kumar_kashyap
+  - action: utter_faculty_sunil_kumar_kashyap
+
+- story: User asks about Kankat Ghosh's office
+  steps:
+  - intent: faculty_kankat_ghosh
+  - action: utter_faculty_kankat_ghosh
+
+- story: User asks about Vijay Kumar Pal's office
+  steps:
+  - intent: faculty_vijay_kumar_pal
+  - action: utter_faculty_vijay_kumar_pal
+
+- story: User asks about Sidharath Maheshwari's office
+  steps:
+  - intent: faculty_sidharath_maheshwari
+  - action: utter_faculty_sidharath_maheshwari
+
+- story: User asks about Shaifu Gupta's office
+  steps:
+  - intent: faculty_shaifu_gupta
+  - action: utter_faculty_shaifu_gupta
+
+- story: User asks about Surendra Beniwal's office
+  steps:
+  - intent: faculty_surendra_beniwal
+  - action: utter_faculty_surendra_beniwal
+
+- story: User asks about Gaurav Varshney's office
+  steps:
+  - intent: faculty_gaurav_varshney
+  - action: utter_faculty_gaurav_varshney
+
+- story: User asks about Sarada Prasad Gochhayat's office
+  steps:
+  - intent: faculty_sarada_prasad_gochhayat
+  - action: utter_faculty_sarada_prasad_gochhayat
+
+- story: User asks about Shiv Kumar's office
+  steps:
+  - intent: faculty_shiv_kumar
+  - action: utter_faculty_shiv_kumar
+
+- story: User asks about Devi Lal's office
+  steps:
+  - intent: faculty_devi_lal
+  - action: utter_faculty_devi_lal
+
+- story: User asks about Harkeerat Kaur's office
+  steps:
+  - intent: faculty_harkeerat_kaur
+  - action: utter_faculty_harkeerat_kaur
+
+- story: User asks about Deepak Yadav's office
+  steps:
+  - intent: faculty_deepak_yadav
+  - action: utter_faculty_deepak_yadav
+
+- story: User asks about Samrat Rao's office
+  steps:
+  - intent: faculty_samrat_rao
+  - action: utter_faculty_samrat_rao
+
+- story: User asks about Saurabh Biswas's office
+  steps:
+  - intent: faculty_saurabh_biswas
+  - action: utter_faculty_saurabh_biswas
+
+- story: User asks about Pragat Srivastava's office
+  steps:
+  - intent: faculty_pragat_srivastava
+  - action: utter_faculty_pragat_srivastava
+
+- story: User asks about Nitesh Kumar's office
+  steps:
+  - intent: faculty_nitesh_kumar
+  - action: utter_faculty_nitesh_kumar
+
+- story: User asks about Archana Rajput's office
+  steps:
+  - intent: faculty_archana_rajput
+  - action: utter_faculty_archana_rajput
+
+- story: User asks about Anand Kumar Subramaniyan's office
+  steps:
+  - intent: faculty_anand_kumar_subramaniyan
+  - action: utter_faculty_anand_kumar_subramaniyan
+
+- story: User asks about Ajay Singh's office
+  steps:
+  - intent: faculty_ajay_singh
+  - action: utter_faculty_ajay_singh
+
+- story: User asks about Badri Narayan Subudhi's office
+  steps:
+  - intent: faculty_badri_narayan_subudhi
+  - action: utter_faculty_badri_narayan_subudhi
+
+- story: User asks about Alok Kumar Saxena's office
+  steps:
+  - intent: faculty_alok_kumar_saxena
+  - action: utter_faculty_alok_kumar_saxena
+
+- story: User asks about Rajendra Kumar Varma's office
+  steps:
+  - intent: faculty_rajendra_kumar_varma
+  - action: utter_faculty_rajendra_kumar_varma
+
+- story: User asks about Sayantam Mukherjee's office
+  steps:
+  - intent: faculty_sayantam_mukherjee
+  - action: utter_faculty_sayantam_mukherjee
+
+- story: User asks about Aditya Shankar Sandupatla's office
+  steps:
+  - intent: faculty_aditya_shankar_sandupatla
+  - action: utter_faculty_aditya_shankar_sandupatla
+
+- story: User asks about Anup Shukla's office
+  steps:
+  - intent: faculty_anup_shukla
+  - action: utter_faculty_anup_shukla
+
+- story: User asks about Srishilan C's office
+  steps:
+  - intent: faculty_srishilan_c
+  - action: utter_faculty_srishilan_c
+
+- story: User asks about Ashutosh Yadav's office
+  steps:
+  - intent: faculty_ashutosh_yadav
+  - action: utter_faculty_ashutosh_yadav
+
+- story: User asks about Suman Sarkar's office
+  steps:
+  - intent: faculty_suman_sarkar
+  - action: utter_faculty_suman_sarkar
+
+- story: User asks about Mir Faizan Ul Haq's office
+  steps:
+  - intent: faculty_mir_faizan_ul_haq
+  - action: utter_faculty_mir_faizan_ul_haq
+
+- story: User asks about Yamuna Prasad's office
+  steps:
+  - intent: faculty_yamuna_prasad
+  - action: utter_faculty_yamuna_prasad
+
+- story: User asks about Akash Awale's office
+  steps:
+  - intent: faculty_akash_awale
+  - action: utter_faculty_akash_awale
+
+- story: User asks about Karan Nathwani's office
+  steps:
+  - intent: faculty_karan_nathwani
+  - action: utter_faculty_karan_nathwani
+
+- story: User asks about Rimen Jamata's office
+  steps:
+  - intent: faculty_rimen_jamata
+  - action: utter_faculty_rimen_jamata
+
+- story: User asks about Ankur Bansal's office
+  steps:
+  - intent: faculty_ankur_bansal
+  - action: utter_faculty_ankur_bansal
+
+- story: User asks about Dr. Arun Kumar Verma's office
+  steps:
+  - intent: faculty_dr_arun_kumar_verma
+  - action: utter_faculty_dr_arun_kumar_verma
+
+- story: User asks about Kanchrala Harikrishna's office
+  steps:
+  - intent: faculty_kanchrala_harikrishna
+  - action: utter_faculty_kanchrala_harikrishna
+
+- story: User asks about Nitin Joshi's office
+  steps:
+  - intent: faculty_nitin_joshi
+  - action: utter_faculty_nitin_joshi
+
+- story: User asks about Srinivasan N's office
+  steps:
+  - intent: faculty_srinivasan_n
+  - action: utter_faculty_srinivasan_n
+
+- story: User asks about Sameer Kumar Sarma Pachalla's office
+  steps:
+  - intent: faculty_sameer_kumar_sarma_pachalla
+  - action: utter_faculty_sameer_kumar_sarma_pachalla
+
+- story: User asks about Pratik Kumar's office
+  steps:
+  - intent: faculty_pratik_kumar
+  - action: utter_faculty_pratik_kumar
+
+- story: User asks about Sahil Kalra's office
+  steps:
+  - intent: faculty_sahil_kalra
+  - action: utter_faculty_sahil_kalra
+
+- story: User asks about Ravikant Saini's office
+  steps:
+  - intent: faculty_ravikant_saini
+  - action: utter_faculty_ravikant_saini
+
+- story: User asks about Suman Banerjee's office
+  steps:
+  - intent: faculty_suman_banerjee
+  - action: utter_faculty_suman_banerjee
+
+- story: User asks about Nalin Kumar Sharma's office
+  steps:
+  - intent: faculty_nalin_kumar_sharma
+  - action: utter_faculty_nalin_kumar_sharma
+
+- story: User asks about Chembolu Vinay's office
+  steps:
+  - intent: faculty_chembolu_vinay
+  - action: utter_faculty_chembolu_vinay
+
+- story: User asks about Kushmanda Saurav's office
+  steps:
+  - intent: faculty_kushmanda_saurav
+  - action: utter_faculty_kushmanda_saurav
+
+- story: User asks about Shikha Malhotra
+  steps:
+  - intent: shikha_malhotra
+  - action: utter_shikha_malhotra
+
+- story: User asks about Meena Sharma
+  steps:
+  - intent: meena_sharma
+  - action: utter_meena_sharma
+
+- story: User asks about Ripul Vaid
+  steps:
+  - intent: ripul_vaid
+  - action: utter_ripul_vaid
+
+- story: User asks about Sahil Dogra
+  steps:
+  - intent: sahil_dogra
+  - action: utter_sahil_dogra
+
+- story: User asks about Shubham Gupta
+  steps:
+  - intent: shubham_gupta
+  - action: utter_shubham_gupta
+
+- story: User asks about latest alumni news and events
+  steps:
+  - intent: alumni_news_events
+  - action: utter_alumni_news_events
+
+- story: User asks about the Dean's message for alumni
+  steps:
+  - intent: alumni_dean_message
+  - action: utter_alumni_dean_message
+
+- story: User asks about the Associate Dean's message for alumni
+  steps:
+  - intent: alumni_associate_dean_message
+  - action: utter_alumni_associate_dean_message
+
+- story: User asks about the Associate Dean for Curriculum
+  steps:
+  - intent: academic_affairs_associate_dean_curriculum
+  - action: utter_academic_affairs_associate_dean_curriculum
+
+- story: User asks about the Deputy Registrar for Academic Affairs
+  steps:
+  - intent: academic_affairs_deputy_registrar
+  - action: utter_academic_affairs_deputy_registrar
+
+- story: User asks about Abhishek in Academic Affairs
+  steps:
+  - intent: academic_affairs_staff_abhishek
+  - action: utter_academic_affairs_staff_abhishek
+
+- story: User asks about B.Tech Civil Engineering courses
+  steps:
+  - intent: btech_civil_engineering_courses
+  - action: utter_btech_civil_engineering_courses
+
+- story: User asks about B.Tech Chemical Engineering courses
+  steps:
+  - intent: btech_chemical_engineering_courses
+  - action: utter_btech_chemical_engineering_courses
+
+
+- story: Respond with Mechanical B.Tech Courses
+  steps:
+  - intent: mechanical_btech_courses
+  - action: utter_btech_mechanical_engineering_courses
+
+
+- story: Respond with Mathematics and Computing B.Tech Courses
+  steps:
+  - intent: mathematics_btech_courses
+  - action: utter_btech_mathematics_and_computing_courses
+
+
+- story: User asks about B.Tech Computer Science Engineering courses
+  steps:
+  - intent: btech_cse_engineering_courses
+  - action: utter_btech_cse_engineering_courses
+
+- story: User asks about B.Tech Electrical Engineering courses
+  steps:
+  - intent: ee_btech_courses_semester_wise
+  - action: utter_ee_btech_courses_semester_wise
+
+
+- story: User asks about B.Tech Materials Engineering courses
+  steps:
+  - intent: materials_btech_courses_semester_wise
+  - action: action_fetch_data
+ 
+- story: User asks about Departmental UG Committees
+  steps:
+  - intent: departmental_ug_committees
+  - action: utter_departmental_ug_committees
+
+- story: User asks about Senate Undergraduate Board
+  steps:
+  - intent: senate_undergraduate_board
+  - action: utter_senate_undergraduate_board
+
+- story: User asks about Faculty Advisor
+  steps:
+  - intent: faculty_advisor
+  - action: utter_faculty_advisor
+
+- story: User asks about new UG courses
+  steps:
+  - intent: new_undergraduate_courses
+  - action: utter_new_undergraduate_courses
+
+- story: User asks about UG student requests
+  steps:
+  - intent: undergraduate_student_requests
+  - action: utter_undergraduate_student_requests
+
+- story: User asks about UG issue escalation
+  steps:
+  - intent: undergraduate_issue_escalation
+  - action: utter_undergraduate_issue_escalation
+
+- story: User asks about Departmental PG Committee
+  steps:
+  - intent: department_pg_committee
+  - action: utter_department_pg_committee
+
+- story: User asks about Senate Postgraduate Board
+  steps:
+  - intent: senate_postgraduate_board
+  - action: utter_senate_postgraduate_board
+
+- story: User asks about Programme Coordinator
+  steps:
+  - intent: programme_coordinator
+  - action: utter_programme_coordinator
+
+- story: User asks about new PG courses
+  steps:
+  - intent: new_postgraduate_courses
+  - action: utter_new_postgraduate_courses
+
+- story: User asks about PG student requests
+  steps:
+  - intent: postgraduate_student_requests
+  - action: utter_postgraduate_student_requests
+
+- story: User asks about PG issue escalation
+  steps:
+  - intent: escalation_of_postgraduate_student_requests
+  - action: utter_escalation_of_postgraduate_student_requests
+
+- story: User asks about dropping PG semester
+  steps:
+  - intent: postgraduate_semester_drop
+  - action: utter_postgraduate_semester_drop
+
+- story: User asks about PhD student guidance
+  steps:
+  - intent: phd_students
+  - action: utter_phd_students
+
+- story: User asks about curricular credits
+  steps:
+  - intent: curricular_credits
+  - action: utter_curricular_credits
+
+- story: User asks about credit load flexibility
+  steps:
+  - intent: credit_load_flexibility
+  - action: utter_credit_load_flexibility
+
+- story: User asks about programmes under UG curriculum
+  steps:
+  - intent: ug_programmes
+  - action: utter_ug_programmes
+
+- story: User asks about programmes under PG curriculum
+  steps:
+  - intent:  pg_programmes
+  - action:  utter_pg_programmes
+
+- story: User asks about programmes under Phd curriculum
+  steps:
+  - intent:  phd_programmes
+  - action:  utter_phd_programmes
+
+- story: User asks about course evaluation methods
+  steps:
+  - intent: course_evaluation
+  - action: utter_course_evaluation
+
+- story: User asks about course registration
+  steps:
+  - intent: course_registration
+  - action: utter_course_registration
+
+- story: User asks about course withdrawal
+  steps:
+  - intent: course_withdrawal
+  - action: utter_course_withdrawal
+
+- story: User asks about backlog courses
+  steps:
+  - intent: backlog_courses
+  - action: utter_backlog_courses
+
+- story: User asks about summer term
+  steps:
+  - intent: summer_term
+  - action: utter_summer_term
+
+- story: User asks about attendance policy
+  steps:
+  - intent: attendance_policy
+  - action: utter_attendance_policy
+
+- story: User asks about grading system
+  steps:
+  - intent: grading_system
+  - action: utter_grading_system
+
+- story: User asks about semester freeze
+  steps:
+  - intent: semester_freeze
+  - action: utter_semester_freeze
+
+- story: User asks about branch change
+  steps:
+  - intent: change_branch
+  - action: utter_change_branch
+
+- story: User asks about internship policy
+  steps:
+  - intent: internship_policy
+  - action: utter_internship_policy
+
+- story: User asks about UG Merit-Cum-Means Scholarship
+  steps:
+  - intent: ug_merit_cum_means_scholarship
+  - action: utter_ug_merit_cum_means_scholarship
+
+- story: User asks about Free Messing Scholarship
+  steps:
+  - intent: ug_free_messing_scholarship
+  - action: utter_ug_free_messing_scholarship
+
+- story: User asks about UG Freeship Scholarship
+  steps:
+  - intent: ug_freeship_scholarship
+  - action: utter_ug_freeship_scholarship
+
+- story: User asks about QUEST Fee Waiver
+  steps:
+  - intent: ug_quest_fee_waiver
+  - action: utter_ug_quest_fee_waiver
+
+- story: User asks about MTech Fellowship
+  steps:
+  - intent: eligibility_mtech_fellowship
+  - action: utter_eligibility_mtech_fellowship
+
+- story: User asks about PhD Assistantship
+  steps:
+  - intent: eligibility_phd_assistantship
+  - action: utter_eligibility_phd_assistantship
+
+- story: User asks about Travel Allowance and Contingency Grant
+  steps:
+  - intent: travel_allowance_contingency_grant
+  - action: utter_travel_allowance_contingency_grant
+
+- story: User asks about EULER Earn While You Learn
+  steps:
+  - intent: euler_earn_while_you_learn
+  - action: utter_euler_earn_while_you_learn
+
+- story: User asks about President Gold Medal
+  steps:
+  - intent: president_gold_medal_ug_students
+  - action: utter_president_gold_medal_ug_students
+
+- story: User asks about Director’s Gold Medal
+  steps:
+  - intent: directors_gold_medal_ug_students
+  - action: utter_directors_gold_medal_ug_students
+
+- story: User asks about Institute Silver Medal
+  steps:
+  - intent: institute_silver_medal_ug_students
+  - action: utter_institute_silver_medal_ug_students
+
+- story: User asks about Prof. Ashok Ahuja Steel Structures Award
+  steps:
+  - intent: prof_ashok_ahuja_steel_structures_award
+  - action: utter_prof_ashok_ahuja_steel_structures_award
+
+- story: User asks about Certificates for Currently Enrolled Students
+  steps:
+  - intent: certificates_to_encourage_currently_enrolled_students
+  - action: utter_certificates_to_encourage_currently_enrolled_students
+
+- story: User asks about Institute Gold and Silver Medal for MTech students
+  steps:
+  - intent: institute_gold_silver_medal_mtech
+  - action: utter_institute_gold_silver_medal_mtech
+
+- story: User asks about Outstanding Doctoral Student Award for PhD
+  steps:
+  - intent: outstanding_doctoral_student_award_phd
+  - action: utter_outstanding_doctoral_student_award_phd
+
+
+- story: Ask for library location
+  steps:
+  - intent: library_iit_jammu_location
+  - action: utter_library_iit_jammu_location
+
+- story: Ask for library contact details
+  steps:
+  - intent: library_iit_jammu_contact
+  - action: utter_library_iit_jammu_contact
+
+- story: Ask for library opening hours
+  steps:
+  - intent: library_iit_jammu_opening_hours
+  - action: utter_library_iit_jammu_opening_hours
+
+- story: Ask for library circulation timing
+  steps:
+  - intent: library_iit_jammu_circulation_timing
+  - action: utter_library_iit_jammu_circulation_timing
+
+- story: Ask faculty borrowing policy
+  steps:
+  - intent: library_iit_jammu_faculty_borrowing_policy
+  - action: utter_library_iit_jammu_faculty_borrowing_policy
+
+- story: Ask PhD student borrowing policy
+  steps:
+  - intent: library_iit_jammu_phd_borrowing_policy
+  - action: utter_library_iit_jammu_phd_borrowing_policy
+
+- story: Ask M.Tech borrowing policy
+  steps:
+  - intent: library_iit_jammu_mtech_borrowing_policy
+  - action: utter_library_iit_jammu_mtech_borrowing_policy
+
+- story: Ask B.Tech borrowing policy
+  steps:
+  - intent: library_iit_jammu_btech_borrowing_policy
+  - action: utter_library_iit_jammu_btech_borrowing_policy
+
+- story: Ask project assistant borrowing policy
+  steps:
+  - intent: library_iit_jammu_project_assistant_borrowing_policy
+  - action: utter_library_iit_jammu_project_assistant_borrowing_policy
+
+- story: Ask staff borrowing policy
+  steps:
+  - intent: library_iit_jammu_staff_borrowing_policy
+  - action: utter_library_iit_jammu_staff_borrowing_policy
+
+- story: Ask Hindi book borrowing policy
+  steps:
+  - intent: library_iit_jammu_hindi_books_policy
+  - action: utter_library_iit_jammu_hindi_books_policy
+
+- story: Ask about library resources
+  steps:
+  - intent: library_iit_jammu_resources
+  - action: utter_library_iit_jammu_resources
+
+- story: Ask about research tools
+  steps:
+  - intent: library_iit_jammu_research_assistance_tools
+  - action: utter_library_iit_jammu_research_assistance_tools
+
+
+- story: User asks about seating arrangements
+  steps:
+  - intent: library_iit_jammu_seating_arrangements
+  - action: utter_library_iit_jammu_seating_arrangements
+
+- story: User asks about latest library updates
+  steps:
+  - intent: library_iit_jammu_updates
+  - action: utter_library_iit_jammu_updates
+
+
+- story: Medical Centre Introduction
+  steps:
+  - intent: medical_center_intro
+  - action: utter_medical_center_intro
+
+- story: Contact Medical Centre
+  steps:
+  - intent: medical_center_contact
+  - action: utter_medical_center_contact
+
+- story: Medical Centre Facilities
+  steps:
+  - intent: medical_center_facilities
+  - action: utter_medical_center_facilities
+
+- story: Doctor Inquiry - Dr. Karunika
+  steps:
+  - intent: doctor_karunika
+  - action: utter_doctor_karunika
+
+- story: Doctor Inquiry - Dr. Vikram Singh
+  steps:
+  - intent: doctor_vikram_singh
+  - action: utter_doctor_vikram_singh
+
+- story: Doctor Inquiry - Dr. Priya
+  steps:
+  - intent: doctor_priya
+  - action: utter_doctor_priya
+
+- story: Doctor Inquiry - Dr. Bidisha
+  steps:
+  - intent: doctor_bidisha
+  - action: utter_doctor_bidisha
+
+- story: Doctor Inquiry - Dr. Pranav Gupta
+  steps:
+  - intent: doctor_pranav_gupta
+  - action: utter_doctor_pranav_gupta
+
+- story: Doctor Inquiry - Dr. Rohit Bhatiya
+  steps:
+  - intent: doctor_rohit_bhatiya
+  - action: utter_doctor_rohit_bhatiya
+
+- story: Medical Centre Location
+  steps:
+  - intent: medical_center_location
+  - action: utter_medical_center_location
+
+- story: Research and Consultancy Section
+  steps:
+  - intent: research_and_consultancy_section
+  - action: utter_research_and_consultancy_section
+
+- story: Research and Consultancy Message
+  steps:
+  - intent: research_and_consultancy_message
+  - action: utter_research_and_consultancy_message
+
+- story: Research and Consultancy Deputy Registrar
+  steps:
+  - intent: research_and_consultancy_deputy_registrar
+  - action: utter_research_and_consultancy_deputy_registrar
+
+- story: Research and Consultancy Objectives
+  steps:
+  - intent: research_and_consultancy_objectives
+  - action: utter_research_and_consultancy_objectives
+
+- story: Research and Consultancy Main Functions
+  steps:
+  - intent: research_and_consultancy_main_functions
+  - action: utter_research_and_consultancy_main_functions
+
+- story: Research and Consultancy Team - Deputy Registrar
+  steps:
+  - intent: research_and_consultancy_team_deputy_registrar
+  - action: utter_research_and_consultancy_team_deputy_registrar
+
+- story: Security Officer Inquiry
+  steps:
+  - intent: security_staff
+  - action: utter_security_staff
+
+- story: Security Contact Inquiry
+  steps:
+  - intent: security_contact
+  - action: utter_security_contact
+
+- story: Security Officer Email Inquiry
+  steps:
+  - intent: security_officer_email
+  - action: utter_security_officer_email
+
+- story: Student Affairs Section Inquiry
+  steps:
+  - intent: student_affairs_section
+  - action: utter_student_affairs_section
+
+- story: Student Affairs Message Inquiry
+  steps:
+  - intent: student_affairs_message
+  - action: utter_student_affairs_message
+
+- story: Hostel Life Inquiry
+  steps:
+  - intent: hostel_life
+  - action: utter_hostel_life
+
+- story: Mess Facilities Inquiry
+  steps:
+  - intent: mess_facilities
+  - action: utter_mess_facilities
+
+- story: Student Activities Inquiry
+  steps:
+  - intent: student_activities
+  - action: utter_student_activities
+
+- story: Sports Facilities Inquiry
+  steps:
+  - intent: sports_facilities
+  - action: utter_sports_facilities
+
+- story: Student Affairs Office Inquiry
+  steps:
+  - intent: student_affairs_office
+  - action: utter_student_affairs_office
+
+- story: Sartaj Ul Hasan Inquiry
+  steps:
+  - intent: student_affairs_team_sartaj_ul_hasan
+  - action: utter_student_affairs_team_sartaj_ul_hasan
+
+- story: Semester schedule
+  steps:
+  - intent: semester_schedule
+  - action: utter_semester_schedule

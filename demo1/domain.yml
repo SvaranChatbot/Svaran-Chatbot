@@ -1,0 +1,997 @@
+version: "3.1"
+
+actions:
+  - action_fetch_data
+  - action_list_material_courses
+  - action_director
+  - action_out_of_scope
+  
+
+intents:
+
+  - semester_schedule
+  - out_of_scope
+  - director_iitjammu
+  - about_yourself
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - about iit jammu
+  - finance_and_accounts
+  - assistant_registrar_message
+  - finance_and_accounts_team
+  - faculty_vinit_jakhetiya
+  - faculty_durai_prabhakaran_r_t
+  - faculty_shantanu_vijay_madge
+  - faculty_pervaiz_fathima_khatoon_m
+  - faculty_navneet_kumar
+  - faculty_ankit_tyagi
+  - faculty_shiva_s
+  - faculty_shanmugadas_k_p
+  - faculty_divyesh_varade
+  - faculty_roshan_udaram_pal
+  - faculty_samaresh_bera
+  - faculty_dharitri_rath
+  - faculty_rajkumar_v
+  - faculty_rani_rohini
+  - faculty_ankit_dubey
+  - faculty_padmini_singh
+  - faculty_gaurav_ashok_bhaduri
+  - faculty_sudhakar_modem
+  - faculty_pothukuchi_harish
+  - faculty_satya_sekhar_bhogilla
+  - faculty_satyadev_ahlawat
+  - faculty_subhasis_bhattacharjee
+  - faculty_arvind_kumar_rajput
+  - faculty_ankit_kathuria
+  - faculty_rohit_buddhiram_chourasiya
+  - faculty_ravi_kumar_arun
+  - faculty_chandan_yadav
+  - faculty_sumit_kumar_pandey
+  - faculty_sarah_mariam_abraham
+  - faculty_bidhan_biswas
+  - faculty_yogesh_madhukarrao_nimdeo
+  - faculty_sunil_kumar_kashyap
+  - faculty_kankat_ghosh
+  - faculty_vijay_kumar_pal
+  - faculty_sidharath_maheshwari
+  - faculty_shaifu_gupta
+  - faculty_surendra_beniwal
+  - faculty_gaurav_varshney
+  - faculty_sarada_prasad_gochhayat
+  - faculty_shiv_kumar
+  - faculty_devi_lal
+  - faculty_harkeerat_kaur
+  - faculty_deepak_yadav
+  - faculty_samrat_rao
+  - faculty_saurabh_biswas
+  - faculty_pragat_srivastava
+  - faculty_nitesh_kumar
+  - faculty_archana_rajput
+  - faculty_anand_kumar_subramaniyan
+  - faculty_ajay_singh
+  - faculty_badri_narayan_subudhi
+  - faculty_alok_kumar_saxena
+  - faculty_rajendra_kumar_varma
+  - faculty_sayantam_mukherjee
+  - faculty_aditya_shankar_sandupatla
+  - faculty_anup_shukla
+  - faculty_srishilan_c
+  - faculty_ashutosh_yadav
+  - faculty_suman_sarkar
+  - faculty_mir_faizan_ul_haq
+  - faculty_yamuna_prasad
+  - faculty_akash_awale
+  - faculty_karan_nathwani
+  - faculty_rimen_jamata
+  - faculty_ankur_bansal
+  - faculty_dr_arun_kumar_verma
+  - faculty_kanchrala_harikrishna
+  - faculty_nitin_joshi
+  - faculty_srinivasan_n
+  - faculty_sameer_kumar_sarma_pachalla
+  - faculty_pratik_kumar
+  - faculty_sahil_kalra
+  - faculty_ravikant_saini
+  - faculty_suman_banerjee
+  - faculty_nalin_kumar_sharma
+  - faculty_chembolu_vinay
+  - faculty_kushmanda_saurav
+  - shikha_malhotra
+  - meena_sharma
+  - ripul_vaid
+  - sahil_dogra
+  - shubham_gupta
+  - alumni_news_events
+  - alumni_dean_message
+  - alumni_associate_dean_message
+  - alumni_team
+  - alumni_services
+  - alumni_contact
+  - academic_affairs_dean
+  - academic_affairs_associate_dean_research
+  - academic_affairs_associate_dean_curriculum
+  - academic_affairs_deputy_registrar
+  - academic_affairs_staff_abhishek
+  - btech_civil_engineering_courses
+  - btech_chemical_engineering_courses
+  - btech_cse_engineering_courses
+  - ee_btech_courses_semester_wise
+  - materials_btech_courses_semester_wise
+  - mechanical_btech_courses
+  - mathematics_btech_courses
+  - btech_fullform
+  - cgpa_fullform
+  - ug_programmes
+  - pg_programmes
+  - phd_programmes
+  - academic_administration
+  - btech_programmes_admission
+  - semester_system
+  - schedule_and_hostel
+  - timetable
+  - fees
+  - departmental_ug_committees
+  - senate_undergraduate_board
+  - faculty_advisor
+  - new_undergraduate_courses
+  - undergraduate_student_requests
+  - undergraduate_issue_escalation
+  - department_pg_committee
+  - senate_postgraduate_board
+  - programme_coordinator
+  - new_postgraduate_courses
+  - postgraduate_student_requests
+  - escalation_of_postgraduate_student_requests
+  - postgraduate_semester_drop
+  - phd_students
+  - curricular_credits
+  - credit_load_flexibility
+  - course_evaluation
+  - course_registration
+  - course_withdrawal
+  - backlog_courses
+  - summer_term
+  - attendance_policy
+  - grading_system
+  - semester_freeze
+  - change_branch
+  - internship_policy
+  - ug_merit_cum_means_scholarship
+  - ug_free_messing_scholarship
+  - ug_freeship_scholarship
+  - ug_quest_fee_waiver
+  - eligibility_mtech_fellowship
+  - eligibility_phd_assistantship
+  - travel_allowance_contingency_grant
+  - euler_earn_while_you_learn
+  - president_gold_medal_ug_students
+  - directors_gold_medal_ug_students
+  - institute_silver_medal_ug_students
+  - prof_ashok_ahuja_steel_structures_award
+  - certificates_to_encourage_currently_enrolled_students
+  - institute_gold_silver_medal_mtech
+  - outstanding_doctoral_student_award_phd
+  - library_iit_jammu_location
+  - library_iit_jammu_contact
+  - library_iit_jammu_opening_hours
+  - library_iit_jammu_circulation_timing
+  - library_iit_jammu_faculty_borrowing_policy
+  - library_iit_jammu_phd_borrowing_policy
+  - library_iit_jammu_mtech_borrowing_policy
+  - library_iit_jammu_btech_borrowing_policy
+  - library_iit_jammu_project_assistant_borrowing_policy
+  - library_iit_jammu_staff_borrowing_policy
+  - library_iit_jammu_hindi_books_policy
+  - library_iit_jammu_resources
+  - library_iit_jammu_research_assistance_tools
+  - library_iit_jammu_seating_arrangements
+  - library_iit_jammu_updates
+  - medical_center_intro
+  - medical_center_contact
+  - medical_center_facilities
+  - doctor_karunika
+  - doctor_vikram_singh
+  - doctor_priya
+  - doctor_bidisha
+  - doctor_pranav_gupta
+  - doctor_rohit_bhatiya
+  - medical_center_location
+  - research_and_consultancy_section
+  - research_and_consultancy_message
+  - research_and_consultancy_deputy_registrar
+  - research_and_consultancy_objectives
+  - research_and_consultancy_main_functions
+  - research_and_consultancy_team_deputy_registrar
+ 
+  - security_staff
+  - security_contact
+  - security_officer_email
+  - student_affairs_section
+  - student_affairs_message
+  - hostel_life
+  - mess_facilities
+  - student_activities
+  - sports_facilities
+  - student_affairs_office
+  - student_affairs_team_sartaj_ul_hasan
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+responses:
+
+
+
+  utter_greet:
+  - text: |
+      Hey! How are you?
+      What can I help you with?
+      1) About semester wise B.Tech course structure (Electrical, CSE, Materials etc)
+      2) About office location and availability timings of faculties
+      3) About medical center at IIT JAMMU
+      4) About library timings and borrowing policy for B.Tech/M.Tech students
+      5) Programmes offered under UG curriculum
+      6) Programmes offered under PG curriculum
+      7) Programmes offered under PhD curriculum
+      8) Grading system at IIT JAMMU
+
+
+  utter_cheer_up:
+  - text: | 
+      Here is something to cheer you up:
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiCFnyeaXQDYGW30yv_60uVH9w_0QBFj422w&s">
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_semester_schedule:
+  - text:   '<a href="https://iitjammu.ac.in//semester-schedule" target="_blank">CHECK SEMESTER SCHEDULE</a>'
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_about_yourself:
+  - text: "I am an assistant Chatbot for IIT JAMMU , developed and trained by Sumit Chaudhary, a Btech Second Year , MECHANICAL ENGINEERING STUDENT AT IIT JAMMU ."
+
+  utter_about iit jammu:
+  - text: "IIT JAMMU IS A PREMIER INSTITUTE OF INDIA."
+
+  utter_finance_and_accounts:
+  - text: "The accounts section of an academic institution is responsible for managing financial transactions and records. It handles budgeting, accounting, financial reporting, payroll, accounts payable and receivable, and statutory compliance."
+
+  utter_assistant_registrar_message:
+  - text: "As the Assistant Registrar for Finance & Accounts at IIT Jammu, Shikha Malhotra welcomes all users warmly. The team is ready to assist with billing, fee payments, financial aid, and scholarships to ensure a seamless experience."
+
+
+  utter_finance_and_accounts_team:
+  - text: "The Finance and Accounts team includes:\n- Shikha Malhotra, Assistant Registrar (ar.accounts@iitjammu.ac.in)\n- Meena Sharma, Senior Assistant (meena.sharma@iitjammu.ac.in)\n- Ripul Vaid, Section Officer (ripul.vaid@iitjammu.ac.in)\n- Sahil Dogra, Senior Assistant (sahil.dogra@iitjammu.ac.in)\n- Shubham Gupta, Senior Assistant (shubham.gupta@iitjammu.ac.in)"
+
+
+  utter_faculty_vinit_jakhetiya:
+  - text: "Vinit Jakhetiya is in office 11AC6008 and is available from 11 AM to 4 PM."
+
+  utter_faculty_durai_prabhakaran_r_t:
+  - text: "Durai Prabhakaran R T is in office 11AC7005 and is available from 11 AM to 4 PM."
+
+  utter_faculty_shantanu_vijay_madge:
+  - text: "Shantanu Vijay Madge is in office 11AC5030 and is available from 11 AM to 4 PM."
+
+  utter_faculty_pervaiz_fathima_khatoon_m:
+  - text: "Pervaiz Fathima Khatoon M is in office 11AC6025 and is available from 11 AM to 4 PM."
+
+  utter_faculty_navneet_kumar:
+  - text: "Navneet Kumar is in office 11AC6019 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ankit_tyagi:
+  - text: "Ankit Tyagi is in office 11AC5033 and is available from 11 AM to 4 PM."
+
+  utter_faculty_shiva_s:
+  - text: "Shiva S is in office 11AC6009 and is available from 11 AM to 4 PM."
+
+  utter_faculty_shanmugadas_k_p:
+  - text: "Shanmugadas K P is in office 11AC7014 and is available from 11 AM to 4 PM."
+
+  utter_faculty_divyesh_varade:
+  - text: "Divyesh Varade is in office 11AC5039 and is available from 11 AM to 4 PM."
+
+  utter_faculty_roshan_udaram_pal:
+  - text: "Roshan Udaram Pal is in office 11AC7008 and is available from 11 AM to 4 PM."
+
+  utter_faculty_samaresh_bera:
+  - text: "Samaresh Bera is in office 11AC6020 and is available from 11 AM to 4 PM."
+
+
+  utter_faculty_dharitri_rath:
+  - text: "Dharitri Rath is in office 11AC7009 and is available from 11 AM to 4 PM."
+
+  utter_faculty_rajkumar_v:
+  - text: "Rajkumar V is in office 11AC7017 and is available from 11 AM to 4 PM."
+
+  utter_faculty_rani_rohini:
+  - text: "Rani Rohini is in office 11AC5037 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ankit_dubey:
+  - text: "Ankit Dubey is in office 11AC5005 and is available from 11 AM to 4 PM."
+
+  utter_faculty_padmini_singh:
+  - text: "Padmini Singh is in office 11AC7023 and is available from 11 AM to 4 PM."
+
+  utter_faculty_gaurav_ashok_bhaduri:
+  - text: "Gaurav Ashok Bhaduri is in office 11AC5003 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sudhakar_modem:
+  - text: "Sudhakar Modem is in office 11AC7015 and is available from 11 AM to 4 PM."
+
+  utter_faculty_pothukuchi_harish:
+  - text: "Pothukuchi Harish is in office 11AC7024 and is available from 11 AM to 4 PM."
+
+  utter_faculty_satya_sekhar_bhogilla:
+  - text: "Satya Sekhar Bhogilla is in office 11AC6006 and is available from 11 AM to 4 PM."
+
+  utter_faculty_satyadev_ahlawat:
+  - text: "Satyadev Ahlawat is in office 11AC5043 and is available from 11 AM to 4 PM."
+
+  utter_faculty_subhasis_bhattacharjee:
+  - text: "Subhasis Bhattacharjee is in office 11AC7019 and is available from 11 AM to 4 PM."
+
+  utter_faculty_arvind_kumar_rajput:
+  - text: "Arvind Kumar Rajput is in office 11AC6013 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ankit_kathuria:
+  - text: "Ankit Kathuria is in office 11AC3036 and is available from 11 AM to 4 PM."
+
+  utter_faculty_rohit_buddhiram_chourasiya:
+  - text: "Rohit Buddhiram Chourasiya is in office 11AC5028 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ravi_kumar_arun:
+  - text: "Ravi Kumar Arun is in office 11AC7013 and is available from 11 AM to 4 PM."
+
+  utter_faculty_chandan_yadav:
+  - text: "Chandan Yadav is in office 11AC3021 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sumit_kumar_pandey:
+  - text: "Sumit Kumar Pandey is in office 11AC5035 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sarah_mariam_abraham:
+  - text: "Sarah Mariam Abraham is in office 11AC5031 and is available from 11 AM to 4 PM."
+
+  utter_faculty_bidhan_biswas:
+  - text: "Bidhan Biswas is in office 11AC7020 and is available from 11 AM to 4 PM."
+
+  utter_faculty_yogesh_madhukarrao_nimdeo:
+  - text: "Yogesh Madhukarrao Nimdeo is in office 11AC5070 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sunil_kumar_kashyap:
+  - text: "Sunil Kumar Kashyap is in office 11AC5071 and is available from 11 AM to 4 PM."
+
+  utter_faculty_kankat_ghosh:
+  - text: "Kankat Ghosh is in office 11AC3034 and is available from 11 AM to 4 PM."
+
+  utter_faculty_vijay_kumar_pal:
+  - text: "Vijay Kumar Pal is in office 11AC5068 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sidharath_maheshwari:
+  - text: "Sidharath Maheshwari is in office 11AC5002 and is available from 11 AM to 4 PM."
+
+  utter_faculty_shaifu_gupta:
+  - text: "Shaifu Gupta is in office 11AC7018 and is available from 11 AM to 4 PM."
+
+  utter_faculty_surendra_beniwal:
+  - text: "Surendra Beniwal is in office 11AC5034 and is available from 11 AM to 4 PM."
+
+  utter_faculty_gaurav_varshney:
+  - text: "Gaurav Varshney is in office 11AC6005 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sarada_prasad_gochhayat:
+  - text: "Sarada Prasad Gochhayat is in office 11AC3020 and is available from 11 AM to 4 PM."
+
+  utter_faculty_shiv_kumar:
+  - text: "Shiv Kumar is in office 11AC3037 and is available from 11 AM to 4 PM."
+
+  utter_faculty_devi_lal:
+  - text: "Devi Lal is in office 11AC7006 and is available from 11 AM to 4 PM."
+
+  utter_faculty_harkeerat_kaur:
+  - text: "Harkeerat Kaur is in office 11AC7010 and is available from 11 AM to 4 PM."
+
+  utter_faculty_deepak_yadav:
+  - text: "Deepak Yadav is in office 11AC5063 and is available from 11 AM to 4 PM."
+
+  utter_faculty_samrat_rao:
+  - text: "Samrat Rao is in office 11AC5006 and is available from 11 AM to 4 PM."
+
+  utter_faculty_saurabh_biswas:
+  - text: "Saurabh Biswas is in office 11AC5067 and is available from 11 AM to 4 PM."
+
+  utter_faculty_pragat_srivastava:
+  - text: "Pragat Srivastava is in office 11AC6016 and is available from 11 AM to 4 PM."
+
+  utter_faculty_nitesh_kumar:
+  - text: "Nitesh Kumar is in office 11AC6024 and is available from 11 AM to 4 PM."
+
+  utter_faculty_archana_rajput:
+  - text: "Archana Rajput is in office 11AC5072 and is available from 11 AM to 4 PM."
+
+  utter_faculty_anand_kumar_subramaniyan:
+  - text: "Anand Kumar Subramaniyan is in office 11AC5029 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ajay_singh:
+  - text: "Ajay Singh is in office 11AC5044 and is available from 11 AM to 4 PM."
+
+  utter_faculty_badri_narayan_subudhi:
+  - text: "Badri Narayan Subudhi is in office 11AC7021 and is available from 11 AM to 4 PM."
+
+  utter_faculty_alok_kumar_saxena:
+  - text: "Alok Kumar Saxena is in office 11AC5001 and is available from 11 AM to 4 PM."
+
+  utter_faculty_rajendra_kumar_varma:
+  - text: "Rajendra Kumar Varma is in office 11AC6022 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sayantam_mukherjee:
+  - text: "Sayantam Mukherjee is in office 11AC6017 and is available from 11 AM to 4 PM."
+
+  utter_faculty_aditya_shankar_sandupatla:
+  - text: "Aditya Shankar Sandupatla is in office 11AC3032 and is available from 11 AM to 4 PM."
+
+  utter_faculty_anup_shukla:
+  - text: "Anup Shukla is in office 11AC3038 and is available from 11 AM to 4 PM."
+
+  utter_faculty_srishilan_c:
+  - text: "Srishilan C is in office 11AC7011 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ashutosh_yadav:
+  - text: "Ashutosh Yadav is in office 11AC5062 and is available from 11 AM to 4 PM."
+
+  utter_faculty_suman_sarkar:
+  - text: "Suman Sarkar is in office 11AC3025 and is available from 11 AM to 4 PM."
+
+  utter_faculty_mir_faizan_ul_haq:
+  - text: "Mir Faizan Ul Haq is in office 11AC7007 and is available from 11 AM to 4 PM."
+
+  utter_faculty_yamuna_prasad:
+  - text: "Yamuna Prasad is in office 11AC5007 and is available from 11 AM to 4 PM."
+
+  utter_faculty_akash_awale:
+  - text: "Akash Awale is in office 11AC6010 and is available from 11 AM to 4 PM."
+
+  utter_faculty_karan_nathwani:
+  - text: "Karan Nathwani is in office 11AC5040 and is available from 11 AM to 4 PM."
+
+  utter_faculty_rimen_jamata:
+  - text: "Rimen Jamata is in office 11AC3024 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ankur_bansal:
+  - text: "Ankur Bansal is in office 11AC3019 and is available from 11 AM to 4 PM."
+
+  utter_faculty_dr_arun_kumar_verma:
+  - text: "Dr. Arun Kumar Verma is in office 11AC5032 and is available from 11 AM to 4 PM."
+
+  utter_faculty_kanchrala_harikrishna:
+  - text: "Kanchrala Harikrishna is in office 11AC5027 and is available from 11 AM to 4 PM."
+
+  utter_faculty_nitin_joshi:
+  - text: "Nitin Joshi is in office 11AC3022 and is available from 11 AM to 4 PM."
+
+  utter_faculty_srinivasan_n:
+  - text: "Srinivasan N is in office 11AC5025 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sameer_kumar_sarma_pachalla:
+  - text: "Sameer Kumar Sarma Pachalla is in office 11AC3026 and is available from 11 AM to 4 PM."
+
+  utter_faculty_pratik_kumar:
+  - text: "Pratik Kumar is in office 11AC5045 and is available from 11 AM to 4 PM."
+
+  utter_faculty_sahil_kalra:
+  - text: "Sahil Kalra is in office 11AC6014 and is available from 11 AM to 4 PM."
+
+  utter_faculty_ravikant_saini:
+  - text: "Ravikant Saini is in office 11AC6011 and is available from 11 AM to 4 PM."
+
+  utter_faculty_suman_banerjee:
+  - text: "Suman Banerjee is in office 11AC5064 and is available from 11 AM to 4 PM."
+
+  utter_faculty_nalin_kumar_sharma:
+  - text: "Nalin Kumar Sharma is in office 11AC6018 and is available from 11 AM to 4 PM."
+
+  utter_faculty_chembolu_vinay:
+  - text: "Chembolu Vinay is in office 11AC5066 and is available from 11 AM to 4 PM."
+
+  utter_faculty_kushmanda_saurav:
+  - text: "Kushmanda Saurav is in office 11AC5009 and is available from 11 AM to 4 PM."
+
+  utter_shikha_malhotra:
+  - text: "Shikha Malhotra is the Assistant Registrar for Finance and Accounts at IIT Jammu. You can reach her at ar.accounts@iitjammu.ac.in."
+
+  utter_meena_sharma:
+  - text: "Meena Sharma is a Senior Assistant in the Finance and Accounts team at IIT Jammu. You can reach her at meena.sharma@iitjammu.ac.in."
+
+  utter_ripul_vaid:
+  - text: "Ripul Vaid is the Section Officer in the Finance and Accounts team at IIT Jammu. You can reach him at ripul.vaid@iitjammu.ac.in."
+
+  utter_sahil_dogra:
+  - text: "Sahil Dogra is a Senior Assistant in the Finance and Accounts team at IIT Jammu. You can reach him at sahil.dogra@iitjammu.ac.in."
+
+  utter_shubham_gupta:
+  - text: "Shubham Gupta is a Senior Assistant in the Finance and Accounts team at IIT Jammu. You can reach him at shubham.gupta@iitjammu.ac.in."
+
+  utter_alumni_news_events:
+  - text: "Here are the latest alumni news events:\n1. Alumni Startup Update (Published on 14-05-2024)\n2. Yash Cracks UPSC CSE 2023 (Published on 17-04-2024)\n3. Alumni Relations Newsletter 2023 (Published on 29-02-2024)."
+
+  utter_alumni_dean_message:
+  - text: "Dr. Prabhat Munshi, Dean of Alumni Affairs, says:\n\"We are committed to enriching our relationship with alumni, organizing events like Alumni Reunions, Scholarship Campaigns, and Distinguished Lecture Series. We also plan to fix an annual Alumni Day to celebrate alumni achievements and inspire progress at IIT Jammu.\""
+
+  utter_alumni_associate_dean_message:
+  - text: "Dr. Vinay Sharma, Associate Dean, states:\n\"We proudly support five cohorts of alumni. Our goal is to offer accessible support to every IIT Jammu alumnus. Our office enhances alumni interactions and strengthens the bond between alumni and the Institute.\""
+
+
+  utter_alumni_team:
+  - text: "The Alumni Affairs team includes:\n- Dr. Prabhat Munshi (Dean)\n- Dr. Vinay Sharma (Associate Dean)\n- Mr. Nishbinder Singh (Assistant Registrar)\n- Mr. Shivam Sahdev (Relationship Manager)."
+
+  utter_alumni_services:
+  - text: "We offer several services for our alumni:\n- 50% discount on guest house bookings.\n- Support in cities for accommodation and transport.\n- Requests for mark sheets or transcripts.\nFor assistance, email us at office.alumni@iitjammu.ac.in."
+
+  utter_alumni_contact:
+  - text: "You can contact the Alumni Office:\n- Email: office.alumni@iitjammu.ac.in\n- Address: Alumni Office, IIT Jammu, Jagti, NH-44, PO Nagrota, Jammu - 181 221 J&K, India."
+
+  utter_academic_affairs_dean:
+  - text: "The Dean of Academic Affairs at IIT Jammu is Kannan Iyer. You can reach out via email at dean.acad@iitjammu.ac.in."
+
+  utter_academic_affairs_associate_dean_research:
+  - text: "The Associate Dean for Research Programs and Interdisciplinary Programs is Sameer K. Sarma P. You can contact him at sameer.pachalla@iitjammu.ac.in."
+
+  utter_academic_affairs_associate_dean_curriculum:
+  - text: "The Associate Dean for Curriculum (UG, PG) is Shanmugadas K.P. You can reach him at shanmugadas.kp@iitjammu.ac.in."
+
+  utter_academic_affairs_deputy_registrar:
+  - text: "The Deputy Registrar at IIT Jammu is Shrikarshan Pareek. You can contact him at dr.acad@iitjammu.ac.in."
+
+  utter_academic_affairs_staff_abhishek:
+  - text: "Abhishek is a Senior Assistant in Academic Affairs. You can reach him at abhishek@iitjammu.ac.in."
+
+  utter_btech_civil_engineering_courses:
+  - text: | 
+      Here is the semester-wise course distribution for B.Tech Civil Engineering: 
+      Semester 1: Mathematics I, Physics I, Engineering Drawing, Basic Electrical Engineering, Environmental Science, Workshop Practice.
+      Semester 2: Mathematics II, Chemistry, Programming for Problem Solving, Basic Electronics Engineering, Engineering Mechanics, Communication Skills.
+      Semester 3: Mathematics III, Strength of Materials, Fluid Mechanics, Surveying, Building Materials and Construction, Structural Analysis I.
+      Semester 4: Geotechnical Engineering I, Hydraulics and Hydraulic Machines, Concrete Technology, Transportation Engineering I, Structural Analysis II, Environmental Engineering I.
+      Semester 5: Geotechnical Engineering II, Design of Concrete Structures, Transportation Engineering II, Environmental Engineering II, Water Resources Engineering, Construction Planning and Management.
+      Semester 6: Design of Steel Structures, Advanced Structural Analysis, Irrigation Engineering, Elective I, Elective II, Project I.
+      Semester 7: Elective III, Elective IV, Professional Ethics, Internship/Industrial Training, Project II.
+      Semester 8: Elective V, Elective VI, Comprehensive Viva, Major Project.
+
+  utter_btech_mechanical_engineering_courses:
+  - text: | 
+      Here is the semester-wise course distribution for B.Tech Mechanical Engineering:
+
+      Semester 1: Mathematics I, Physics I, Engineering Drawing, Basic Electrical Engineering, Environmental Science, Workshop Practice.  
+      Semester 2: Mathematics II, Chemistry, Programming for Problem Solving, Engineering Mechanics, Basic Electronics Engineering, Communication Skills.  
+      Semester 3: Mathematics III, Thermodynamics, Strength of Materials, Manufacturing Processes, Fluid Mechanics, Kinematics of Machines.  
+      Semester 4: Applied Thermodynamics, Dynamics of Machines, Heat and Mass Transfer, Materials Engineering, Machine Drawing, Instrumentation and Control.  
+      Semester 5: Design of Machine Elements, Manufacturing Technology, Mechanical Measurements, Fluid Machinery, Numerical Methods, Open Elective I.  
+      Semester 6: CAD/CAM, Refrigeration and Air Conditioning, Operations Research, Internal Combustion Engines, Elective I, Project I.  
+      Semester 7: Finite Element Methods, Elective II, Elective III, Industrial Engineering, Internship/Industrial Training, Project II.  
+      Semester 8: Elective IV, Elective V, Comprehensive Viva, Major Project.
+
+  utter_btech_mathematics_and_computing_courses:
+  - text: | 
+      Here is the semester-wise course distribution for B.Tech Mathematics and Computing:
+
+      Semester 1: Mathematics I, Physics I, Programming in C/C++, Digital Logic Design, Environmental Science, Workshop Practice.  
+      Semester 2: Mathematics II, Chemistry, Data Structures, Discrete Mathematics, Communication Skills, Engineering Mechanics.  
+      Semester 3: Mathematics III, Computer Organization and Architecture, Algorithms, Probability and Statistics, Object-Oriented Programming, Linear Algebra.  
+      Semester 4: Operating Systems, Graph Theory, Theory of Computation, Database Systems, Optimization Techniques, Elective I.  
+      Semester 5: Machine Learning, Numerical Methods, Compiler Design, Software Engineering, Elective II, Open Elective I.  
+      Semester 6: Artificial Intelligence, Cryptography, Computer Networks, Elective III, Elective IV, Project I.  
+      Semester 7: Deep Learning, Elective V, Elective VI, Industrial Training/Internship, Project II.  
+      Semester 8: Elective VII, Elective VIII, Comprehensive Viva, Major Project.
+
+
+  utter_btech_chemical_engineering_courses:
+  - text: | 
+      Here is the semester-wise course distribution for B.Tech Chemical Engineering:
+      Semester 1: Mathematics I, Physics I, Engineering Drawing, Basic Electrical Engineering, Environmental Science, Workshop Practice.
+      Semester 2: Mathematics II, Chemistry, Programming for Problem Solving, Basic Electronics Engineering, Engineering Mechanics, Communication Skills.
+      Semester 3: Material and Energy Balances, Fluid Mechanics, Chemical Process Calculations, Engineering Thermodynamics, Organic Chemistry, Heat Transfer Operations.
+      Semester 4: Chemical Reaction Engineering I, Mass Transfer Operations I, Chemical Engineering Thermodynamics, Mechanical Operations, Process Instrumentation and Control, Numerical Methods for Engineers.
+      Semester 5: Chemical Reaction Engineering II, Mass Transfer Operations II, Process Dynamics and Control, Chemical Process Technology, Industrial Pollution Control, Elective I.
+      Semester 6: Chemical Plant Design and Economics, Transport Phenomena, Energy Engineering, Elective II, Elective III, Project I.
+      Semester 7: Elective IV, Elective V, Professional Ethics, Internship/Industrial Training, Project II.
+      Semester 8: Elective VI, Elective VII, Comprehensive Viva, Major Project.
+
+  utter_btech_cse_engineering_courses:
+  - text: | 
+      Here is the semester-wise course distribution for B.Tech Computer Science Engineering:
+      Semester 1: Mathematics I, Physics I, Engineering Drawing, Basic Electrical Engineering, Environmental Science, Programming in C.
+      Semester 2: Mathematics II, Chemistry, Data Structures and Algorithms, Basic Electronics Engineering, Engineering Mechanics, Communication Skills.
+      Semester 3: Discrete Mathematics, Object-Oriented Programming, Digital Logic Design, Computer Organization and Architecture, Operating Systems, Database Management Systems.
+      Semester 4: Design and Analysis of Algorithms, Software Engineering, Computer Networks, Theory of Computation, Microprocessors and Embedded Systems, Artificial Intelligence.
+      Semester 5: Machine Learning, Cloud Computing, Big Data Analytics, Cyber Security, Elective I, Elective II.
+      Semester 6: Internet of Things, Blockchain Technology, Computer Vision, Elective III, Elective IV, Project I.
+      Semester 7: Elective V, Elective VI, Professional Ethics, Internship/Industrial Training, Project II.
+      Semester 8: Elective VII, Elective VIII, Comprehensive Viva, Major Project.
+
+  utter_ee_btech_courses_semester_wise:
+  - text:  | 
+      Here is the semester-wise course distribution for B.Tech Electrical Engineering: 
+      Semester 1: Chemistry, Fundamental and Applied Chemistry-II, Calculus, CAD, Computers and Programming, Basic Electrical and Electronics Engineering.
+      Semester 2: Physics, Mathematics-II, Engineering Mechanics, Basic Electronics Laboratory, Workshop Practice.
+      Semester 3: Electrical Circuit Analysis, Electromagnetic Theory, Digital Electronics, Signals and Systems, Mathematics-III.
+      Semester 4: Electrical Machines-I, Analog Electronics, Control Systems, Power Systems-I, Microprocessors and Microcontrollers.
+      Semester 5: Electrical Machines-II, Power Electronics, Communication Systems, Open Elective-I, Departmental Elective-I.
+      Semester 6: High Voltage Engineering, Renewable Energy Systems, Open Elective-II, Departmental Elective-II, Industrial Training.
+      Semester 7: Smart Grid Technologies, Power System Protection, Project Phase-I, Open Elective-III.
+      Semester 8: Electric Vehicle Technology, Flexible AC Transmission Systems, Project Phase-II.
+
+  utter_materials_btech_courses_semester_wise:
+  - text:  |  
+        Here is the complete semester-wise course list for Materials Engineering:
+        - Introduction to Materials Engineering
+        - Thermodynamics of Materials
+        - Phase Transformations
+        - Mechanical Behavior of Materials
+        - Materials Characterization Techniques
+        - Electronic and Magnetic Materials
+        - Polymers and Composites
+        - Ceramics and Refractory Materials
+        - Corrosion and Degradation of Materials
+        - Computational Materials Science
+        - Nanomaterials and Nanotechnology
+        - Advanced Materials Processing
+        - Biomaterials
+        - Surface Engineering
+        - Manufacturing Processes for Materials
+        - Materials Testing and Quality Control
+        - Industrial Metallurgy
+        - Welding and Joining of Materials
+        - Smart Materials and Structures
+        - Sustainable Materials and Recycling
+        - B.Tech Project in Materials Engineering
+
+
+  utter_btech_fullform:
+  - text: "BTech: Bachelor of Technology"
+
+  utter_cgpa_fullform:
+  - text: "CGPA: Cumulative Grade Point Average"
+
+  utter_ug_programmes:
+  - text:  |
+      The following undergraduate programmes are offered by IIT Jammu:
+      - BTech in Chemical Engineering
+      - BTech in Civil Engineering
+      - BTech in Computer Science and Engineering
+      - BTech in Electrical Engineering
+      - BTech in Materials Engineering
+      - BTech in Mathematics and Computing
+      - BTech in Mechanical Engineering
+
+  utter_pg_programmes:
+  - text: | 
+      The following postgraduate programmes are offered by IIT Jammu:
+      - MTech in CSE, EE, CE, ME, Chemical Engineering
+      - MSc & MS(R) in Chemistry and Physics
+      - PG Diploma in Cyber Security
+
+  utter_phd_programmes:
+  - text: |
+      PhD is offered by the following departments at IIT Jammu:
+      - Bio-Sciences and Bio-Engineering
+      - Chemical Engineering
+      - Chemistry
+      - Civil Engineering
+      - Computer Science and Engineering
+      - Electrical Engineering
+      - Humanities and Social Sciences
+      - Materials Engineering
+      - Mathematics
+      - Mechanical Engineering
+      - Physics
+
+  utter_academic_administration:
+  - text: "The Academic Affairs Section at IIT Jammu works under the Dean Academic Affairs, assisted by Associate Deans and the Assistant Registrar."
+
+  utter_btech_programmes_admission:
+  - text: "Admissions are conducted through JoSAA, administered by the Joint Admission Board (JAB) at the all-India level."
+
+  utter_semester_system:
+  - text: "IIT Jammu follows a semester system with two regular semesters (Autumn and Winter)."
+
+  utter_schedule_and_hostel:
+  - text: "Undergraduate students must vacate hostels during summer vacation unless they have permission to stay for projects, internships, or summer courses."
+
+  utter_timetable:
+  - text: "The timetable for each semester is uploaded on the IIT Jammu website one week before the semester starts. [View here](https://www.iitjammu.ac.in/time-table)"
+
+  utter_fees:
+  - text: "All students must pay fees to enroll in courses and access facilities. Fee details can be found at: [IIT Jammu Fee Details](https://iitjammu.ac.in/fee)."
+
+  utter_departmental_ug_committees:
+  - text: "Each department offering undergraduate degrees at IIT Jammu has a Departmental Undergraduate Committee (DUGC). The DUGC is responsible for administering the rules related to undergraduate courses and students. It also reports relevant matters to and from the Senate."
+
+  utter_senate_undergraduate_board:
+  - text: "The Senate Undergraduate Board (SUGB) is responsible for processing matters to be discussed in the Senate and overseeing the execution of Senate directives related to all undergraduate academic matters."
+
+  utter_faculty_advisor:
+  - text: "Each undergraduate program in a department has a Faculty Advisor (FA) who guides students on academic matters and assists them with course registration choices."
+
+  utter_new_undergraduate_courses:
+  - text: "When new undergraduate course proposals or curricular modifications are forwarded by the Departmental Undergraduate Committee (DUGC), the Senate Undergraduate Board (SUGB) examines them and submits recommendations to the Senate for approval."
+
+  utter_undergraduate_student_requests:
+  - text: "Undergraduate students can submit requests and appeals to the Senate Undergraduate Board (SUGB) through their Faculty Advisor (FA) and the Departmental Undergraduate Committee (DUGC)."
+
+  utter_undergraduate_issue_escalation:
+  - text: "If the Senate Undergraduate Board (SUGB) cannot resolve an academic issue or if there is no clarity on the matter, the case may be forwarded to the Senate for further review and resolution."
+
+  utter_department_pg_committee:
+  - text: "Each department offering postgraduate degrees (MSc, MS(R), M.Tech, PhD) has a Departmental Postgraduate Committee (DPGC). The DPGC is responsible for administering rules related to postgraduate courses and students, as well as reporting matters to and from the Senate."
+
+  utter_senate_postgraduate_board:
+  - text: "The Senate Postgraduate Board (SPGB) is responsible for processing matters to be discussed in the Senate and overseeing the execution of Senate directives related to all postgraduate academic matters."
+
+  utter_programme_coordinator:
+  - text: "Each postgraduate program in a department has a Programme Coordinator (PC), who is responsible for advising postgraduate students on matters related to their program."
+
+  utter_new_postgraduate_courses:
+  - text: "When new postgraduate course proposals or curricular modifications are forwarded by the Departmental Postgraduate Committee (DPGC), the Senate Postgraduate Board (SPGB) discusses them and submits recommendations to the Senate for approval."
+
+  utter_postgraduate_student_requests:
+  - text: "Postgraduate students can submit requests and appeals to the Senate Postgraduate Board (SPGB) through their Programme Coordinator (PC) and the Departmental Postgraduate Committee (DPGC). The SPGB will resolve the issues and communicate the decisions to the concerned student or person and the DPGC."
+
+  utter_escalation_of_postgraduate_student_requests:
+  - text: "If the Senate Postgraduate Board (SPGB) cannot resolve an academic issue or if there is no clarity on the matter, the case may be forwarded to the Senate for further review and resolution."
+
+  utter_postgraduate_semester_drop:
+  - text: "Postgraduate students can drop an entire semester, subject to prior approval from the Senate Postgraduate Board (SPGB). This provision may be allowed in cases of medical issues or if the student requires a break for starting a business or taking up a job."
+
+
+  utter_phd_students:
+  - text: "Every PhD student at the institute has a main supervisor from the institute. PhD students can approach the Departmental Postgraduate Committee (DPGC) for any issues and follow the same procedure as other postgraduate students, except that their Programme Coordinator (PC) is replaced by their Supervisor."
+
+  utter_curricular_credits:
+  - text: "The total credits required for the B.Tech program is between 138-144 curricular credits, along with 8 co-curricular credits. The credit distribution includes:\n\n- Institute Core (54-63 credits)\n- HSS Core (6 credits)\n- Science Core (18.5 credits)\n- Engineering Core (18-27 credits)\n- Design Core (1.5-2 credits each, totaling 7.5-10.5 credits)\n- Departmental Courses (51-57 credits), including Departmental Core and Elective courses\n- Interdisciplinary (18 credits minimum, with 6 from HSS)\n- Open Elective (18 credits)\n- Project (9 credits)\n- Minor/Specialization (if opted, 12 extra credits)\n\nCo-curricular credits (minimum of 8) are also compulsory, starting from 1 credit per semester from the 1st semester."
+
+  utter_credit_load_flexibility:
+  - text: "IIT Jammu offers flexibility in credit load based on the student's CGPA and backlog status. High-performing students may take additional credits, choose minors, specialize in their major, or take electives during the summer. Students with backlogs are given fewer credits to help them focus on clearing pending courses. Below is the guidance for credit load based on CGPA and backlogs:\n\n- CGPA ≥ 7, no backlog or cleared backlog: CR+6 credits\n- CGPA ≥ 7, cleared backlog: CR+3 credits\n- CGPA ≥ 7, with 2 or fewer backlogs: CR+3 credits\n- CGPA ≥ 7, with more than 2 backlogs: CR credits\n- CGPA between 6 and 7, no backlog or cleared backlog: CR credits\n- CGPA between 6 and 7, with 1 or more backlogs: CR credits\n- CGPA ≤ 6, with 1 to 3 backlogs: CR credits\n- CGPA ≤ 6, with more than 5 backlogs: 12 credits\n- Any CGPA, with 8 or more backlogs: 9 credits."
+
+  utter_course_evaluation:
+  - text: "In the UG 2022 curriculum, students are evaluated through a combination of class tests, assignments, practicals, mid-semester exams, end-semester exams, and term papers. The distribution of marks is as follows:\n\n- Class tests, assignments, and practicals: Up to 50% of the final grade.\n- End-semester exam: Typically contributes 40-60% to the final grade.\n- The exact distribution is decided by the Course Coordinator/Instructor and announced at the start of the course.\n\nFor a typical course, the following evaluation scheme is used:\n\n- Mid-semester exam: 10-20% weightage, duration of 1-2 hours.\n- End-semester exam: 40-60% weightage, duration of 2-3 hours.\n- Assignments: 0-25% weightage.\n- Quizzes: 30 minutes, 0-20% weightage.\n- Term papers/projects: 0-20% weightage.\n- Attendance: 0-5% weightage."
+
+  utter_course_registration:
+  - text: "Course registration at IIT Jammu is done through SARAL. Students must register for courses before the semester begins. The process includes:\n\n1. Logging into the SARAL portal.\n2. Selecting courses as per curriculum requirements.\n3. Getting Faculty Advisor approval.\n4. Paying fees (if applicable).\n5. Finalizing registration before the deadline.\n\nCourse addition/dropping, auditing, or withdrawing follows the institute’s academic calendar deadlines."
+
+  utter_course_withdrawal:
+  - text: "Students can withdraw from a course within the stipulated withdrawal period mentioned in the academic calendar. The withdrawal process includes:\n\n1. Submitting a course withdrawal request on the SARAL portal.\n2. Getting approval from the Faculty Advisor.\n3. Ensuring that withdrawal does not affect the minimum credit requirement.\n4. Completing the withdrawal before the deadline."
+
+  utter_backlog_courses:
+  - text: "If a student fails a course at IIT Jammu, they must retake it during a future semester or in the summer term (if available). The rules include:\n\n1. Backlog courses must be registered and cleared within the maximum duration of the program.\n2. A student with backlogs may have credit limits imposed based on CGPA.\n3. Certain core courses may have priority for retake.\n\nFor detailed backlog handling, refer to the academic regulations."
+
+  utter_summer_term:
+  - text: "IIT Jammu offers a summer term primarily for backlog courses and a limited set of electives. The summer term is shorter (typically 10 weeks) and has a higher lecture frequency. Students can register for a maximum of two courses. Some key points:\n\n1. Registration is done through SARAL.\n2. Fees may be applicable for summer term courses.\n3. Limited electives are available.\n4. It helps students clear backlogs without extending graduation duration."
+
+  utter_attendance_policy:
+  - text: "IIT Jammu follows a strict attendance policy. The minimum required attendance is **75%** for all courses. If attendance falls below **75%**, students may receive a grade penalty or be barred from final exams. Medical and emergency cases may be considered with prior approval."
+
+  utter_grading_system:
+  - text: |
+      The grading system at IIT Jammu follows a **10-point CGPA scale**.
+      **Letter grades and their equivalent grade points:**
+      - A+ = 10  
+      - A = 9  
+      - B+ = 8  
+      - B = 7  
+      - C+ = 6  
+      - C = 5  
+      - D = 4 (Minimum passing grade)  
+      - F = 0 (Fail)  
+      **CGPA is calculated as:**  
+      (CGPA) = (Sum of (Grade Points × Course Credits)) ÷ (Total Credits Taken)
+
+
+  utter_semester_freeze:
+  - text: "Students may apply for a **semester freeze** due to medical, personal, or financial reasons. The process includes:\n\n1. Submitting a written request to the **Dean of Academics**.\n2. Providing supporting documents (medical, financial, etc.).\n3. Getting approval from the Senate.\n\nA semester freeze is typically allowed **once** during the entire program."
+
+  utter_change_branch:
+  - text: "Students can apply for **branch change** after their first year based on CGPA and availability of seats. Criteria:\n\n- Minimum CGPA: **8.0** for general category, **7.5** for reserved categories.\n- Branch change is subject to seat availability.\n- Applications are reviewed after **2nd semester results**.\n- Once changed, the decision is final."
+
+  utter_internship_policy:
+  - text: "Internships are encouraged for practical experience. Guidelines:\n\n- **Internship Duration**: Typically **6-8 weeks** after the **6th semester**.\n- **Mandatory for B.Tech students** (Internship/Industrial Training counts towards credits).\n- Students must apply through **T&P Cell** or find their own internships.\n- Completion certificates are required for course credit recognition."
+
+
+  utter_ug_merit_cum_means_scholarship:
+  - text: "The Merit-cum-Means (MCM) scholarship at IIT Jammu is offered to a maximum of 25% of students in each branch. It is available only for General, OBC-NCL, and EWS category students. The benefits include a tuition fee refund and Rs. 1,000/- per month. Eligibility criteria include:\n\n1. For new admissions, JEE Advanced Rank is considered for merit.\n2. For existing students, SGPA & CGPA must be ≥6.0 with no more than 2 backlogs.\n3. The Gross Annual Family Income must be ≤ Rs. 4.50 Lakh.\n4. Students receiving MCM cannot apply for other scholarships from government, private, or institutional sources.\n5. Students availing the scholarship in a semester cannot withdraw/drop that semester without refunding the availed amount."
+
+  utter_ug_free_messing_scholarship:
+  - text: "The Free Messing scholarship at IIT Jammu is available only to SC, ST, and PWD category students whose Gross Annual Family Income is ≤ Rs. 4.50 Lakh. It includes free mess (basic menu) and a pocket allowance of Rs. 250 per month (only for months with active classes). Renewal requires an SGPA & CGPA ≥6.0 with no more than 2 backlogs. Students receiving this scholarship cannot apply for other scholarships from government, private, or institutional sources."
+
+  utter_ug_freeship_scholarship:
+  - text: "The Freeship scheme at IIT Jammu provides tuition fee remission to up to 10% of General, OBC-NCL, and EWS students (branch-wise) in a particular batch. More details regarding eligibility and application can be found on the institute website."
+
+  utter_ug_quest_fee_waiver:
+  - text: "The **Quality for Undergraduates in Engineering, Science, and Technology (QUEST)** is a tuition fee waiver scheme at IIT Jammu. It provides a full tuition fee waiver (currently Rs. 1 lakh per semester) for the entire undergraduate program based on **JEE Advanced Rank**.\n\nFor more details, visit the official IIT Jammu website: [IIT Jammu](https://www.iitjammu.ac.in/)."
+
+  utter_eligibility_mtech_fellowship:
+  - text: "The **fellowship details** for MTech students at IIT Jammu are as follows:\n\n1. **TA Category**: MTech students under the **Teaching Assistantship (TA)** category receive a **monthly fellowship of ₹12,400** for a **maximum duration of 24 months**.\n2. **RA Category**: MTech students under the **Research Assistantship (RA)** category receive **50% more fellowship** than TA students.\n3. **Sponsored Students**: MTech students enrolled under **sponsored categories are not eligible** for any fellowship from the institute.\n4. The **fellowship amount is subject to revision** as per Government of India regulations.\n\nFor the latest updates, visit the official IIT Jammu website: [IIT Jammu](https://www.iitjammu.ac.in/)."
+
+  utter_eligibility_phd_assistantship:
+  - text: "The PhD assistantship is available for full-time students who provide teaching/research assistance for a minimum of 6-8 hours per week. The assistantship lasts for up to five years or until thesis submission. Externally funded students may receive institute assistantship after exhausting their external funds."
+
+  utter_travel_allowance_contingency_grant:
+  - text: "IIT Jammu provides a Travel Allowance and Contingency Grant to support UG, PG, and PhD students in participating in technical, cultural, and sports activities at other institutes. This grant is approved by the Dean (Students Welfare)."
+
+  utter_euler_earn_while_you_learn:
+  - text: "The EULER (Earn While You Learn) program at IIT Jammu provides financial assistance to students without scholarships. It allows students to work on academic, administrative, and research tasks assigned by the institute."
+
+  utter_president_gold_medal_ug_students:
+  - text: "The President Gold Medal is awarded to the UG student with the highest CGPA among all graduating students. The student must have no backlogs and no disciplinary record."
+
+  utter_directors_gold_medal_ug_students:
+  - text: "The Director’s Gold Medal is given to the UG student with the best all-around performance, considering academic excellence, leadership, and extracurricular involvement."
+
+  utter_institute_silver_medal_ug_students:
+  - text: "The Institute Silver Medal is awarded to the BTech student with the highest CGPA and graduating with honors, excluding the recipient of the President Gold Medal."
+
+  utter_prof_ashok_ahuja_steel_structures_award:
+  - text: "The Prof. Ashok K Ahuja Steel Structures Award is given to the graduating BTech student with the highest grade in the Design of Steel Structures course."
+
+  utter_certificates_to_encourage_currently_enrolled_students:
+  - text: "The top three students (based on SGPA) from each batch in every department up to the third year receive Certificates of Encouragement, provided they have no backlogs or disciplinary issues."
+
+  utter_institute_gold_silver_medal_mtech:
+  - text: "The Institute Gold Medal is awarded to the MTech student with the highest CGPA among all graduating students. The Institute Silver Medal is awarded to the top CGPA holder in each major department, excluding the Gold Medal winner."
+
+  utter_outstanding_doctoral_student_award_phd:
+  - text: "The Outstanding Doctoral Student Award is given to one graduating PhD student annually, based on thesis quality, publications, and extracurricular achievements."
+
+  utter_library_iit_jammu_location:
+  - text: "The Central Library, Indian Institute of Technology Jammu is located at Jagti, NH-44, PO Nagrota, Jammu – 181 221, J&K, India."
+
+  utter_library_iit_jammu_contact:
+  - text: "You can contact the library at +91-191-257-0631 or email at library@iitjammu.ac.in."
+
+  utter_library_iit_jammu_opening_hours:
+  - text: "The library opens on weekdays from 09:00 AM - 10:00 PM, and on Saturdays from 09:00 AM - 05:30 PM."
+
+  utter_library_iit_jammu_circulation_timing:
+  - text: "The circulation timing is from 10:00 AM to 5:30 PM (Monday to Friday)."
+
+  utter_library_iit_jammu_faculty_borrowing_policy:
+  - text: "Faculty members can borrow 6 books for 90 days."
+
+  utter_library_iit_jammu_phd_borrowing_policy:
+  - text: "PhD students can borrow 5 books for 30 days."
+
+  utter_library_iit_jammu_mtech_borrowing_policy:
+  - text: "M. Tech students can borrow 3 General Books for 14 days and 1 Textbook for 14 days."
+
+  utter_library_iit_jammu_btech_borrowing_policy:
+  - text: "B. Tech students can borrow 2 General Books for 14 days and 2 Textbooks for 7 days."
+
+  utter_library_iit_jammu_project_assistant_borrowing_policy:
+  - text: "Project/Teaching Assistants and others can borrow 2 books for 14 days."
+
+  utter_library_iit_jammu_staff_borrowing_policy:
+  - text: "Staff members can borrow 2 books for 30 days."
+
+  utter_library_iit_jammu_hindi_books_policy:
+  - text: "All members can borrow 1 Hindi book for 30 days."
+
+  utter_library_iit_jammu_resources:
+  - text: "The library provides access to a variety of e-resources, including ACM Digital Library, Springer Journals, IEEE IEL Online, JSTOR, Science Direct, and many others. Additionally, it offers e-books from publishers such as McGraw Hill, Pearson, Wiley, and the Institute of Physics."
+
+  utter_library_iit_jammu_research_assistance_tools:
+  - text: "Research assistance tools available include iThenticate, Grammarly, QuillBot, and DrillBit."
+
+  utter_library_iit_jammu_seating_arrangements:
+  - text: "The seating arrangements in the LHC Library are ready, and you can start using them from Monday, 06-01-2025. The installation of other furniture and book racks is still in progress."
+
+  utter_library_iit_jammu_updates:
+  - text: "The final setup and book shifting from the Transit Campus Library to the Mansar Library (LHC) are in progress. Updates will be shared once completed. Stay tuned for more!"
+
+  utter_medical_center_intro:
+  - text: "Welcome to our Institute Health and Wellness Center, your go-to destination for all your medical needs on campus! Nestled in the serene southern corner of our campus lies your gateway to well-being, our Health and Wellness Center. Here amidst the tranquil surroundings, you'll discover a haven dedicated to nurturing your health and vitality since 2018."
+
+  utter_medical_center_contact:
+  - text: "You can contact the Medical Centre by email at medical.center@iitjammu.ac.in or call at 01912570636. We're always here to assist you!"
+
+  utter_medical_center_facilities:
+  - text: "The Medical Centre provides the following facilities:\n- Dental facilities\n- Ward facility\n- Minor OT/Dressing Room\n- Physiotherapy\n- Laboratory services\n- ECG Services\n- Pharmacy\n- Ambulance Services"
+
+  utter_doctor_karunika:
+  - text: "Dr. Karunika is a specialist with qualifications in MBBS, MD, PGDHHM, and a Diploma in Ultrasonography. She has over 10 years of experience. You can reach her at karunika.sharma@iitjammu.ac.in or call +91 95967 45001."
+
+  utter_doctor_vikram_singh:
+  - text: "Dr. Vikram Singh holds an MBBS degree and has 2.5 years of experience. You can contact him at medical.gdmo3@iitjammu.ac.in or call +91 99060 16244."
+
+  utter_doctor_priya:
+  - text: "Dr. Priya is an MBBS graduate with 6 months of experience in psychiatry. You can reach her at medical.gdmo@iitjammu.ac.in or call +91 70064 66731."
+
+  utter_doctor_bidisha:
+  - text: "Dr. Bidisha is an MBBS graduate with 1 year of experience. You can contact her at medical.gdmo5@iitjammu.ac.in or call +91 700601 75069."
+
+  utter_doctor_pranav_gupta:
+  - text: "Dr. Pranav Gupta has qualifications in B.D.S, M.D.S, and Fellowship of the Faculty of Applied Clinical Sciences (F.F.A.C). He has 7 years of experience. You can reach him at medical.gdmo4@iitjammu.ac.in."
+
+  utter_doctor_rohit_bhatiya:
+  - text: "Dr. Rohit Bhatiya is a Visiting Physiotherapist at the Medical Centre. For appointments, please contact the Medical Centre directly."
+
+  utter_medical_center_location:
+  - text: "The Medical Centre is located at: Medical Centre, Indian Institute of Technology Jammu, Jagti, NH-44, PO Nagrota, Jammu - 181 221, J&K, India."
+
+  utter_research_and_consultancy_section:
+  - text: "The Research and Consultancy Section at IIT Jammu is an integral part of the institute, supporting research and development activities to enhance intellectual property and knowledge base."
+
+  utter_research_and_consultancy_message:
+  - text: "Research and consultancy are integral parts of IIT Jammu's mission, and we are committed to providing a supportive and efficient environment for research and consultancy activities."
+
+  utter_research_and_consultancy_deputy_registrar:
+  - text: "The Deputy Registrar for Research and Consultancy is Cdr Avinash Barthwal (Retd)."
+
+  utter_research_and_consultancy_objectives:
+  - text: "The Research and Consultancy Section provides services such as research projects, industry collaborations, and consulting services while closely working with other departments and external partners."
+
+  utter_research_and_consultancy_main_functions:
+  - text: "The main functions include administrative and accounting support for various projects, grants, staff recruitment, and monitoring of funds and expenditures."
+
+  utter_research_and_consultancy_team_deputy_registrar:
+  - text: "Cdr Avinash Barthwal (Retd) is the Deputy Registrar of Research and Consultancy at IIT Jammu. You can contact him at hos.rnc@iitjammu.ac.in."
+
+  utter_security_staff:
+  - text: "The Security Officer is Lt Cdr Mannu Virk (Retd.), and can be contacted at security.officer@iitjammu.ac.in or 0191-257 0639."
+  - text: "For any inquiries regarding security, reach out to the Security Officer Lt Cdr Mannu Virk (Retd.) at security.officer@iitjammu.ac.in."
+
+  utter_security_contact:
+  - text: "You can contact the Security Control Room at 0638 or 0191-257 0638 for general queries."
+  - text: "In case of an emergency, reach out to the Emergency Response Team at 1111 (0191-257 1111)."
+
+  utter_security_officer_email:
+  - text: "You can contact the Security Officer at security.officer@iitjammu.ac.in."
+
+  utter_student_affairs_section:
+  - text: "Welcome to the Student Affairs Section of IIT Jammu. This office provides a supportive and enriching environment for students, focusing on both academic success and personal growth."
+
+  utter_student_affairs_message:
+  - text: "The Student Affairs Office serves as the central hub for all aspects of student life, aiming to foster a supportive environment for academic excellence and personal development."
+
+  utter_hostel_life:
+  - text: "Campus Hostel life at IIT Jammu is vital for learning independence and self-sufficiency. The institute offers three hostels at the main campus and two at the satellite campus, providing all basic amenities."
+
+  utter_mess_facilities:
+  - text: "The institute provides healthy and delicious meals through Mess Canary, Mess Breag, and Mess Egret, ensuring students' overall well-being."
+
+  utter_student_activities:
+  - text: "The Student Activities Section offers a variety of clubs, including technical, cultural, social, adventure clubs, and the EK Bharat Shrestha Bharat initiative, providing ample opportunities for student involvement."
+
+  utter_sports_facilities:
+  - text: "The Sports Section offers a range of facilities for sports like cricket, football, basketball, volleyball, athletics, and more, with qualified trainers to help students improve their skills."
+
+  utter_student_affairs_office:
+  - text: "The Student Affairs Office provides health insurance, accidental coverage, travel support, certificates, financial assistance, and manages student welfare funds, among other responsibilities."
+
+  utter_student_affairs_team_sartaj_ul_hasan:
+  - text: "Sartaj Ul Hasan is the Dean of Student Affairs at IIT Jammu. You can contact him at dean.sw@iitjammu.ac.in."
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

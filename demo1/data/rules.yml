@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: out_of_scope
+  - action: action_out_of_scope
+
+- rule: Out of scope to chatGPT
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: about_yourself
+  - action: utter_about_yourself
