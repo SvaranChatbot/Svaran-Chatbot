@@ -1,0 +1,237 @@
+/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  height: 100vh;
+  align-content: center;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding: 3rem;
+}
+
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+  }
+  
+  .contact-info,
+  .contact-form-container {
+    flex: 1;
+  }
+}
+
+.contact-info {
+  padding-right: 2rem;
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.contact-details {
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.contact-item svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  color: #8E54E9;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.5rem;
+  background: #f9fafc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8E54E9;
+  box-shadow: 0 0 0 3px rgba(142, 84, 233, 0.1);
+}
+
+.submit-button {
+  background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(142, 84, 233, 0.4);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success-message {
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.success-message svg {
+  width: 4rem;
+  height: 4rem;
+  color: #4caf50;
+  margin-bottom: 1rem;
+}
+
+.success-message h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.success-message p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.reset-button {
+  background: transparent;
+  color: #8E54E9;
+  border: 1px solid #8E54E9;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-button:hover {
+  background: rgba(142, 84, 233, 0.1);
+}
+
+.error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear {
+  animation: appear 0.8s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1rem;
+  }
+  
+  .contact-content {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  
+  .contact-info h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-info p {
+    font-size: 0.9rem;
+  }
+  
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+  
+  .contact-item svg {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.8rem;
+  }
+  
+  .form-group label {
+    font-size: 0.9rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .submit-button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}

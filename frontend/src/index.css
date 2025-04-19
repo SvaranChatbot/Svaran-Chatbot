@@ -1,0 +1,16 @@
+/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
+
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Imperial+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-image: url(./assets/noise-light.png);
+  background-repeat: repeat;
+  background-color: #3941fb;
+}
