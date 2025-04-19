@@ -1,0 +1,129 @@
+/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
+
+.header {
+    position: static;
+    width: 100%;
+    padding: 2rem 4rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #3941fb;
+    background-image: url(../assets/noise-light.png);
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.link1 {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.link1:hover {
+    background-color: #1e008089;
+    border-radius: 10%;
+}
+
+.headerbutton {
+    background-color: white;
+    border: none;
+    font-size: 1.15rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.headerbutton:hover {
+    box-shadow: 0 0 10px #1e008069;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.text {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .links {
+        gap: 1rem;
+    }
+
+    .link1 {
+        font-size: 1rem;
+    }
+
+    .headerbutton {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-right: 0.5rem;
+        padding: 4px;
+    }
+
+    .text {
+        font-size: 0.9rem;
+    }
+
+    .link1 {
+        font-size: 0.9rem;
+        padding: 0.3rem;
+    }
+
+    .headerbutton {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .header {
+        padding: 0.5rem 0.3rem;
+        gap: 0.5rem;
+    }
+
+    .links {
+        gap: 0.3rem;
+    }
+}

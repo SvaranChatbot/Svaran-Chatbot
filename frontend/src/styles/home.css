@@ -1,0 +1,410 @@
+/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+.vector {
+  height: 200px;
+}
+
+.line {
+  color: white;
+  font-family: "Boldonse", system-ui;
+  font-size: 3rem;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+span {
+  color: #1e008069;
+}
+
+.but {
+  background-color: white;
+  border: none;
+  width: 180px;
+  font-size: 1.15rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.but:hover {
+  box-shadow: 0 0 10px #1e0080;
+}
+
+.ss {
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1e0080;
+}
+
+.testimonials-section {
+  width: 100%;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  justify-content: center;
+}
+
+.testimonial {
+  min-width: 280px;
+  width: 280px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+  position: relative;
+}
+
+.cream-bg {
+  background-color: #1e0080;
+}
+
+.source {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  text-align: right;
+  color: silver;
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+.testimonial p {
+  margin: 0 0 10px 0;
+}
+
+.blue-bg {
+  background-color: #4865f6;
+}
+
+.pink-bg {
+  background-color: #ff8a8a;
+}
+
+.navy-bg {
+  background-color: #1c2350;
+}
+
+@media (max-width: 1024px) {
+  .tech {
+    width: 400px;
+  }
+  
+  .techicon {
+    width: 80px;
+  }
+  
+  /* Adjust positioning for this breakpoint */
+  .tech img:nth-child(1) { --x: 136px; --y: 0; }
+  .tech img:nth-child(2) { --x: 68px; --y: 118px; }
+  .tech img:nth-child(3) { --x: -68px; --y: 118px; }
+  .tech img:nth-child(4) { --x: -136px; --y: 0; }
+  .tech img:nth-child(5) { --x: -68px; --y: -118px; }
+  .tech img:nth-child(6) { --x: 68px; --y: -118px; }
+}
+
+@media (max-width: 768px) {
+  .vector {
+    height: 150px;
+  }
+  
+  .line {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .but {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .ss {
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .tech {
+    width: 300px;
+    height: 40vh;
+  }
+  
+  .techicon {
+    width: 60px;
+  }
+  
+  .testimonial {
+    min-width: 250px;
+    height: 140px;
+  }
+  
+  /* Adjust positioning for this breakpoint */
+  .tech img:nth-child(1) { --x: 102px; --y: 0; }
+  .tech img:nth-child(2) { --x: 51px; --y: 88px; }
+  .tech img:nth-child(3) { --x: -51px; --y: 88px; }
+  .tech img:nth-child(4) { --x: -102px; --y: 0; }
+  .tech img:nth-child(5) { --x: -51px; --y: -88px; }
+  .tech img:nth-child(6) { --x: 51px; --y: -88px; }
+}
+
+@media (max-width: 480px) {
+  .vector {
+    height: 120px;
+  }
+  
+  .line {
+    font-size: 1.5rem;
+  }
+  
+  .tech {
+    width: 240px;
+    height: 300px;
+  }
+  
+  .techicon {
+    width: 45px;
+  }
+  
+  .testimonials-container {
+    justify-content: flex-start;
+  }
+  
+  .faq-question h3 {
+    font-size: 1rem;
+  }
+  
+  /* Adjust positioning for smaller screens */
+  .tech img:nth-child(1) { --x: 80px; --y: 0; }
+  .tech img:nth-child(2) { --x: 40px; --y: 70px; }
+  .tech img:nth-child(3) { --x: -40px; --y: 70px; }
+  .tech img:nth-child(4) { --x: -80px; --y: 0; }
+  .tech img:nth-child(5) { --x: -40px; --y: -70px; }
+  .tech img:nth-child(6) { --x: 40px; --y: -70px; }
+}
+
+/* For very small screens */
+@media (max-width: 360px) {
+  .tech {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .techicon {
+    width: 40px;
+  }
+  
+  /* Adjust positioning for tiny screens */
+  .tech img:nth-child(1) { --x: 65px; --y: 0; }
+  .tech img:nth-child(2) { --x: 32px; --y: 56px; }
+  .tech img:nth-child(3) { --x: -32px; --y: 56px; }
+  .tech img:nth-child(4) { --x: -65px; --y: 0; }
+  .tech img:nth-child(5) { --x: -32px; --y: -56px; }
+  .tech img:nth-child(6) { --x: 32px; --y: -56px; }
+}
+
+.heading {
+  margin-bottom: 80px;
+}
+
+.tech {
+  position: relative;
+  height: 50vh;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.techicon {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.tech img:nth-child(1) {
+  --x: 170px;
+  --y: 0;
+  transform: translate(var(--x), var(--y));
+}
+
+.tech img:nth-child(2) {
+  --x: 85px;
+  --y: 147px;
+  transform: translate(var(--x), var(--y));
+}
+
+.tech img:nth-child(3) {
+  --x: -85px;
+  --y: 147px;
+  transform: translate(var(--x), var(--y));
+}
+
+.tech img:nth-child(4) {
+  --x: -170px;
+  --y: 0;
+  transform: translate(var(--x), var(--y));
+}
+
+.tech img:nth-child(5) {
+  --x: -85px;
+  --y: -147px;
+  transform: translate(var(--x), var(--y));
+}
+
+.tech img:nth-child(6) {
+  --x: 85px;
+  --y: -147px;
+  transform: translate(var(--x), var(--y));
+}
+
+.rasa {
+  background-color: wheat;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.bots {
+  padding: 1rem;
+  background-color: wheat;
+  border-radius: 20px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear {
+  animation: appear 0.8s ease-in-out;
+}
+
+.faq-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 20px auto 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background-color: rgba(30, 0, 128, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.faq-item.active {
+  background-color: rgba(30, 0, 128, 0.9);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+.faq-answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-10px);
+  transition: 
+    max-height 0.4s cubic-bezier(0, 1, 0, 1),
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    padding 0.2s ease;
+  will-change: max-height, opacity, transform;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+  padding: 0 24px 24px;
+  transition: 
+    max-height 0.6s cubic-bezier(0.5, 0, 1, 0), 
+    opacity 0.4s ease 0.1s, 
+    transform 0.4s ease 0.1s,
+    padding 0.2s ease;
+}
+
+.faq-answer p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.faq-icon {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    width: 90%;
+  }
+  
+  .faq-question h3 {
+    font-size: 1.1rem;
+  }
+}

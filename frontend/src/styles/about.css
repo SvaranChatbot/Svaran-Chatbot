@@ -1,0 +1,328 @@
+/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
+
+:root {
+  --primary-color: wheat;
+  --secondary-color: #f8d8a8;
+  --text-color: #f5f5f5;
+  --bg-color: #1a1a2e;
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --transition: all 0.3s ease;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  padding-top: 8rem;
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.about-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-tagline {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.about-section {
+  margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease-in-out;
+  animation-fill-mode: both;
+}
+
+.about-section:nth-child(2) { animation-delay: 0.2s; }
+.about-section:nth-child(3) { animation-delay: 0.4s; }
+.about-section:nth-child(4) { animation-delay: 0.6s; }
+.about-section:nth-child(5) { animation-delay: 0.8s; }
+
+.about-section h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.about-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.about-section p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.feature-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.feature-list li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  position: absolute;
+  left: -1rem;
+  top: 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 220, 170, 0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  opacity: 0.9;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.feature-card p {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.tech-stack {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin: 2rem 0;
+}
+
+.tech-item {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: var(--transition);
+}
+
+.tech-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tech-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+.tech-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background-color: var(--primary-color);
+}
+
+.tech-evolution {
+  margin-top: 2rem;
+  font-style: italic;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact {
+  text-align: center;
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-top: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.contact h2::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border-bottom: 1px dashed rgba(245, 222, 179, 0.4);
+  padding-bottom: 2px;
+}
+
+.contact a:hover {
+  color: var(--secondary-color);
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem;
+    padding-top: 6rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .about-tagline {
+    font-size: 1.1rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .features-grid, .tech-stack {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feature-card, .tech-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 1rem;
+    padding-top: 4rem;
+  }
+  
+  .about-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .about-tagline {
+    font-size: 1rem;
+  }
+  
+  .about-section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .about-section p {
+    font-size: 1rem;
+  }
+  
+  .feature-card, .tech-item {
+    padding: 1rem;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appear {
+  animation: appear 0.8s ease-in-out;
+}

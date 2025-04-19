@@ -1,0 +1,103 @@
+// Kunal Sharma 2023UMA0221 Mathematics and Computing
+
+import "../styles/Home.css"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
+
+function Home() {
+  const navigate = useNavigate()
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  const toggleFAQ = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index)
+  }
+
+  const faqs = [
+    {
+      question: "What is Svaran?",
+      answer: "Svaran is a smart chatbot specifically designed for IIT Jammu students to get information quickly and efficiently about campus resources, courses, and student services."
+    },
+    {
+      question: "How can Svaran help me?",
+      answer: "Svaran can answer questions about course schedules, campus facilities, academic policies, upcoming events, and provide guidance on common student inquiries without having to search through multiple websites."
+    },
+    {
+      question: "Is Svaran available 24/7?",
+      answer: "Yes! Svaran is available round-the-clock to assist you with information whenever you need it."
+    },
+    {
+      question: "What technologies power Svaran?",
+      answer: "Svaran is built using RASA for natural language processing, Python for backend logic, and React with TypeScript for the frontend interface you're using right now."
+    }
+  ]
+
+  return (
+    <div className="home appear">
+      <img src="src\assets\vector.png" alt="vector"  className="vector"/>
+      <h1 className="line"><span>"</span> Svaran is the smart chatbot</h1>
+      <h1 className="line">every IIT Jammu student deserves. <span>"</span></h1>
+      <button className="but" onClick={() => navigate("/chat")}>Try Svaran</button>
+      <video 
+        src="src\assets\Screen Recording 2025-04-19 104253.mp4" 
+        className="ss" 
+        autoPlay 
+        loop 
+        muted 
+      ></video>
+
+      <div className="testimonials-section">
+        <div className="wave-separator"></div>
+        <div className="testimonials-container">
+          <div className="testimonial cream-bg">
+            <p>"Swaran is the best chatbot to come out in the last decade."</p>
+            <p className="source">Piyush</p>
+          </div>
+          <div className="testimonial cream-bg">
+            <p>"Swaran is the new assistant I've most enjoyed using."</p>
+            <p className="source">Krishiv</p>
+          </div>
+          <div className="testimonial cream-bg">
+            <p>"Swaran is a great name."</p>
+            <p className="source">Nishchay</p>
+          </div>
+          <div className="testimonial cream-bg">
+            <p>"Rethinking the fundamentals of how students get information."</p>
+            <p className="source">Singla</p>
+          </div>
+        </div>
+      </div>
+      <h1 className="line heading"><span>"</span> Technologies Used <span>"</span></h1>
+      <div className="tech">
+        <img src="src\assets\rasa.webp" alt="RASA" className="techicon rasa" />
+        <img src="src\assets\python.png" alt="python" className="techicon" />
+        <img src="src\assets\react.png" alt="React" className="techicon" />
+        <img src="src\assets\typescript.png" alt="Typescript" className="techicon" />
+        <img src="src\assets\js.png" alt="Javascript" className="techicon" />
+        <img src="src\assets\css-3.png" alt="CSS" className="techicon" />
+        <img src="src\assets\icon.png" alt="bot" className="techicon bots" />
+      </div>
+
+      {/* FAQ Section */}
+      <h1 className="line heading"><span>"</span> Frequently Asked Questions <span>"</span></h1>
+      <div className="faq-container">
+        {faqs.map((faq, index) => (
+          <div 
+            key={index} 
+            className={`faq-item ${activeIndex === index ? 'active' : ''}`}
+            onClick={() => toggleFAQ(index)}
+          >
+            <div className="faq-question">
+              <h3>{faq.question}</h3>
+              <div className="faq-icon">{activeIndex === index ? '−' : '+'}</div>
+            </div>
+            <div className="faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export default Home

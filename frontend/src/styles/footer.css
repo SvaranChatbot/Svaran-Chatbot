@@ -1,0 +1,88 @@
+/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1.5rem 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-brand h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-brand p {
+  color: #aaa;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #aaa;
+}
+
+.footer-copyright {
+  width: 100%;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footer-links {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 0.5rem;
+  }
+  
+  .footer-brand h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-brand p {
+    font-size: 0.8rem;
+  }
+  
+  .footer-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}
