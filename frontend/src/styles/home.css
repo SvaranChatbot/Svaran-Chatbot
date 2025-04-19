@@ -108,6 +108,10 @@ span {
   background-color: #1c2350;
 }
 
+.top-padding {
+  padding-top: 8rem;
+}
+
 @media (max-width: 1024px) {
   .tech {
     width: 400px;

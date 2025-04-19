@@ -33,17 +33,22 @@ function Home() {
 
   return (
     <div className="home appear">
-      <img src="src\assets\vector.png" alt="vector"  className="vector"/>
+      <img src="src\assets\vector.png" alt="vector" className="vector" />
       <h1 className="line"><span>"</span> Svaran is the smart chatbot</h1>
       <h1 className="line">every IIT Jammu student deserves. <span>"</span></h1>
-      <button className="but" onClick={() => navigate("/chat")}>Try Svaran</button>
-      <video 
-        src="src\assets\Screen Recording 2025-04-19 104253.mp4" 
-        className="ss" 
-        autoPlay 
-        loop 
-        muted 
+      <button className="but" onClick={() => navigate("/login")}>Try Svaran</button>
+      <video
+        src="src\assets\Screen Recording 2025-04-19 104253.mp4"
+        className="ss"
+        autoPlay
+        loop
+        muted
       ></video>
+
+      {/* Privacy Statement */}
+      <h1 className="line heading top-padding"><span>"</span> Your privacy is our priority.</h1>
+      <h1 className="line heading">We do not store or retain any user prompts</h1>
+      <h1 className="line heading">or personal information. <span>"</span></h1>
 
       <div className="testimonials-section">
         <div className="wave-separator"></div>
@@ -81,8 +86,8 @@ function Home() {
       <h1 className="line heading"><span>"</span> Frequently Asked Questions <span>"</span></h1>
       <div className="faq-container">
         {faqs.map((faq, index) => (
-          <div 
-            key={index} 
+          <div
+            key={index}
             className={`faq-item ${activeIndex === index ? 'active' : ''}`}
             onClick={() => toggleFAQ(index)}
           >
@@ -96,6 +101,8 @@ function Home() {
           </div>
         ))}
       </div>
+
+
     </div>
   )
 }
