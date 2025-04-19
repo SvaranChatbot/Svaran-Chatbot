@@ -32,7 +32,7 @@ const TeamPage: React.FC = () => {
       role: "Web Developer",
       image: kunalImg,
       contributions: [
-        "Front Development",
+        "Website Development",
         "React Component Development",
         "UI/UX Design",
       ],
