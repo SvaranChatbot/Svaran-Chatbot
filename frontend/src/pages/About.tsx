@@ -26,7 +26,7 @@ function About() {
             As IIT Jammu continues to grow, we recognized the need for an accessible information system that could:
           </p>
           <ul className="feature-list">
-            <li>Help new students navigate campus resources and facilities</li>
+            <li>Help new students faculty and labs locations</li>
             <li>Provide quick answers to frequently asked questions</li>
             <li>Assist visitors and prospective students with relevant information</li>
             <li>Reduce the information overload typically experienced by newcomers</li>
