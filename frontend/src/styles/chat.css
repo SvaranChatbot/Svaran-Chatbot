@@ -3,14 +3,14 @@
 .chat-container {
   display: flex;
   flex-direction: column;
-  height: 80vh; /* Use a fixed percentage instead of viewport calculation */
+  height: 80vh;
   max-width: 1000px;
   margin: 20px auto;
   border-radius: 12px;
   background-color: white;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  position: relative; /* Add this */
+  position: relative;
 }
 
 .chat-header {
@@ -174,7 +174,7 @@
   width: 100%;
   min-height: 100vh;
   padding-top: 10px;
-  overflow-x: hidden; /* Add this to prevent horizontal shifts */
+  overflow-x: hidden;
 }
 
 .back-button {

@@ -1,3 +1,6 @@
+// Initially created by Kunal Sharma 2023UMA0221 Mathematics and Computing
+// Updated by Ronak Bagri 2023UMA0233 Mathematics and Computing for backend intergation and language support
+
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/chat.css';
