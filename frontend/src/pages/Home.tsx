@@ -3,6 +3,15 @@
 import "../styles/home.css"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
+import rasa from "../assets/rasa.webp"
+import js from "../assets/js.png"
+import python from "../assets/python.png"
+import react from "../assets/react.png"
+import typescript from "../assets/typescript.png"
+import css from "../assets/css-3.png"
+import icon from "../assets/icon.png"
+import video from "../assets/Screen Recording 2025-04-19 235054.mp4"
+import vector from "../assets/vector.png"
 
 function Home() {
   const navigate = useNavigate()
@@ -33,12 +42,12 @@ function Home() {
 
   return (
     <div className="home appear">
-      <img src="src\assets\vector.png" alt="vector" className="vector" />
+      <img src={vector} alt="vector" className="vector" />
       <h1 className="line"><span>"</span> Svaran is the smart chatbot</h1>
       <h1 className="line">every IIT Jammu student deserves. <span>"</span></h1>
       <button className="but" onClick={() => navigate("/login")}>Try Svaran</button>
       <video
-        src="\src\assets\Screen Recording 2025-04-19 235054.mp4"
+        src={video}
         className="ss"
         autoPlay
         loop
@@ -75,13 +84,13 @@ function Home() {
       </div>
       <h1 className="line heading"><span>"</span> Technologies Used <span>"</span></h1>
       <div className="tech">
-        <img src="src\assets\rasa.webp" alt="RASA" className="techicon rasa" />
-        <img src="src\assets\python.png" alt="python" className="techicon" />
-        <img src="src\assets\react.png" alt="React" className="techicon" />
-        <img src="src\assets\typescript.png" alt="Typescript" className="techicon" />
-        <img src="src\assets\js.png" alt="Javascript" className="techicon" />
-        <img src="src\assets\css-3.png" alt="CSS" className="techicon" />
-        <img src="src\assets\icon.png" alt="bot" className="techicon bots" />
+        <img src={rasa} alt="RASA" className="techicon rasa" />
+        <img src={python} alt="python" className="techicon" />
+        <img src={react} alt="React" className="techicon" />
+        <img src={typescript} alt="Typescript" className="techicon" />
+        <img src={js} alt="Javascript" className="techicon" />
+        <img src={css} alt="CSS" className="techicon" />
+        <img src={icon} alt="bot" className="techicon bots" />
       </div>
 
       {/* FAQ Section */}

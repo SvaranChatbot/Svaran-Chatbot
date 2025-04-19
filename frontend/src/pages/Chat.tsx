@@ -4,6 +4,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/chat.css';
+import icon from "../assets/icon.png"
 
 const LANGUAGES = [
   { code: 'en', name: 'English' },
@@ -121,7 +122,7 @@ function Chat() {
       <div className="chat-container" style={{ height: `${windowHeight - 180}px` }}>
         <div className="chat-header">
           <div className="chat-title">
-            <img src="/src/assets/icon.png" alt="Svaran" className="chat-avatar" />
+            <img src={icon} alt="Svaran" className="chat-avatar" />
             <div>
               <h1>Svaran</h1>
               <p>IIT Jammu Chatbot</p>

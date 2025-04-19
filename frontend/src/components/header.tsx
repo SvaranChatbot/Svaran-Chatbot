@@ -2,6 +2,7 @@
 
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/header.css';
+import icon from "../assets/icon.png"
 
 const Header = () => {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ const Header = () => {
   return (
     <header className="header">
       <Link to={"/"} className='logo'>
-        <img src="src\assets\icon.png" alt="icon" className='icon' />
+        <img src={icon} alt="icon" className='icon' />
         <h1 className="text">Svaran</h1>
         </Link>
       <div className="links">
