@@ -46,9 +46,11 @@ function Home() {
       ></video>
 
       {/* Privacy Statement */}
+      <div className="privacy">
       <h1 className="line heading top-padding"><span>"</span> Your privacy is our priority.</h1>
       <h1 className="line heading">We do not store or retain any user prompts</h1>
       <h1 className="line heading">or personal information. <span>"</span></h1>
+      </div>
 
       <div className="testimonials-section">
         <div className="wave-separator"></div>
