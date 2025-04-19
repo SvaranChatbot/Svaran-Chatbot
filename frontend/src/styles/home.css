@@ -358,16 +358,20 @@ span {
 }
 
 .faq-answer {
-  max-height: 0;
-  opacity: 0;
+  max-height: 500px; /* Start with max-height when closing instead of 0 */
+  opacity: 1;
   overflow: hidden;
-  transform: translateY(-10px);
+  transform: translateY(0);
   transition: 
-    max-height 0.4s cubic-bezier(0, 1, 0, 1),
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    padding 0.2s ease;
-  will-change: max-height, opacity, transform;
+    max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s ease,
+    transform 0.4s ease,
+    padding 0.4s ease;
+  max-height: 0; /* Override with 0 to ensure closed state */
+  opacity: 0;
+  transform: translateY(-10px);
+  padding: 0;
+  will-change: max-height, opacity, transform, padding;
 }
 
 .faq-item.active .faq-answer {
@@ -376,10 +380,10 @@ span {
   transform: translateY(0);
   padding: 0 24px 24px;
   transition: 
-    max-height 0.6s cubic-bezier(0.5, 0, 1, 0), 
-    opacity 0.4s ease 0.1s, 
-    transform 0.4s ease 0.1s,
-    padding 0.2s ease;
+    max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
+    opacity 0.4s ease 0.05s, 
+    transform 0.4s ease 0.05s,
+    padding 0.4s ease 0.05s;
 }
 
 .faq-answer p {
