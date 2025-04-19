@@ -82,6 +82,7 @@
 
 
 import json
+import os
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -152,8 +153,11 @@ class ActionFetchData(Action):
         return "action_fetch_data"  # Single action for all cases
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Load JSON data
-        with open("C:\\Users\\user\\Desktop\\rasa\\demo1\\actions\\courses.json", "r") as file:
+        # Load JSON data - using relative path
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        json_path = os.path.join(current_dir, "courses.json")
+        
+        with open(json_path, "r") as file:
             data = json.load(file)
 
         # Identify the user's intent
