@@ -44,9 +44,10 @@ function About() {
             </div>
             <div className="feature-card">
               <div className="feature-icon">🏢</div>
-              <h3>Campus Navigation</h3>
-              <p>Help finding buildings, facilities, and important locations</p>
+              <h3>Faculty Offices and Labs</h3>
+              <p>Help in getting office rooms and lab locations</p>
             </div>
+
             <div className="feature-card">
               <div className="feature-icon">📅</div>
               <h3>Events & Deadlines</h3>
@@ -63,10 +64,10 @@ function About() {
         <section className="about-section">
           <h2>Our Technology</h2>
           <p>
-            Svaran is built using cutting-edge natural language processing and machine learning technologies, 
+            Svaran is built using cutting-edge natural language processing and machine learning technologies,
             with RASA as our core conversational AI framework. Our tech stack includes:
           </p>
-          
+
           <div className="tech-stack">
             <div className="tech-item">
               <h3>Backend</h3>
@@ -77,7 +78,7 @@ function About() {
                 <li><strong>TensorFlow:</strong> Powers our machine learning models</li>
               </ul>
             </div>
-            
+
             <div className="tech-item">
               <h3>Frontend</h3>
               <ul className="feature-list">
@@ -88,7 +89,7 @@ function About() {
               </ul>
             </div>
           </div>
-          
+
           <p className="tech-evolution">
             Our chatbot continuously learns and improves through regular training with new data,
             enabling it to provide increasingly relevant and helpful information to our users.
