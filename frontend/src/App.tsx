@@ -7,9 +7,7 @@ import Contact from './pages/Contact';
 import Header from './components/header';
 import Team from './pages/Team.tsx';
 import Chat from './pages/Chat.tsx';
-import Login from './pages/Login.tsx';
 import Footer from './components/footer.tsx';
-import Signup from './pages/Signup.tsx';
 
 const AppContent = () => {
   return (
@@ -21,8 +19,6 @@ const AppContent = () => {
         <Route path="/team" element={<Team />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/chat" element={<Chat />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup/>} />
       </Routes>
       <Footer/>
     </>

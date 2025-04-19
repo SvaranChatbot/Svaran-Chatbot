@@ -86,3 +86,7 @@
     font-size: 0.8rem;
   }
 }
+.elfsight-widget-container {
+  margin-top: 1rem;
+  margin-left: auto; /* Pushes it to the right */
+}
