@@ -38,7 +38,7 @@ function Home() {
       <h1 className="line">every IIT Jammu student deserves. <span>"</span></h1>
       <button className="but" onClick={() => navigate("/login")}>Try Svaran</button>
       <video
-        src="src\assets\Screen Recording 2025-04-19 104253.mp4"
+        src="\src\assets\Screen Recording 2025-04-19 235054.mp4"
         className="ss"
         autoPlay
         loop
