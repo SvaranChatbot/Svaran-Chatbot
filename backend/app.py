@@ -1,75 +1,55 @@
-from flask import Flask, request, jsonify, render_template
+# update By Ronak Bagri (2023uma0233)
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 from deep_translator import GoogleTranslator
 
-app = Flask(__name__, static_folder='static', template_folder='templates')
-CORS(app)
+app = Flask(__name__)
+CORS(app)  # Enable Cross-Origin Resource Sharing (CORS) to allow your React app to communicate with Flask
 
-user_language = None
+user_language = "en"  # default language
 RASA_URL = "http://localhost:5005/webhooks/rest/webhook"  # Rasa API Endpoint
-
-@app.route('/', methods=['GET'])
-def index_get():
-    return render_template('base.html')
 
 @app.route('/set_language', methods=['POST'])
 def set_language():
     global user_language
-    language = request.get_json().get("language", "").strip()
-
-    if not language:
-        return jsonify({"error": "The 'language' field is required!"}), 400
-
-    user_language = language
+    data = request.get_json()
+    user_language = data.get("language", "en").strip()
+    print(f"Language set to: {user_language}")
     return jsonify({"message": f"Language set to {user_language}."})
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    if not user_language:
-        return jsonify({"error": "Language is not set! Please set the language first."}), 400
+    global user_language
+    data = request.get_json()
+    user_text = data.get("message", "").strip()
 
-    text = request.get_json().get("message", "").strip()
-
-    if not text:
-        return jsonify({"error": "The 'message' field is required!"}), 400
+    if not user_text:
+        return jsonify({"error": "Message is required!"}), 400
 
     try:
-        # Translate input to English
-        translated_input = GoogleTranslator(source=user_language, target='en').translate(text)
-        print(f"Translated input to English: {translated_input}")
+        # Translate user input to English
+        input_en = GoogleTranslator(source=user_language, target='en').translate(user_text)
+        print(f"User: {user_text} -> English: {input_en}")
 
-        # Send translated text to Rasa
-        response = requests.post(RASA_URL, json={"sender": "user", "message": translated_input})
+        # Send to Rasa
+        rasa_response = requests.post(RASA_URL, json={"sender": "user", "message": input_en})
+        if rasa_response.status_code != 200:
+            return jsonify({"error": "Error communicating with Rasa"}), 500
 
-        if response.status_code != 200:
-            return jsonify({"error": "Failed to get a response from Rasa!"}), 500
+        rasa_data = rasa_response.json()
+        if not rasa_data:
+            return jsonify({"answer": "Sorry, I didn't get that."})
 
-        rasa_response = response.json()
-        if not rasa_response:
-            return jsonify({"error": "Empty response from Rasa!"}), 500
+        bot_reply_en = rasa_data[0].get("text", "")
+        bot_reply_translated = GoogleTranslator(source='en', target=user_language).translate(bot_reply_en)
+        print(f"Bot: {bot_reply_en} -> Translated: {bot_reply_translated}")
 
-        # Extract response message from Rasa
-        response_text = rasa_response[0].get("text", "")
-
-        if not response_text:
-            return jsonify({"error": "Rasa did not return any response!"}), 500
-
-        print(f"Chatbot response in English: {response_text}")
-
-        # Translate response back to the original language
-        translated_response = GoogleTranslator(source='en', target=user_language).translate(response_text)
-        print(f"Translated response: {translated_response}")
-
-        if not translated_response:
-            return jsonify({"error": "Translation of chatbot response failed!"}), 500
-
-        # Return final response
-        return jsonify({"answer": translated_response})
+        return jsonify({"answer": bot_reply_translated})
 
     except Exception as e:
-        print(f"Error occurred: {str(e)}")
+        print("Error:", e)
         return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
-    app.run(debug=True,port=8080)
+    app.run(debug=True, port=8080)

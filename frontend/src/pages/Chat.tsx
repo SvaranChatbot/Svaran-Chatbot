@@ -1,19 +1,23 @@
-// Kunal Sharma 2023UMA0221 Mathematics and Computing
-
-import React from 'react'
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import axios from 'axios';
 import '../styles/chat.css';
 
 const LANGUAGES = [
   { code: 'en', name: 'English' },
   { code: 'hi', name: 'Hindi' },
-  { code: 'fr', name: 'French' },
-  { code: 'es', name: 'Spanish' },
-  // Add more languages as needed
-];
+  { code: 'ta', name: 'Tamil' },
+  { code: 'te', name: 'Telugu' },
+  { code: 'kn', name: 'Kannada' },
+  { code: 'ml', name: 'Malayalam' },
+  { code: 'bn', name: 'Bengali' },
+  { code: 'mr', name: 'Marathi' },
+  { code: 'gu', name: 'Gujarati' },
+  { code: 'pa', name: 'Punjabi' },
+  { code: 'ur', name: 'Urdu' }
+]; //update By Ronak Bagri (2023uma0233)
 
 function Chat() {
-  const [messages, setMessages] = useState<Array<{text: string, sender: 'user' | 'bot', timestamp: Date}>>([
+  const [messages, setMessages] = useState<Array<{ text: string; sender: 'user' | 'bot'; timestamp: Date }>>([
     {
       text: "Hi there! I'm Svaran, the IIT Jammu chatbot. How can I help you today?",
       sender: 'bot',
@@ -22,30 +26,33 @@ function Chat() {
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [language, setLanguage] = useState('en');
-  const [shouldScroll, setShouldScroll] = useState(false);
+  const [language, setLanguage] = useState('en');//update By Ronak Bagri (2023uma0233)
+  const [shouldScroll, setShouldScroll] = useState(false);//update By Ronak Bagri (2023uma0233)
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
   useEffect(() => {
-    if (messagesEndRef.current && shouldScroll) {
-      // Use this technique to scroll without moving the whole page
-      messagesEndRef.current.scrollIntoView({ block: 'end', inline: 'nearest' });
+    if (shouldScroll && messagesEndRef.current) {
+      messagesEndRef.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
       setShouldScroll(false);
     }
   }, [messages, shouldScroll]);
 
   useEffect(() => {
     const handleResize = () => {
-      // Only update if there's a significant change
       if (Math.abs(window.innerHeight - windowHeight) > 100) {
         setWindowHeight(window.innerHeight);
       }
     };
-    
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [windowHeight]);
+
+  useEffect(() => {
+    axios.post('http://localhost:8080/set_language', { language })
+      .then(res => console.log(res.data))
+      .catch(err => console.error('Error setting language:', err));
+  }, [language]);//update By Ronak Bagri (2023uma0233)
 
   const handleSend = async () => {
     if (inputMessage.trim() === '') return;
@@ -59,53 +66,29 @@ function Chat() {
     setMessages(prev => [...prev, userMessage]);
     setInputMessage('');
     setIsTyping(true);
-    setShouldScroll(true); // Set flag to scroll after user sends message
+    setShouldScroll(true);
 
-    setTimeout(async () => {
-      let botText = getBotResponse(inputMessage);
-      if (language !== 'en') {
-        botText = await translateText(botText, language);
-      }
-      const botResponse = {
-        text: botText,
+    try {
+      const res = await axios.post('http://localhost:8080/predict', { message: inputMessage });
+      const botMessage = {
+        text: res.data.answer,
         sender: 'bot' as const,
         timestamp: new Date()
       };
-
-      setMessages(prev => [...prev, botResponse]);
+      setMessages(prev => [...prev, botMessage]);
+      setShouldScroll(true);
+    } catch (err) {
+      setMessages(prev => [...prev, {
+        text: "Sorry, something went wrong!",
+        sender: 'bot',
+        timestamp: new Date()
+      }]);
+      setShouldScroll(true);
+      console.error(err);
+    } finally {
       setIsTyping(false);
-    }, 1000 + Math.random() * 1000);
-  };
-
-  // Dummy Google Translate API call (replace with real API in production)
-  const translateText = async (text: string, targetLang: string) => {
-    if (targetLang === 'en') return text;
-    // Replace this with actual Google Translate API call
-    // For demo, just append language code
-    return `[${targetLang}] ${text}`;
-  };
-
-  const getBotResponse = (input: string) => {
-    const lowerInput = input.toLowerCase();
-
-    if (lowerInput.includes('hello') || lowerInput.includes('hi')) {
-      return "Hello! How can I help you with information about IIT Jammu?";
-    } else if (lowerInput.includes('course') || lowerInput.includes('program')) {
-      return "IIT Jammu offers various undergraduate, postgraduate, and doctoral programs in engineering, sciences, and humanities.";
-    } else if (lowerInput.includes('admission') || lowerInput.includes('apply')) {
-      return "Admissions to undergraduate programs at IIT Jammu are through JEE Advanced. For postgraduate programs, GATE scores are considered.";
-    } else if (lowerInput.includes('location') || lowerInput.includes('address')) {
-      return "IIT Jammu is located in Jammu, Jammu and Kashmir, India.";
-    } else if (lowerInput.includes('hostel') || lowerInput.includes('accommodation')) {
-      return "IIT Jammu provides hostel facilities for students with modern amenities.";
-    } else if (lowerInput.includes('faculty') || lowerInput.includes('professor')) {
-      return "IIT Jammu has highly qualified faculty members from prestigious institutions across India and abroad.";
-    } else if (lowerInput.includes('thank')) {
-      return "You're welcome! Feel free to ask if you have more questions.";
-    } else {
-      return "I'm still learning about IIT Jammu. Could you please ask something else or rephrase your question?";
     }
-  };
+  };//update By Ronak Bagri (2023uma0233)
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -127,14 +110,12 @@ function Chat() {
       }
     ]);
     setInputMessage('');
+    setShouldScroll(true);
   };
 
   return (
     <div className="chat-page appear">
-      <div 
-        className="chat-container" 
-        style={{ height: `${windowHeight - 180}px` }} // Fixed height based on initial load
-      >
+      <div className="chat-container" style={{ height: `${windowHeight - 180}px` }}>
         <div className="chat-header">
           <div className="chat-title">
             <img src="/src/assets/icon.png" alt="Svaran" className="chat-avatar" />
@@ -159,7 +140,7 @@ function Chat() {
           </div>
         </div>
 
-        <div className="messages-container" style={{ position: 'relative' }}>
+        <div className="messages-container">
           {messages.map((message, index) => (
             <div key={index} className={`message ${message.sender}`}>
               <div className="message-content">
@@ -173,33 +154,28 @@ function Chat() {
             <div className="message bot">
               <div className="message-content">
                 <div className="typing-indicator">
-                  <span></span>
-                  <span></span>
-                  <span></span>
+                  <span></span><span></span><span></span>
                 </div>
               </div>
             </div>
           )}
 
-          <div ref={messagesEndRef} style={{ position: 'absolute', bottom: 0, height: 0 }} />
+          {/* Scroll to latest message update By Ronak Bagri (2023uma0233) */}
+          <div ref={messagesEndRef} />
         </div>
 
         <div className="input-area">
-          <textarea 
+          <textarea
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Type a message..."
             rows={1}
           />
-          <button 
-            onClick={handleSend}
-            disabled={inputMessage.trim() === ''}
-            className="send-button"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <button onClick={handleSend} disabled={inputMessage.trim() === ''} className="send-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </button>
         </div>
