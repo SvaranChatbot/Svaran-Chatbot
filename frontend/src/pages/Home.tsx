@@ -1,6 +1,6 @@
 // Kunal Sharma 2023UMA0221 Mathematics and Computing
 
-import "../styles/Home.css"
+import "../styles/home.css"
 import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
