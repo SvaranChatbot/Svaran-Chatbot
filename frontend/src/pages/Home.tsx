@@ -49,20 +49,20 @@ function Home() {
         <div className="wave-separator"></div>
         <div className="testimonials-container">
           <div className="testimonial cream-bg">
-            <p>"Swaran is the best chatbot to come out in the last decade."</p>
-            <p className="source">Piyush</p>
+            <p>"Svaran is the best Mini Project Ever Seen."</p>
+            <p className="source">Piyush (2023uma0227)</p>
           </div>
           <div className="testimonial cream-bg">
-            <p>"Swaran is the new assistant I've most enjoyed using."</p>
-            <p className="source">Krishiv</p>
+            <p>"Svaran is the new assistant I've most enjoyed using."</p>
+            <p className="source">Anshika Singh (2024uch0005)</p>
           </div>
           <div className="testimonial cream-bg">
-            <p>"Swaran is a great name."</p>
-            <p className="source">Nishchay</p>
+            <p>"Svaran is a great name."</p>
+            <p className="source">Pratayaksh (2021ucs0108)</p>
           </div>
           <div className="testimonial cream-bg">
             <p>"Rethinking the fundamentals of how students get information."</p>
-            <p className="source">Singla</p>
+            <p className="source">Aayush (2021ucs0082)</p>
           </div>
         </div>
       </div>

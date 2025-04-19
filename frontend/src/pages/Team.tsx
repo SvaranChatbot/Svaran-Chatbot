@@ -5,8 +5,8 @@ import '../styles/team.css';
 import professorImg from '../assets/1521176440492.jpg';
 import kunalImg from '../assets/Screenshot 2025-03-29 165750.png';
 import ronakImg from '../assets/WhatsApp Image 2025-04-18 at 22.31.33_baee17c2.jpg';
-import sumitImg from '../assets/Screenshot 2025-03-29 165750.png';
-import krupaImg from '../assets/Screenshot 2025-03-29 165750.png';
+import sumitImg from '../assets/1707585755298.jpg';
+import krupaImg from '../assets/WhatsApp Image 2025-04-19 at 14.55.16_b2df5500.jpg';
 
 interface TeamMember {
   name: string;
@@ -29,7 +29,7 @@ const TeamPage: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       name: "Kunal Sharma",
-      role: "Front End Developer",
+      role: "Web Developer",
       image: kunalImg,
       contributions: [
         "Front Development",
@@ -42,7 +42,7 @@ const TeamPage: React.FC = () => {
     },
     {
       name: "Ronak Bagri",
-      role: "Full Stack Developer",
+      role: "Mobile Developer",
       image: ronakImg,
       contributions: [
         "Mobile App Development",
