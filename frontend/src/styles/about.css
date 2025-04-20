@@ -3,7 +3,7 @@
 :root {
   --primary-color: wheat;
   --secondary-color: #f8d8a8;
-  --text-color: #ffffff; /* Updated to white for normal text */
+  --text-color: #ffffff;
   --bg-color: #1a1a2e;
   --card-bg: rgba(255, 255, 255, 0.07);
   --transition: all 0.3s ease;
@@ -14,7 +14,7 @@
   margin: 0 auto;
   padding: 2rem;
   padding-top: 8rem;
-  color: var(--text-color); /* White text for normal content */
+  color: var(--text-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
@@ -40,7 +40,7 @@
 
 .about-header h1 {
   font-size: 3rem;
-  color: var(--text-color); /* White text for headers */
+  color: var(--text-color);
   margin-bottom: 0.8rem;
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -48,7 +48,7 @@
 
 .about-tagline {
   font-size: 1.3rem;
-  color: #f0f0f0; /* Light color for tagline */
+  color: #f0f0f0;
   font-style: italic;
   opacity: 0.9;
 }
@@ -66,7 +66,7 @@
 
 .about-section h2 {
   font-size: 2rem;
-  color: var(--text-color); /* White text for section headers */
+  color: var(--text-color);
   margin-bottom: 1.2rem;
   padding-bottom: 0.8rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.08);
@@ -80,14 +80,14 @@
   left: 0;
   width: 60px;
   height: 2px;
-  background-color: var(--bg-color); /* Underline color matching background */
+  background-color: var(--bg-color);
 }
 
 .about-section p {
   line-height: 1.8;
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: var(--text-color); /* White text for paragraphs */
+  color: var(--text-color);
 }
 
 .feature-list {
@@ -100,12 +100,12 @@
   line-height: 1.6;
   position: relative;
   padding-left: 0.5rem;
-  color: var(--text-color); /* White text for list items */
+  color: var(--text-color);
 }
 
 .feature-list li::before {
   content: "•";
-  color: var(--text-color); /* White text for bullet points */
+  color: var(--text-color);
   font-size: 1.2rem;
   position: absolute;
   left: -1rem;
@@ -114,14 +114,14 @@
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Changed to 2x2 grid */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .feature-card {
   background-color: white;
-  color: #222222; /* Dark text for white background */
+  color: #222222;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -148,26 +148,26 @@
 .feature-card h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #222222; /* Dark text for headings in cards */
+  color: #222222;
   text-align: center;
 }
 
 .feature-card p {
   text-align: center;
   font-size: 1rem;
-  color: #333333; /* Dark text for paragraphs in cards */
+  color: #333333;
 }
 
 .tech-stack {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Changed to 2x2 grid */
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
   margin: 2rem 0;
 }
 
 .tech-item {
   background-color: white;
-  color: #222222; /* Dark text for white background */
+  color: #222222;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
@@ -181,7 +181,7 @@
 }
 
 .tech-item h3 {
-  color: #222222; /* Dark text for headings in tech cards */
+  color: #222222;
   margin-bottom: 1.2rem;
   font-size: 1.5rem;
   text-align: center;
@@ -197,13 +197,13 @@
   transform: translateX(-50%);
   width: 40px;
   height: 2px;
-  background-color: var(--bg-color); /* Underline color matching background */
+  background-color: var(--bg-color);
 }
 
 .tech-evolution {
   margin-top: 2rem;
   font-style: italic;
-  color: var(--text-color); /* White text for tech evolution */
+  color: var(--text-color);
   text-align: center;
   padding: 1rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -217,7 +217,7 @@
   border-radius: 12px;
   margin-top: 3rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  color: var(--text-color); /* White text for contact section */
+  color: var(--text-color);
 }
 
 .contact h2 {
@@ -230,7 +230,7 @@
 }
 
 .contact a {
-  color: #0056b3; /* Blue for links */
+  color: #0056b3;
   text-decoration: none;
   font-weight: 600;
   transition: var(--transition);
@@ -239,7 +239,7 @@
 }
 
 .contact a:hover {
-  color: #003d80; /* Darker blue for hover state */
+  color: #003d80; 
   border-bottom: 1px solid var(--secondary-color);
 }
 
@@ -262,7 +262,7 @@
   }
 
   .features-grid, .tech-stack {
-    grid-template-columns: 1fr; /* Single column on smaller screens */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
@@ -332,14 +332,12 @@
   animation: appear 0.8s ease-in-out;
 }
 
-/* Ensure any lists in cards are also black */
 .feature-card li, .tech-item li {
   color: #333333;
 }
 
-/* Backend-specific card styles if they exist */
 .backend-card, .frontend-card {
-  color: #222222; /* Dark text for all cards */
+  color: #222222;
 }
 
 .backend-card h3, .frontend-card h3 {
