@@ -45,7 +45,7 @@ function Home() {
       <img src={vector} alt="vector" className="vector" />
       <h1 className="line"><span>"</span> Svaran is the smart chatbot</h1>
       <h1 className="line">every IIT Jammu student deserves. <span>"</span></h1>
-      <button className="but" onClick={() => navigate("/login")}>Try Svaran</button>
+      <button className="but" onClick={() => navigate("/chat")}>Try Svaran</button>
       <video
         src={video}
         className="ss"
