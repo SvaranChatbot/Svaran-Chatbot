@@ -55,7 +55,8 @@ def predict():
         print("Error:", e)
         return jsonify({"error": str(e)}), 500
 
-def run_rasa_shell(): #updated by kunal sharma 2023uma0221
+def run_rasa_shell():
+    # Get the absolute directory where this script is located
     current_dir = os.path.dirname(os.path.abspath(__file__))
     print(f"Running Rasa shell in directory: {current_dir}")
     subprocess.call(["rasa", "shell"], cwd=current_dir, shell=True)
