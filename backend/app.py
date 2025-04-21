@@ -53,7 +53,9 @@ def predict():
     except Exception as e:
         print("Error:", e)
         return jsonify({"error": str(e)}), 500
+    
 
+# add scipt to run rasa and flask app with one command
 def run_rasa_shell():
     # Get the absolute directory where this script is located
     current_dir = os.path.dirname(os.path.abspath(__file__))
