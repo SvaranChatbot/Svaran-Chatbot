@@ -1,91 +1,982 @@
 #### This file contains tests to evaluate that your bot behaves as expected.
 #### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
 
+version: '3.1'
 stories:
-- story: happy path 1
+- story: 'Test: happy path'
   steps:
-  - user: |
-      hello there!
+  - user: hey
     intent: greet
   - action: utter_greet
-  - user: |
-      amazing
+  - user: perfect
     intent: mood_great
   - action: utter_happy
-
-- story: happy path 2
+- story: 'Test: sad path 1'
   steps:
-  - user: |
-      hello there!
+  - user: hey
     intent: greet
   - action: utter_greet
-  - user: |
-      amazing
-    intent: mood_great
-  - action: utter_happy
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: sad path 1
-  steps:
-  - user: |
-      hello
-    intent: greet
-  - action: utter_greet
-  - user: |
-      not good
+  - user: my day was horrible
     intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
-  - user: |
-      yes
+  - user: 'yes'
     intent: affirm
   - action: utter_happy
-
-- story: sad path 2
+- story: 'Test: sad path 2'
   steps:
-  - user: |
-      hello
+  - user: hey
     intent: greet
   - action: utter_greet
-  - user: |
-      not good
+  - user: my day was horrible
     intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
-  - user: |
-      not really
+  - user: 'no'
     intent: deny
   - action: utter_goodbye
-
-- story: sad path 3
+- story: 'Test: describe iit jammu'
   steps:
-  - user: |
-      hi
-    intent: greet
-  - action: utter_greet
-  - user: |
-      very terrible
-    intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - user: |
-      no
-    intent: deny
-  - action: utter_goodbye
-
-- story: say goodbye
+  - user: what is iit jammu?
+    intent: about iit jammu
+  - action: action_out_of_scope
+- story: 'Test: director'
   steps:
-  - user: |
-      bye-bye!
-    intent: goodbye
-  - action: utter_goodbye
-
-- story: bot challenge
+  - user: who is director
+    intent: director_iitjammu
+  - action: action_fetch_data
+- story: 'Test: out of scope'
   steps:
-  - user: |
-      are you a bot?
-    intent: bot_challenge
-  - action: utter_iamabot
+  - user: This is a joke
+    intent: out_of_scope
+  - action: action_out_of_scope
+- story: 'Test: about yourself'
+  steps:
+  - user: tell me about yourself
+    intent: about_yourself
+  - action: utter_about_yourself
+- story: 'Test: User asks about finance and accounts'
+  steps:
+  - user: Finance and accounts
+    intent: finance_and_accounts
+  - action: utter_finance_and_accounts
+- story: 'Test: User asks about assistant registrar message'
+  steps:
+  - user: What do you know about message from assistant registrar?
+    intent: assistant_registrar_message
+  - action: utter_assistant_registrar_message
+- story: 'Test: User asks about finance and accounts team'
+  steps:
+  - user: I want to learn about list of finance team members
+    intent: finance_and_accounts_team
+  - action: utter_finance_and_accounts_team
+- story: 'Test: User asks about Vinit Jakhetiya''s office'
+  steps:
+  - user: Where is the office of Vinit Jakhetiya?
+    intent: faculty_vinit_jakhetiya
+  - action: utter_faculty_vinit_jakhetiya
+- story: 'Test: User asks about Durai Prabhakaran R T''s office'
+  steps:
+  - user: Where is the office of Durai Prabhakaran R T?
+    intent: faculty_durai_prabhakaran_r_t
+  - action: utter_faculty_durai_prabhakaran_r_t
+- story: 'Test: User asks about Shantanu Vijay Madge''s office'
+  steps:
+  - user: Where is the office of Shantanu Vijay Madge?
+    intent: faculty_shantanu_vijay_madge
+  - action: utter_faculty_shantanu_vijay_madge
+- story: 'Test: User asks about Pervaiz Fathima Khatoon M''s office'
+  steps:
+  - user: Where is the office of Pervaiz Fathima Khatoon M?
+    intent: faculty_pervaiz_fathima_khatoon_m
+  - action: utter_faculty_pervaiz_fathima_khatoon_m
+- story: 'Test: User asks about Navneet Kumar''s office'
+  steps:
+  - user: Where is the office of Navneet Kumar?
+    intent: faculty_navneet_kumar
+  - action: utter_faculty_navneet_kumar
+- story: 'Test: User asks about Ankit Tyagi''s office'
+  steps:
+  - user: Where is the office of Ankit Tyagi?
+    intent: faculty_ankit_tyagi
+  - action: utter_faculty_ankit_tyagi
+- story: 'Test: User asks about Shiva S''s office'
+  steps:
+  - user: Where is the office of Shiva S?
+    intent: faculty_shiva_s
+  - action: utter_faculty_shiva_s
+- story: 'Test: User asks about Shanmugadas K P''s office'
+  steps:
+  - user: Where is the office of Shanmugadas K P?
+    intent: faculty_shanmugadas_k_p
+  - action: utter_faculty_shanmugadas_k_p
+- story: 'Test: User asks about Divyesh Varade''s office'
+  steps:
+  - user: Where is the office of Divyesh Varade?
+    intent: faculty_divyesh_varade
+  - action: utter_faculty_divyesh_varade
+- story: 'Test: User asks about Roshan Udaram Pal''s office'
+  steps:
+  - user: Where is the office of Roshan Udaram Pal?
+    intent: faculty_roshan_udaram_pal
+  - action: utter_faculty_roshan_udaram_pal
+- story: 'Test: User asks about Samaresh Bera''s office'
+  steps:
+  - user: Where is the office of Samaresh Bera?
+    intent: faculty_samaresh_bera
+  - action: utter_faculty_samaresh_bera
+- story: 'Test: User asks about Dharitri Rath''s office'
+  steps:
+  - user: Where is the office of Dharitri Rath?
+    intent: faculty_dharitri_rath
+  - action: utter_faculty_dharitri_rath
+- story: 'Test: User asks about Rajkumar V''s office'
+  steps:
+  - user: Where is the office of Rajkumar V?
+    intent: faculty_rajkumar_v
+  - action: utter_faculty_rajkumar_v
+- story: 'Test: User asks about Rani Rohini''s office'
+  steps:
+  - user: Where is the office of Rani Rohini?
+    intent: faculty_rani_rohini
+  - action: utter_faculty_rani_rohini
+- story: 'Test: User asks about Ankit Dubey''s office'
+  steps:
+  - user: Where is the office of Ankit Dubey?
+    intent: faculty_ankit_dubey
+  - action: utter_faculty_ankit_dubey
+- story: 'Test: User asks about Padmini Singh''s office'
+  steps:
+  - user: Where is the office of Padmini Singh?
+    intent: faculty_padmini_singh
+  - action: utter_faculty_padmini_singh
+- story: 'Test: User asks about Gaurav Ashok Bhaduri''s office'
+  steps:
+  - user: Where is the office of Gaurav Ashok Bhaduri?
+    intent: faculty_gaurav_ashok_bhaduri
+  - action: utter_faculty_gaurav_ashok_bhaduri
+- story: 'Test: User asks about Sudhakar Modem''s office'
+  steps:
+  - user: Where is the office of Sudhakar Modem?
+    intent: faculty_sudhakar_modem
+  - action: utter_faculty_sudhakar_modem
+- story: 'Test: User asks about Pothukuchi Harish''s office'
+  steps:
+  - user: Where is the office of Pothukuchi Harish?
+    intent: faculty_pothukuchi_harish
+  - action: utter_faculty_pothukuchi_harish
+- story: 'Test: User asks about Satya Sekhar Bhogilla''s office'
+  steps:
+  - user: Where is the office of Satya Sekhar Bhogilla?
+    intent: faculty_satya_sekhar_bhogilla
+  - action: utter_faculty_satya_sekhar_bhogilla
+- story: 'Test: User asks about Satyadev Ahlawat''s office'
+  steps:
+  - user: Where is the office of Satyadev Ahlawat?
+    intent: faculty_satyadev_ahlawat
+  - action: utter_faculty_satyadev_ahlawat
+- story: 'Test: User asks about Subhasis Bhattacharjee''s office'
+  steps:
+  - user: Where is the office of Subhasis Bhattacharjee?
+    intent: faculty_subhasis_bhattacharjee
+  - action: utter_faculty_subhasis_bhattacharjee
+- story: 'Test: User asks about Arvind Kumar Rajput''s office'
+  steps:
+  - user: Where is the office of Arvind Kumar Rajput?
+    intent: faculty_arvind_kumar_rajput
+  - action: utter_faculty_arvind_kumar_rajput
+- story: 'Test: User asks about Ankit Kathuria''s office'
+  steps:
+  - user: Where is the office of Ankit Kathuria?
+    intent: faculty_ankit_kathuria
+  - action: utter_faculty_ankit_kathuria
+- story: 'Test: User asks about Rohit Buddhiram Chourasiya''s office'
+  steps:
+  - user: Where is the office of Rohit Buddhiram Chourasiya?
+    intent: faculty_rohit_buddhiram_chourasiya
+  - action: utter_faculty_rohit_buddhiram_chourasiya
+- story: 'Test: User asks about Ravi Kumar Arun''s office'
+  steps:
+  - user: Where is the office of Ravi Kumar Arun?
+    intent: faculty_ravi_kumar_arun
+  - action: utter_faculty_ravi_kumar_arun
+- story: 'Test: User asks about Chandan Yadav''s office'
+  steps:
+  - user: Where is the office of Chandan Yadav?
+    intent: faculty_chandan_yadav
+  - action: utter_faculty_chandan_yadav
+- story: 'Test: User asks about Sumit Kumar Pandey''s office'
+  steps:
+  - user: Where is the office of Sumit Kumar Pandey?
+    intent: faculty_sumit_kumar_pandey
+  - action: utter_faculty_sumit_kumar_pandey
+- story: 'Test: User asks about Sarah Mariam Abraham''s office'
+  steps:
+  - user: Where is the office of Sarah Mariam Abraham?
+    intent: faculty_sarah_mariam_abraham
+  - action: utter_faculty_sarah_mariam_abraham
+- story: 'Test: User asks about Bidhan Biswas''s office'
+  steps:
+  - user: Where is the office of Bidhan Biswas?
+    intent: faculty_bidhan_biswas
+  - action: utter_faculty_bidhan_biswas
+- story: 'Test: User asks about Yogesh Madhukarrao Nimdeo''s office'
+  steps:
+  - user: Where is the office of Yogesh Madhukarrao Nimdeo?
+    intent: faculty_yogesh_madhukarrao_nimdeo
+  - action: utter_faculty_yogesh_madhukarrao_nimdeo
+- story: 'Test: User asks about Sunil Kumar Kashyap''s office'
+  steps:
+  - user: Where is the office of Sunil Kumar Kashyap?
+    intent: faculty_sunil_kumar_kashyap
+  - action: utter_faculty_sunil_kumar_kashyap
+- story: 'Test: User asks about Kankat Ghosh''s office'
+  steps:
+  - user: Where is the office of Kankat Ghosh?
+    intent: faculty_kankat_ghosh
+  - action: utter_faculty_kankat_ghosh
+- story: 'Test: User asks about Vijay Kumar Pal''s office'
+  steps:
+  - user: Where is the office of Vijay Kumar Pal?
+    intent: faculty_vijay_kumar_pal
+  - action: utter_faculty_vijay_kumar_pal
+- story: 'Test: User asks about Sidharath Maheshwari''s office'
+  steps:
+  - user: Where is the office of Sidharath Maheshwari?
+    intent: faculty_sidharath_maheshwari
+  - action: utter_faculty_sidharath_maheshwari
+- story: 'Test: User asks about Shaifu Gupta''s office'
+  steps:
+  - user: Where is the office of Shaifu Gupta?
+    intent: faculty_shaifu_gupta
+  - action: utter_faculty_shaifu_gupta
+- story: 'Test: User asks about Surendra Beniwal''s office'
+  steps:
+  - user: Where is the office of Surendra Beniwal?
+    intent: faculty_surendra_beniwal
+  - action: utter_faculty_surendra_beniwal
+- story: 'Test: User asks about Gaurav Varshney''s office'
+  steps:
+  - user: Where is the office of Gaurav Varshney?
+    intent: faculty_gaurav_varshney
+  - action: utter_faculty_gaurav_varshney
+- story: 'Test: User asks about Sarada Prasad Gochhayat''s office'
+  steps:
+  - user: Where is the office of Sarada Prasad Gochhayat?
+    intent: faculty_sarada_prasad_gochhayat
+  - action: utter_faculty_sarada_prasad_gochhayat
+- story: 'Test: User asks about Shiv Kumar''s office'
+  steps:
+  - user: Where is the office of Shiv Kumar?
+    intent: faculty_shiv_kumar
+  - action: utter_faculty_shiv_kumar
+- story: 'Test: User asks about Devi Lal''s office'
+  steps:
+  - user: Where is the office of Devi Lal?
+    intent: faculty_devi_lal
+  - action: utter_faculty_devi_lal
+- story: 'Test: User asks about Harkeerat Kaur''s office'
+  steps:
+  - user: Where is the office of Harkeerat Kaur?
+    intent: faculty_harkeerat_kaur
+  - action: utter_faculty_harkeerat_kaur
+- story: 'Test: User asks about Deepak Yadav''s office'
+  steps:
+  - user: Where is the office of Deepak Yadav?
+    intent: faculty_deepak_yadav
+  - action: utter_faculty_deepak_yadav
+- story: 'Test: User asks about Samrat Rao''s office'
+  steps:
+  - user: Where is the office of Samrat Rao?
+    intent: faculty_samrat_rao
+  - action: utter_faculty_samrat_rao
+- story: 'Test: User asks about Saurabh Biswas''s office'
+  steps:
+  - user: Where is the office of Saurabh Biswas?
+    intent: faculty_saurabh_biswas
+  - action: utter_faculty_saurabh_biswas
+- story: 'Test: User asks about Pragat Srivastava''s office'
+  steps:
+  - user: Where is the office of Pragat Srivastava?
+    intent: faculty_pragat_srivastava
+  - action: utter_faculty_pragat_srivastava
+- story: 'Test: User asks about Nitesh Kumar''s office'
+  steps:
+  - user: Where is the office of Nitesh Kumar?
+    intent: faculty_nitesh_kumar
+  - action: utter_faculty_nitesh_kumar
+- story: 'Test: User asks about Archana Rajput''s office'
+  steps:
+  - user: Where is the office of Archana Rajput?
+    intent: faculty_archana_rajput
+  - action: utter_faculty_archana_rajput
+- story: 'Test: User asks about Anand Kumar Subramaniyan''s office'
+  steps:
+  - user: Where is the office of Anand Kumar Subramaniyan?
+    intent: faculty_anand_kumar_subramaniyan
+  - action: utter_faculty_anand_kumar_subramaniyan
+- story: 'Test: User asks about Ajay Singh''s office'
+  steps:
+  - user: Where is the office of Ajay Singh?
+    intent: faculty_ajay_singh
+  - action: utter_faculty_ajay_singh
+- story: 'Test: User asks about Badri Narayan Subudhi''s office'
+  steps:
+  - user: Where is the office of Badri Narayan Subudhi?
+    intent: faculty_badri_narayan_subudhi
+  - action: utter_faculty_badri_narayan_subudhi
+- story: 'Test: User asks about Alok Kumar Saxena''s office'
+  steps:
+  - user: Where is the office of Alok Kumar Saxena?
+    intent: faculty_alok_kumar_saxena
+  - action: utter_faculty_alok_kumar_saxena
+- story: 'Test: User asks about Rajendra Kumar Varma''s office'
+  steps:
+  - user: Where is the office of Rajendra Kumar Varma?
+    intent: faculty_rajendra_kumar_varma
+  - action: utter_faculty_rajendra_kumar_varma
+- story: 'Test: User asks about Sayantam Mukherjee''s office'
+  steps:
+  - user: Where is the office of Sayantam Mukherjee?
+    intent: faculty_sayantam_mukherjee
+  - action: utter_faculty_sayantam_mukherjee
+- story: 'Test: User asks about Aditya Shankar Sandupatla''s office'
+  steps:
+  - user: Where is the office of Aditya Shankar Sandupatla?
+    intent: faculty_aditya_shankar_sandupatla
+  - action: utter_faculty_aditya_shankar_sandupatla
+- story: 'Test: User asks about Anup Shukla''s office'
+  steps:
+  - user: Where is the office of Anup Shukla?
+    intent: faculty_anup_shukla
+  - action: utter_faculty_anup_shukla
+- story: 'Test: User asks about Srishilan C''s office'
+  steps:
+  - user: Where is the office of Srishilan C?
+    intent: faculty_srishilan_c
+  - action: utter_faculty_srishilan_c
+- story: 'Test: User asks about Ashutosh Yadav''s office'
+  steps:
+  - user: Where is the office of Ashutosh Yadav?
+    intent: faculty_ashutosh_yadav
+  - action: utter_faculty_ashutosh_yadav
+- story: 'Test: User asks about Suman Sarkar''s office'
+  steps:
+  - user: Where is the office of Suman Sarkar?
+    intent: faculty_suman_sarkar
+  - action: utter_faculty_suman_sarkar
+- story: 'Test: User asks about Mir Faizan Ul Haq''s office'
+  steps:
+  - user: Where is the office of Mir Faizan Ul Haq?
+    intent: faculty_mir_faizan_ul_haq
+  - action: utter_faculty_mir_faizan_ul_haq
+- story: 'Test: User asks about Yamuna Prasad''s office'
+  steps:
+  - user: Where is the office of Yamuna Prasad?
+    intent: faculty_yamuna_prasad
+  - action: utter_faculty_yamuna_prasad
+- story: 'Test: User asks about Akash Awale''s office'
+  steps:
+  - user: Where is the office of Akash Awale?
+    intent: faculty_akash_awale
+  - action: utter_faculty_akash_awale
+- story: 'Test: User asks about Karan Nathwani''s office'
+  steps:
+  - user: Where is the office of Karan Nathwani?
+    intent: faculty_karan_nathwani
+  - action: utter_faculty_karan_nathwani
+- story: 'Test: User asks about Rimen Jamata''s office'
+  steps:
+  - user: Where is the office of Rimen Jamata?
+    intent: faculty_rimen_jamata
+  - action: utter_faculty_rimen_jamata
+- story: 'Test: User asks about Ankur Bansal''s office'
+  steps:
+  - user: Where is the office of Ankur Bansal?
+    intent: faculty_ankur_bansal
+  - action: utter_faculty_ankur_bansal
+- story: 'Test: User asks about Dr. Arun Kumar Verma''s office'
+  steps:
+  - user: Where is the office of Dr. Arun Kumar Verma?
+    intent: faculty_dr_arun_kumar_verma
+  - action: utter_faculty_dr_arun_kumar_verma
+- story: 'Test: User asks about Kanchrala Harikrishna''s office'
+  steps:
+  - user: Where is the office of Kanchrala Harikrishna?
+    intent: faculty_kanchrala_harikrishna
+  - action: utter_faculty_kanchrala_harikrishna
+- story: 'Test: User asks about Nitin Joshi''s office'
+  steps:
+  - user: Where is the office of Nitin Joshi?
+    intent: faculty_nitin_joshi
+  - action: utter_faculty_nitin_joshi
+- story: 'Test: User asks about Srinivasan N''s office'
+  steps:
+  - user: Where is the office of Srinivasan N?
+    intent: faculty_srinivasan_n
+  - action: utter_faculty_srinivasan_n
+- story: 'Test: User asks about Sameer Kumar Sarma Pachalla''s office'
+  steps:
+  - user: Where is the office of Sameer Kumar Sarma Pachalla?
+    intent: faculty_sameer_kumar_sarma_pachalla
+  - action: utter_faculty_sameer_kumar_sarma_pachalla
+- story: 'Test: User asks about Pratik Kumar''s office'
+  steps:
+  - user: Where is the office of Pratik Kumar?
+    intent: faculty_pratik_kumar
+  - action: utter_faculty_pratik_kumar
+- story: 'Test: User asks about Sahil Kalra''s office'
+  steps:
+  - user: Where is the office of Sahil Kalra?
+    intent: faculty_sahil_kalra
+  - action: utter_faculty_sahil_kalra
+- story: 'Test: User asks about Ravikant Saini''s office'
+  steps:
+  - user: Where is the office of Ravikant Saini?
+    intent: faculty_ravikant_saini
+  - action: utter_faculty_ravikant_saini
+- story: 'Test: User asks about Suman Banerjee''s office'
+  steps:
+  - user: Where is the office of Suman Banerjee?
+    intent: faculty_suman_banerjee
+  - action: utter_faculty_suman_banerjee
+- story: 'Test: User asks about Nalin Kumar Sharma''s office'
+  steps:
+  - user: Where is the office of Nalin Kumar Sharma?
+    intent: faculty_nalin_kumar_sharma
+  - action: utter_faculty_nalin_kumar_sharma
+- story: 'Test: User asks about Chembolu Vinay''s office'
+  steps:
+  - user: Where is the office of Chembolu Vinay?
+    intent: faculty_chembolu_vinay
+  - action: utter_faculty_chembolu_vinay
+- story: 'Test: User asks about Kushmanda Saurav''s office'
+  steps:
+  - user: Where is the office of Kushmanda Saurav?
+    intent: faculty_kushmanda_saurav
+  - action: utter_faculty_kushmanda_saurav
+- story: 'Test: User asks about Shikha Malhotra'
+  steps:
+  - user: Can you explain who is Shikha Malhotra??
+    intent: shikha_malhotra
+  - action: utter_shikha_malhotra
+- story: 'Test: User asks about Meena Sharma'
+  steps:
+  - user: Contact Meena Sharma
+    intent: meena_sharma
+  - action: utter_meena_sharma
+- story: 'Test: User asks about Ripul Vaid'
+  steps:
+  - user: Who is Ripul Vaid?
+    intent: ripul_vaid
+  - action: utter_ripul_vaid
+- story: 'Test: User asks about Sahil Dogra'
+  steps:
+  - user: Contact Sahil Dogra
+    intent: sahil_dogra
+  - action: utter_sahil_dogra
+- story: 'Test: User asks about Shubham Gupta'
+  steps:
+  - user: Contact Shubham Gupta
+    intent: shubham_gupta
+  - action: utter_shubham_gupta
+- story: 'Test: User asks about latest alumni news and events'
+  steps:
+  - user: I want to learn about what are the latest alumni events?
+    intent: alumni_news_events
+  - action: utter_alumni_news_events
+- story: 'Test: User asks about the Dean''s message for alumni'
+  steps:
+  - user: Can you explain what does the Dean say about alumni relations??
+    intent: alumni_dean_message
+  - action: utter_alumni_dean_message
+- story: 'Test: User asks about the Associate Dean''s message for alumni'
+  steps:
+  - user: Who is the Associate Dean of Alumni Affairs?
+    intent: alumni_associate_dean_message
+  - action: utter_alumni_associate_dean_message
+- story: 'Test: User asks about the Associate Dean for Curriculum'
+  steps:
+  - user: Who is the Associate Dean for Curriculum at IIT Jammu?
+    intent: academic_affairs_associate_dean_curriculum
+  - action: utter_academic_affairs_associate_dean_curriculum
+- story: 'Test: User asks about the Deputy Registrar for Academic Affairs'
+  steps:
+  - user: Who is the Deputy Registrar at IIT Jammu?
+    intent: academic_affairs_deputy_registrar
+  - action: utter_academic_affairs_deputy_registrar
+- story: 'Test: User asks about Abhishek in Academic Affairs'
+  steps:
+  - user: Who is Abhishek at IIT Jammu?
+    intent: academic_affairs_staff_abhishek
+  - action: utter_academic_affairs_staff_abhishek
+- story: 'Test: User asks about B.Tech Civil Engineering courses'
+  steps:
+  - user: What are the courses for B.Tech Civil Engineering?
+    intent: btech_civil_engineering_courses
+  - action: utter_btech_civil_engineering_courses
+- story: 'Test: User asks about B.Tech Chemical Engineering courses'
+  steps:
+  - user: What are the courses for B.Tech Chemical Engineering?
+    intent: btech_chemical_engineering_courses
+  - action: utter_btech_chemical_engineering_courses
+- story: 'Test: Respond with Mechanical B.Tech Courses'
+  steps:
+  - user: What are the courses in mechanical engineering?
+    intent: mechanical_btech_courses
+  - action: utter_btech_mechanical_engineering_courses
+- story: 'Test: Respond with Mathematics and Computing B.Tech Courses'
+  steps:
+  - user: What are the courses in mathematics and computing?
+    intent: mathematics_btech_courses
+  - action: utter_btech_mathematics_and_computing_courses
+- story: 'Test: User asks about B.Tech Computer Science Engineering courses'
+  steps:
+  - user: What are the courses for B.Tech Computer Science Engineering?
+    intent: btech_cse_engineering_courses
+  - action: utter_btech_cse_engineering_courses
+- story: 'Test: User asks about B.Tech Electrical Engineering courses'
+  steps:
+  - user: What are the courses offered in BTech Electrical Engineering semester-wise?
+    intent: ee_btech_courses_semester_wise
+  - action: utter_ee_btech_courses_semester_wise
+- story: 'Test: User asks about B.Tech Materials Engineering courses'
+  steps:
+  - user: What are the courses offered in BTech Materials Engineering semester-wise?
+    intent: materials_btech_courses_semester_wise
+  - action: action_fetch_data
+- story: 'Test: User asks about Departmental UG Committees'
+  steps:
+  - user: What is the Departmental Undergraduate Committee?
+    intent: departmental_ug_committees
+  - action: utter_departmental_ug_committees
+- story: 'Test: User asks about Senate Undergraduate Board'
+  steps:
+  - user: What is the Senate Undergraduate Board?
+    intent: senate_undergraduate_board
+  - action: utter_senate_undergraduate_board
+- story: 'Test: User asks about Faculty Advisor'
+  steps:
+  - user: Who is the Faculty Advisor?
+    intent: faculty_advisor
+  - action: utter_faculty_advisor
+- story: 'Test: User asks about new UG courses'
+  steps:
+  - user: How are new undergraduate courses introduced?
+    intent: new_undergraduate_courses
+  - action: utter_new_undergraduate_courses
+- story: 'Test: User asks about UG student requests'
+  steps:
+  - user: How can undergraduate students submit requests?
+    intent: undergraduate_student_requests
+  - action: utter_undergraduate_student_requests
+- story: 'Test: User asks about UG issue escalation'
+  steps:
+  - user: What happens if SUGB cannot resolve a student issue?
+    intent: undergraduate_issue_escalation
+  - action: utter_undergraduate_issue_escalation
+- story: 'Test: User asks about Departmental PG Committee'
+  steps:
+  - user: What is the Departmental Postgraduate Committee?
+    intent: department_pg_committee
+  - action: utter_department_pg_committee
+- story: 'Test: User asks about Senate Postgraduate Board'
+  steps:
+  - user: What is the Senate Postgraduate Board?
+    intent: senate_postgraduate_board
+  - action: utter_senate_postgraduate_board
+- story: 'Test: User asks about Programme Coordinator'
+  steps:
+  - user: What is the role of a Programme Coordinator?
+    intent: programme_coordinator
+  - action: utter_programme_coordinator
+- story: 'Test: User asks about new PG courses'
+  steps:
+  - user: How are new postgraduate courses introduced?
+    intent: new_postgraduate_courses
+  - action: utter_new_postgraduate_courses
+- story: 'Test: User asks about PG student requests'
+  steps:
+  - user: How can postgraduate students submit requests?
+    intent: postgraduate_student_requests
+  - action: utter_postgraduate_student_requests
+- story: 'Test: User asks about PG issue escalation'
+  steps:
+  - user: What happens if SPGB cannot resolve a student issue?
+    intent: escalation_of_postgraduate_student_requests
+  - action: utter_escalation_of_postgraduate_student_requests
+- story: 'Test: User asks about dropping PG semester'
+  steps:
+  - user: Can a postgraduate student drop a semester?
+    intent: postgraduate_semester_drop
+  - action: utter_postgraduate_semester_drop
+- story: 'Test: User asks about PhD student guidance'
+  steps:
+  - user: What is the role of a PhD supervisor?
+    intent: phd_students
+  - action: utter_phd_students
+- story: 'Test: User asks about curricular credits'
+  steps:
+  - user: What is the total number of credits required for the B.Tech program?
+    intent: curricular_credits
+  - action: utter_curricular_credits
+- story: 'Test: User asks about credit load flexibility'
+  steps:
+  - user: How does IIT Jammu manage credit load for students with different CGPA levels?
+    intent: credit_load_flexibility
+  - action: utter_credit_load_flexibility
+- story: 'Test: User asks about programmes under UG curriculum'
+  steps:
+  - user: What undergraduate programmes are offered by IIT Jammu?
+    intent: ug_programmes
+  - action: utter_ug_programmes
+- story: 'Test: User asks about programmes under PG curriculum'
+  steps:
+  - user: What postgraduate programmes are offered by IIT Jammu?
+    intent: pg_programmes
+  - action: utter_pg_programmes
+- story: 'Test: User asks about programmes under Phd curriculum'
+  steps:
+  - user: What PhD programmes are offered by IIT Jammu?
+    intent: phd_programmes
+  - action: utter_phd_programmes
+- story: 'Test: User asks about course evaluation methods'
+  steps:
+  - user: How are students evaluated in UG 2022 curriculum courses?
+    intent: course_evaluation
+  - action: utter_course_evaluation
+- story: 'Test: User asks about course registration'
+  steps:
+  - user: How do I register for courses at IIT Jammu?
+    intent: course_registration
+  - action: utter_course_registration
+- story: 'Test: User asks about course withdrawal'
+  steps:
+  - user: What is the process to withdraw from a course?
+    intent: course_withdrawal
+  - action: utter_course_withdrawal
+- story: 'Test: User asks about backlog courses'
+  steps:
+  - user: How do I clear my backlogs?
+    intent: backlog_courses
+  - action: utter_backlog_courses
+- story: 'Test: User asks about summer term'
+  steps:
+  - user: Does IIT Jammu offer summer courses?
+    intent: summer_term
+  - action: utter_summer_term
+- story: 'Test: User asks about attendance policy'
+  steps:
+  - user: What is the attendance policy at IIT Jammu?
+    intent: attendance_policy
+  - action: utter_attendance_policy
+- story: 'Test: User asks about grading system'
+  steps:
+  - user: How does the grading system work at IIT Jammu?
+    intent: grading_system
+  - action: utter_grading_system
+- story: 'Test: User asks about semester freeze'
+  steps:
+  - user: Can I take a semester break at IIT Jammu?
+    intent: semester_freeze
+  - action: utter_semester_freeze
+- story: 'Test: User asks about branch change'
+  steps:
+  - user: How can I change my branch at IIT Jammu?
+    intent: change_branch
+  - action: utter_change_branch
+- story: 'Test: User asks about internship policy'
+  steps:
+  - user: What are the internship rules at IIT Jammu?
+    intent: internship_policy
+  - action: utter_internship_policy
+- story: 'Test: User asks about UG Merit-Cum-Means Scholarship'
+  steps:
+  - user: What is the Merit-cum-Means (MCM) scholarship at IIT Jammu?
+    intent: ug_merit_cum_means_scholarship
+  - action: utter_ug_merit_cum_means_scholarship
+- story: 'Test: User asks about Free Messing Scholarship'
+  steps:
+  - user: What is the Free Messing scholarship at IIT Jammu?
+    intent: ug_free_messing_scholarship
+  - action: utter_ug_free_messing_scholarship
+- story: 'Test: User asks about UG Freeship Scholarship'
+  steps:
+  - user: What is the Freeship scheme at IIT Jammu?
+    intent: ug_freeship_scholarship
+  - action: utter_ug_freeship_scholarship
+- story: 'Test: User asks about QUEST Fee Waiver'
+  steps:
+  - user: What is the QUEST fee waiver at IIT Jammu?
+    intent: ug_quest_fee_waiver
+  - action: utter_ug_quest_fee_waiver
+- story: 'Test: User asks about MTech Fellowship'
+  steps:
+  - user: What is the fellowship amount for MTech students?
+    intent: eligibility_mtech_fellowship
+  - action: utter_eligibility_mtech_fellowship
+- story: 'Test: User asks about PhD Assistantship'
+  steps:
+  - user: What is the PhD assistantship for full-time students?
+    intent: eligibility_phd_assistantship
+  - action: utter_eligibility_phd_assistantship
+- story: 'Test: User asks about Travel Allowance and Contingency Grant'
+  steps:
+  - user: What is the Travel Allowance and Contingency Grant for students?
+    intent: travel_allowance_contingency_grant
+  - action: utter_travel_allowance_contingency_grant
+- story: 'Test: User asks about EULER Earn While You Learn'
+  steps:
+  - user: What is the EULER scheme at IIT Jammu?
+    intent: euler_earn_while_you_learn
+  - action: utter_euler_earn_while_you_learn
+- story: 'Test: User asks about President Gold Medal'
+  steps:
+  - user: What is the President Gold Medal for UG students?
+    intent: president_gold_medal_ug_students
+  - action: utter_president_gold_medal_ug_students
+- story: 'Test: User asks about Director’s Gold Medal'
+  steps:
+  - user: What is the Director’s Gold Medal for UG students?
+    intent: directors_gold_medal_ug_students
+  - action: utter_directors_gold_medal_ug_students
+- story: 'Test: User asks about Institute Silver Medal'
+  steps:
+  - user: What is the Institute Silver Medal for UG students?
+    intent: institute_silver_medal_ug_students
+  - action: utter_institute_silver_medal_ug_students
+- story: 'Test: User asks about Prof. Ashok Ahuja Steel Structures Award'
+  steps:
+  - user: What is the Prof Ashok K Ahuja Steel Structures Award?
+    intent: prof_ashok_ahuja_steel_structures_award
+  - action: utter_prof_ashok_ahuja_steel_structures_award
+- story: 'Test: User asks about Certificates for Currently Enrolled Students'
+  steps:
+  - user: What is the certificate to encourage currently enrolled students?
+    intent: certificates_to_encourage_currently_enrolled_students
+  - action: utter_certificates_to_encourage_currently_enrolled_students
+- story: 'Test: User asks about Institute Gold and Silver Medal for MTech students'
+  steps:
+  - user: What is the Institute Gold Medal for MTech students?
+    intent: institute_gold_silver_medal_mtech
+  - action: utter_institute_gold_silver_medal_mtech
+- story: 'Test: User asks about Outstanding Doctoral Student Award for PhD'
+  steps:
+  - user: What is the Outstanding Doctoral Student Award for PhD students?
+    intent: outstanding_doctoral_student_award_phd
+  - action: utter_outstanding_doctoral_student_award_phd
+- story: 'Test: Ask for library location'
+  steps:
+  - user: What is the address of the library?
+    intent: library_iit_jammu_location
+  - action: utter_library_iit_jammu_location
+- story: 'Test: Ask for library contact details'
+  steps:
+  - user: What is the contact number of the library?
+    intent: library_iit_jammu_contact
+  - action: utter_library_iit_jammu_contact
+- story: 'Test: Ask for library opening hours'
+  steps:
+  - user: What are the library's opening hours?
+    intent: library_iit_jammu_opening_hours
+  - action: utter_library_iit_jammu_opening_hours
+- story: 'Test: Ask for library circulation timing'
+  steps:
+  - user: What are the library circulation timings?
+    intent: library_iit_jammu_circulation_timing
+  - action: utter_library_iit_jammu_circulation_timing
+- story: 'Test: Ask faculty borrowing policy'
+  steps:
+  - user: What is the library borrowing policy for faculty?
+    intent: library_iit_jammu_faculty_borrowing_policy
+  - action: utter_library_iit_jammu_faculty_borrowing_policy
+- story: 'Test: Ask PhD student borrowing policy'
+  steps:
+  - user: What is the library borrowing policy for PhD students?
+    intent: library_iit_jammu_phd_borrowing_policy
+  - action: utter_library_iit_jammu_phd_borrowing_policy
+- story: 'Test: Ask M.Tech borrowing policy'
+  steps:
+  - user: What is the borrowing policy for M. Tech students in library?
+    intent: library_iit_jammu_mtech_borrowing_policy
+  - action: utter_library_iit_jammu_mtech_borrowing_policy
+- story: 'Test: Ask B.Tech borrowing policy'
+  steps:
+  - user: What is the library borrowing policy for B. Tech students?
+    intent: library_iit_jammu_btech_borrowing_policy
+  - action: utter_library_iit_jammu_btech_borrowing_policy
+- story: 'Test: Ask project assistant borrowing policy'
+  steps:
+  - user: What is the library borrowing policy for Project or Teaching Assistants?
+    intent: library_iit_jammu_project_assistant_borrowing_policy
+  - action: utter_library_iit_jammu_project_assistant_borrowing_policy
+- story: 'Test: Ask staff borrowing policy'
+  steps:
+  - user: What is the library borrowing policy for staff members?
+    intent: library_iit_jammu_staff_borrowing_policy
+  - action: utter_library_iit_jammu_staff_borrowing_policy
+- story: 'Test: Ask Hindi book borrowing policy'
+  steps:
+  - user: What is the library borrowing policy for Hindi books?
+    intent: library_iit_jammu_hindi_books_policy
+  - action: utter_library_iit_jammu_hindi_books_policy
+- story: 'Test: Ask about library resources'
+  steps:
+  - user: What e-resources does the library have?
+    intent: library_iit_jammu_resources
+  - action: utter_library_iit_jammu_resources
+- story: 'Test: Ask about research tools'
+  steps:
+  - user: What research assistance tools are available in the library?
+    intent: library_iit_jammu_research_assistance_tools
+  - action: utter_library_iit_jammu_research_assistance_tools
+- story: 'Test: User asks about seating arrangements'
+  steps:
+  - user: When can I use the seating in the library?
+    intent: library_iit_jammu_seating_arrangements
+  - action: utter_library_iit_jammu_seating_arrangements
+- story: 'Test: User asks about latest library updates'
+  steps:
+  - user: What are the latest updates in the library?
+    intent: library_iit_jammu_updates
+  - action: utter_library_iit_jammu_updates
+- story: 'Test: Medical Centre Introduction'
+  steps:
+  - user: Tell me about the Medical Centre
+    intent: medical_center_intro
+  - action: utter_medical_center_intro
+- story: 'Test: Contact Medical Centre'
+  steps:
+  - user: How can I contact the Medical Centre?
+    intent: medical_center_contact
+  - action: utter_medical_center_contact
+- story: 'Test: Medical Centre Facilities'
+  steps:
+  - user: What are the facilities at the Medical Centre?
+    intent: medical_center_facilities
+  - action: utter_medical_center_facilities
+- story: 'Test: Doctor Inquiry - Dr. Karunika'
+  steps:
+  - user: Tell me about Dr. Karunika
+    intent: doctor_karunika
+  - action: utter_doctor_karunika
+- story: 'Test: Doctor Inquiry - Dr. Vikram Singh'
+  steps:
+  - user: Tell me about Dr. Vikram Singh
+    intent: doctor_vikram_singh
+  - action: utter_doctor_vikram_singh
+- story: 'Test: Doctor Inquiry - Dr. Priya'
+  steps:
+  - user: Tell me about Dr. Priya
+    intent: doctor_priya
+  - action: utter_doctor_priya
+- story: 'Test: Doctor Inquiry - Dr. Bidisha'
+  steps:
+  - user: Tell me about Dr. Bidisha
+    intent: doctor_bidisha
+  - action: utter_doctor_bidisha
+- story: 'Test: Doctor Inquiry - Dr. Pranav Gupta'
+  steps:
+  - user: Tell me about Dr. Pranav Gupta
+    intent: doctor_pranav_gupta
+  - action: utter_doctor_pranav_gupta
+- story: 'Test: Doctor Inquiry - Dr. Rohit Bhatiya'
+  steps:
+  - user: Who is Dr. Rohit Bhatiya?
+    intent: doctor_rohit_bhatiya
+  - action: utter_doctor_rohit_bhatiya
+- story: 'Test: Medical Centre Location'
+  steps:
+  - user: Where is the Medical Centre located?
+    intent: medical_center_location
+  - action: utter_medical_center_location
+- story: 'Test: Research and Consultancy Section'
+  steps:
+  - user: Research and Consultancy at IIT Jammu
+    intent: research_and_consultancy_section
+  - action: utter_research_and_consultancy_section
+- story: 'Test: Research and Consultancy Message'
+  steps:
+  - user: What is the message from Research and Consultancy?
+    intent: research_and_consultancy_message
+  - action: utter_research_and_consultancy_message
+- story: 'Test: Research and Consultancy Deputy Registrar'
+  steps:
+  - user: Who is the Deputy Registrar for Research and Consultancy?
+    intent: research_and_consultancy_deputy_registrar
+  - action: utter_research_and_consultancy_deputy_registrar
+- story: 'Test: Research and Consultancy Objectives'
+  steps:
+  - user: What are the objectives of the Research and Consultancy Section?
+    intent: research_and_consultancy_objectives
+  - action: utter_research_and_consultancy_objectives
+- story: 'Test: Research and Consultancy Main Functions'
+  steps:
+  - user: What are the main functions of the Research and Consultancy Section?
+    intent: research_and_consultancy_main_functions
+  - action: utter_research_and_consultancy_main_functions
+- story: 'Test: Research and Consultancy Team - Deputy Registrar'
+  steps:
+  - user: Tell me about Cdr Avinash Barthwal
+    intent: research_and_consultancy_team_deputy_registrar
+  - action: utter_research_and_consultancy_team_deputy_registrar
+- story: 'Test: Security Officer Inquiry'
+  steps:
+  - user: Who is the Security Officer?
+    intent: security_staff
+  - action: utter_security_staff
+- story: 'Test: Security Contact Inquiry'
+  steps:
+  - user: What is the contact number for security?
+    intent: security_contact
+  - action: utter_security_contact
+- story: 'Test: Security Officer Email Inquiry'
+  steps:
+  - user: What is the email of the security officer?
+    intent: security_officer_email
+  - action: utter_security_officer_email
+- story: 'Test: Student Affairs Section Inquiry'
+  steps:
+  - user: Student Affairs at IIT Jammu
+    intent: student_affairs_section
+  - action: utter_student_affairs_section
+- story: 'Test: Student Affairs Message Inquiry'
+  steps:
+  - user: What is the message from the Student Affairs Office?
+    intent: student_affairs_message
+  - action: utter_student_affairs_message
+- story: 'Test: Hostel Life Inquiry'
+  steps:
+  - user: Tell me about the hostel life at IIT Jammu
+    intent: hostel_life
+  - action: utter_hostel_life
+- story: 'Test: Mess Facilities Inquiry'
+  steps:
+  - user: What are the mess facilities at IIT Jammu?
+    intent: mess_facilities
+  - action: utter_mess_facilities
+- story: 'Test: Student Activities Inquiry'
+  steps:
+  - user: What student activities are available at IIT Jammu?
+    intent: student_activities
+  - action: utter_student_activities
+- story: 'Test: Sports Facilities Inquiry'
+  steps:
+  - user: What sports facilities are available at IIT Jammu?
+    intent: sports_facilities
+  - action: utter_sports_facilities
+- story: 'Test: Student Affairs Office Inquiry'
+  steps:
+  - user: What is the role of the Student Affairs Office?
+    intent: student_affairs_office
+  - action: utter_student_affairs_office
+- story: 'Test: Sartaj Ul Hasan Inquiry'
+  steps:
+  - user: Who is Sartaj Ul Hasan?
+    intent: student_affairs_team_sartaj_ul_hasan
+  - action: utter_student_affairs_team_sartaj_ul_hasan
+- story: 'Test: Semester schedule'
+  steps:
+  - user: semester schedule
+    intent: semester_schedule
+  - action: utter_semester_schedule

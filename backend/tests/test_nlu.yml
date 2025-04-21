@@ -1,0 +1,2467 @@
+version: '3.1'
+nlu:
+- intent: greet
+  examples: '- hello there?
+
+    - Hey
+
+    - Moin
+
+    - Good morning
+
+    - goodmorning
+
+    - hi?
+
+    - Let''s go'
+- intent: out_of_scope
+  examples: '- this is a joke
+
+    - This is a joke
+
+    - What date is today?
+
+    - This is a joke?
+
+    - This a is joke
+
+    - is What today? date
+
+    - what date is today?'
+- intent: director_iitjammu
+  examples: '- who is the director of iit jammu
+
+    - Who is director
+
+    - who director the of is iit jammu
+
+    - who is the director of iit jammu?
+
+    - who is director
+
+    - who is director?
+
+    - Who is the director of iit jammu'
+- intent: goodbye
+  examples: '- cee you later
+
+    - good night
+
+    - cee you later?
+
+    - bye bye
+
+    - See you around
+
+    - you see later
+
+    - See you later'
+- intent: affirm
+  examples: '- Y
+
+    - of course?
+
+    - That sounds good
+
+    - correct
+
+    - y?
+
+    - yes?
+
+    - that sounds good'
+- intent: deny
+  examples: '- n
+
+    - Never
+
+    - no way?
+
+    - don''t like that
+
+    - like that don''t
+
+    - I don''t think so
+
+    - never'
+- intent: mood_great
+  examples: '- Feeling like a king
+
+    - extremely good?
+
+    - perfect
+
+    - super stoked?
+
+    - Extremely good
+
+    - So so perfect
+
+    - I am great?'
+- intent: mood_unhappy
+  examples: '- So saad
+
+    - I am sad
+
+    - I sad am
+
+    - unhappy?
+
+    - so sad
+
+    - My day was horrible
+
+    - Very sad'
+- intent: about_yourself
+  examples: '- who are you?
+
+    - are you a human?
+
+    - tell me about yourself
+
+    - Are you a human
+
+    - Who are you
+
+    - Am i talking to a human
+
+    - am I talking human to a'
+- intent: about iit jammu
+  examples: '- What is iit jammu?
+
+    - what is iit jammu?
+
+    - Describe iit jammu?
+
+    - iit jammu elaborate?
+
+    - iit jammu? is what
+
+    - iit elaborate? jammu
+
+    - describe iit jammu?'
+- intent: finance_and_accounts
+  examples: '- transactions at Financial IIT Jammu
+
+    - Details about finance and accounts?
+
+    - Can you explain tell me about finance and accounts?
+
+    - details about finance and accounts
+
+    - finance and accounts
+
+    - Account management at iit jammu
+
+    - and Details about finance accounts'
+- intent: assistant_registrar_message
+  examples: '- Details about finance message
+
+    - Details about message from assistant registrar?
+
+    - I want to learn about who is the assistant registrar?
+
+    - i want to learn about accounts message
+
+    - I want to learn about message from assistant registrar?
+
+    - explain message assistant from you registrar? Can
+
+    - registrar message from assistant'
+- intent: finance_and_accounts_team
+  examples: '- I want to learn about list of finance team members?
+
+    - i want to learn about finance and accounts team at iit jammu
+
+    - finance and accounts team at iit jammu
+
+    - Can you explain list of finance team members?
+
+    - members list of finance team
+
+    - Finance and accounts team at IIT Jammu?
+
+    - can you explain finance and accounts team at iit jammu?'
+- intent: faculty_vinit_jakhetiya
+  examples: '- where is the office of vinit jakhetiya?
+
+    - Where is the office of Vinit Jakhetiya?
+
+    - Where is the office of vinit jakhetiya?
+
+    - the Where Vinit of office is Jakhetiya?'
+- intent: faculty_durai_prabhakaran_r_t
+  examples: '- the of is Where office Prabhakaran Durai R T?
+
+    - where is the office of durai prabhakaran r t?
+
+    - Where is the office of Durai Prabhakaran R T?
+
+    - Where is the office of durai prabhakaran r t?'
+- intent: faculty_vinit_jakhetiya
+  examples: '- where is the office of vinit jakhetiya?
+
+    - Where is the office of Vinit Jakhetiya?
+
+    - Where is the office of vinit jakhetiya?
+
+    - Where Jakhetiya? office Vinit is of the'
+- intent: faculty_durai_prabhakaran_r_t
+  examples: '- where is the office of durai prabhakaran r t?
+
+    - Where is the office of Durai Prabhakaran R T?
+
+    - Where is the office of durai prabhakaran r t?
+
+    - of office Prabhakaran T? R is the Where Durai'
+- intent: faculty_shantanu_vijay_madge
+  examples: '- Where is the office of Shantanu Vijay Madge?
+
+    - office of Where Shantanu Vijay is the Madge?
+
+    - where is the office of shantanu vijay madge?
+
+    - Where is the office of shantanu vijay madge?'
+- intent: faculty_pervaiz_fathima_khatoon_m
+  examples: '- Where is the office of pervaiz fathima khatoon m?
+
+    - Where is the office of Pervaiz Fathima Khatoon M?
+
+    - M? Pervaiz Where of is office the Khatoon Fathima
+
+    - where is the office of pervaiz fathima khatoon m?'
+- intent: faculty_navneet_kumar
+  examples: '- of Navneet Kumar? Where is the office
+
+    - Where is the office of Navneet Kumar?
+
+    - Where is the office of navneet kumar?
+
+    - where is the office of navneet kumar?'
+- intent: faculty_ankit_tyagi
+  examples: '- where is the office of ankit tyagi?
+
+    - Where is the office of Ankit Tyagi?
+
+    - the office of Where Ankit is Tyagi?
+
+    - Where is the office of ankit tyagi?'
+- intent: faculty_shiva_s
+  examples: '- S? the office of is Shiva Where
+
+    - where is the office of shiva s?
+
+    - Where is the office of shiva s?
+
+    - Where is the office of Shiva S?'
+- intent: faculty_shanmugadas_k_p
+  examples: '- Where is the office of Shanmugadas K P?
+
+    - Where is the office of shanmugadas k p?
+
+    - where is the office of shanmugadas k p?
+
+    - P? of K Where office the Shanmugadas is'
+- intent: faculty_divyesh_varade
+  examples: '- Where is the office of Divyesh Varade?
+
+    - where is the office of divyesh varade?
+
+    - Where is the office of divyesh varade?
+
+    - Where of the Divyesh office is Varade?'
+- intent: faculty_roshan_udaram_pal
+  examples: '- where is the office of roshan udaram pal?
+
+    - Where is the office of roshan udaram pal?
+
+    - office Where of Pal? is the Udaram Roshan
+
+    - Where is the office of Roshan Udaram Pal?'
+- intent: faculty_samaresh_bera
+  examples: '- Where is the office of samaresh bera?
+
+    - where is the office of samaresh bera?
+
+    - Where is the office of Samaresh Bera?
+
+    - Where Bera? office of Samaresh is the'
+- intent: faculty_dharitri_rath
+  examples: '- Where is the office of dharitri rath?
+
+    - where is the office of dharitri rath?
+
+    - the office Dharitri Where Rath? of is
+
+    - Where is the office of Dharitri Rath?'
+- intent: faculty_rajkumar_v
+  examples: '- Where is the office of Rajkumar V?
+
+    - V? office of Rajkumar Where the is
+
+    - Where is the office of rajkumar v?
+
+    - where is the office of rajkumar v?'
+- intent: faculty_rani_rohini
+  examples: '- Rohini? office of Rani the Where is
+
+    - Where is the office of rani rohini?
+
+    - where is the office of rani rohini?
+
+    - Where is the office of Rani Rohini?'
+- intent: faculty_ankit_dubey
+  examples: '- Where is the office of ankit dubey?
+
+    - where is the office of ankit dubey?
+
+    - is the Where Dubey? office Ankit of
+
+    - Where is the office of Ankit Dubey?'
+- intent: faculty_padmini_singh
+  examples: '- Where Padmini Singh? office is the of
+
+    - where is the office of padmini singh?
+
+    - Where is the office of Padmini Singh?
+
+    - Where is the office of padmini singh?'
+- intent: faculty_gaurav_ashok_bhaduri
+  examples: '- Where is Gaurav Ashok office Bhaduri? the of
+
+    - Where is the office of gaurav ashok bhaduri?
+
+    - where is the office of gaurav ashok bhaduri?
+
+    - Where is the office of Gaurav Ashok Bhaduri?'
+- intent: faculty_sudhakar_modem
+  examples: '- Where is the office of sudhakar modem?
+
+    - where is the office of sudhakar modem?
+
+    - Where is the office of Sudhakar Modem?
+
+    - of office is Where the Sudhakar Modem?'
+- intent: faculty_pothukuchi_harish
+  examples: '- Where is the office of pothukuchi harish?
+
+    - Where is the office of Pothukuchi Harish?
+
+    - Pothukuchi Harish? of is the Where office
+
+    - where is the office of pothukuchi harish?'
+- intent: faculty_satya_sekhar_bhogilla
+  examples: '- Where is the office of satya sekhar bhogilla?
+
+    - where is the office of satya sekhar bhogilla?
+
+    - Where office is the of Satya Sekhar Bhogilla?
+
+    - Where is the office of Satya Sekhar Bhogilla?'
+- intent: faculty_satyadev_ahlawat
+  examples: '- Where is the office of satyadev ahlawat?
+
+    - Where is the office of Satyadev Ahlawat?
+
+    - where is the office of satyadev ahlawat?
+
+    - Where is of the office Ahlawat? Satyadev'
+- intent: faculty_subhasis_bhattacharjee
+  examples: '- Where is the office of Subhasis Bhattacharjee?
+
+    - where is the office of subhasis bhattacharjee?
+
+    - Bhattacharjee? the Subhasis is of Where office
+
+    - Where is the office of subhasis bhattacharjee?'
+- intent: faculty_arvind_kumar_rajput
+  examples: '- Where is the office of Arvind Kumar Rajput?
+
+    - Where is the office of arvind kumar rajput?
+
+    - is the Arvind of Kumar Where office Rajput?
+
+    - where is the office of arvind kumar rajput?'
+- intent: faculty_ankit_kathuria
+  examples: '- where is the office of ankit kathuria?
+
+    - Where is the office of Ankit Kathuria?
+
+    - Where is the office of ankit kathuria?
+
+    - Ankit is the office Kathuria? Where of'
+- intent: faculty_rohit_buddhiram_chourasiya
+  examples: '- Where is the office of Rohit Buddhiram Chourasiya?
+
+    - Where the of Buddhiram Chourasiya? is office Rohit
+
+    - Where is the office of rohit buddhiram chourasiya?
+
+    - where is the office of rohit buddhiram chourasiya?'
+- intent: faculty_ravi_kumar_arun
+  examples: '- office is Where Ravi the of Kumar Arun?
+
+    - Where is the office of ravi kumar arun?
+
+    - Where is the office of Ravi Kumar Arun?
+
+    - where is the office of ravi kumar arun?'
+- intent: faculty_chandan_yadav
+  examples: '- Where is the office of chandan yadav?
+
+    - where is the office of chandan yadav?
+
+    - Where is the office of Chandan Yadav?
+
+    - of Where office the Yadav? is Chandan'
+- intent: faculty_sumit_kumar_pandey
+  examples: '- Where the Sumit is office of Kumar Pandey?
+
+    - Where is the office of Sumit Kumar Pandey?
+
+    - where is the office of sumit kumar pandey?
+
+    - Where is the office of sumit kumar pandey?'
+- intent: faculty_sarah_mariam_abraham
+  examples: '- Where is the office of Sarah Mariam Abraham?
+
+    - where is the office of sarah mariam abraham?
+
+    - Where is the office of sarah mariam abraham?
+
+    - office Where of Mariam Sarah Abraham? is the'
+- intent: faculty_bidhan_biswas
+  examples: '- Where is the office of Bidhan Biswas?
+
+    - where is the office of bidhan biswas?
+
+    - Biswas? is office the Where Bidhan of
+
+    - Where is the office of bidhan biswas?'
+- intent: faculty_yogesh_madhukarrao_nimdeo
+  examples: '- Where is the office of Yogesh Madhukarrao Nimdeo?
+
+    - Where is the office of yogesh madhukarrao nimdeo?
+
+    - the of Nimdeo? is Madhukarrao Where Yogesh office
+
+    - where is the office of yogesh madhukarrao nimdeo?'
+- intent: faculty_sunil_kumar_kashyap
+  examples: '- where is the office of sunil kumar kashyap?
+
+    - Where is the office of Sunil Kumar Kashyap?
+
+    - Where is the office of sunil kumar kashyap?
+
+    - the Where Sunil Kashyap? office Kumar of is'
+- intent: faculty_kankat_ghosh
+  examples: '- of Ghosh? Kankat is the Where office
+
+    - where is the office of kankat ghosh?
+
+    - Where is the office of Kankat Ghosh?
+
+    - Where is the office of kankat ghosh?'
+- intent: faculty_vijay_kumar_pal
+  examples: '- office of the Pal? is Kumar Where Vijay
+
+    - Where is the office of Vijay Kumar Pal?
+
+    - where is the office of vijay kumar pal?
+
+    - Where is the office of vijay kumar pal?'
+- intent: faculty_sidharath_maheshwari
+  examples: '- Where is the office of sidharath maheshwari?
+
+    - where is the office of sidharath maheshwari?
+
+    - Where is the office of Sidharath Maheshwari?
+
+    - is the office Sidharath Maheshwari? Where of'
+- intent: faculty_shaifu_gupta
+  examples: '- is the office Shaifu Where of Gupta?
+
+    - Where is the office of shaifu gupta?
+
+    - where is the office of shaifu gupta?
+
+    - Where is the office of Shaifu Gupta?'
+- intent: faculty_surendra_beniwal
+  examples: '- of is Beniwal? the Surendra Where office
+
+    - Where is the office of Surendra Beniwal?
+
+    - Where is the office of surendra beniwal?
+
+    - where is the office of surendra beniwal?'
+- intent: faculty_gaurav_varshney
+  examples: '- office of gaurav varshney?
+
+    - where is the office of gaurav varshney?
+
+    - Where is the office of Gaurav Varshney?
+
+    - office of varshney? gaurav
+
+    - of Varshney? office Where the is Gaurav
+
+    - Office of gaurav varshney?
+
+    - Where is the office of gaurav varshney?'
+- intent: faculty_sarada_prasad_gochhayat
+  examples: '- Where is the office of sarada prasad gochhayat?
+
+    - Prasad office Gochhayat? Where the Sarada of is
+
+    - Where is the office of Sarada Prasad Gochhayat?
+
+    - where is the office of sarada prasad gochhayat?'
+- intent: faculty_shiv_kumar
+  examples: '- Where is the office of shiv kumar?
+
+    - where is the office of shiv kumar?
+
+    - Where is the office of Shiv Kumar?
+
+    - of office Shiv Where is Kumar? the'
+- intent: faculty_devi_lal
+  examples: '- of is Devi Lal? the Where office
+
+    - Where is the office of Devi Lal?
+
+    - where is the office of devi lal?
+
+    - Where is the office of devi lal?'
+- intent: faculty_harkeerat_kaur
+  examples: '- Where is the office of Harkeerat Kaur?
+
+    - Where is the office of harkeerat kaur?
+
+    - is office Kaur? Harkeerat of Where the
+
+    - where is the office of harkeerat kaur?'
+- intent: faculty_deepak_yadav
+  examples: '- where is the office of deepak yadav?
+
+    - Where office is of the Deepak Yadav?
+
+    - Where is the office of deepak yadav?
+
+    - Where is the office of Deepak Yadav?'
+- intent: faculty_samrat_rao
+  examples: '- Where is the office of Samrat Rao?
+
+    - where is the office of samrat rao?
+
+    - the office Rao? Samrat is of Where
+
+    - Where is the office of samrat rao?'
+- intent: faculty_saurabh_biswas
+  examples: '- Where of Biswas? the Saurabh office is
+
+    - where is the office of saurabh biswas?
+
+    - Where is the office of saurabh biswas?
+
+    - Where is the office of Saurabh Biswas?'
+- intent: faculty_pragat_srivastava
+  examples: '- the Pragat Srivastava? is office Where of
+
+    - Where is the office of Pragat Srivastava?
+
+    - where is the office of pragat srivastava?
+
+    - Where is the office of pragat srivastava?'
+- intent: faculty_nitesh_kumar
+  examples: '- where is the office of nitesh kumar?
+
+    - Where is the office of nitesh kumar?
+
+    - Where is the office of Nitesh Kumar?
+
+    - of Kumar? is Nitesh Where office the'
+- intent: faculty_archana_rajput
+  examples: '- Where is the office of Archana Rajput?
+
+    - Where is the office of archana rajput?
+
+    - Where is the Rajput? of Archana office
+
+    - where is the office of archana rajput?'
+- intent: faculty_anand_kumar_subramaniyan
+  examples: '- where is the office of anand kumar subramaniyan?
+
+    - Where is the office of anand kumar subramaniyan?
+
+    - Where is the office of Anand Kumar Subramaniyan?
+
+    - of Anand is Kumar Where the Subramaniyan? office'
+- intent: faculty_ajay_singh
+  examples: '- where is the office of ajay singh?
+
+    - Where is the office of ajay singh?
+
+    - Where is the office of Ajay Singh?
+
+    - of Ajay office Singh? Where is the'
+- intent: faculty_badri_narayan_subudhi
+  examples: '- where is the office of badri narayan subudhi?
+
+    - Where is the office of Badri Narayan Subudhi?
+
+    - Where is the office of badri narayan subudhi?
+
+    - Badri Subudhi? Where the office of is Narayan'
+- intent: faculty_alok_kumar_saxena
+  examples: '- where is the office of alok kumar saxena?
+
+    - is of Saxena? Where the office Kumar Alok
+
+    - Where is the office of alok kumar saxena?
+
+    - Where is the office of Alok Kumar Saxena?'
+- intent: faculty_rajendra_kumar_varma
+  examples: '- where is the office of rajendra kumar varma?
+
+    - Where is the office of Rajendra Kumar Varma?
+
+    - office Varma? the Rajendra Where is of Kumar
+
+    - Where is the office of rajendra kumar varma?'
+- intent: faculty_sayantam_mukherjee
+  examples: '- Where is the office of sayantam mukherjee?
+
+    - Where is the office of Sayantam Mukherjee?
+
+    - the Sayantam is Where of office Mukherjee?
+
+    - where is the office of sayantam mukherjee?'
+- intent: faculty_aditya_shankar_sandupatla
+  examples: '- Where is the office of Aditya Shankar Sandupatla?
+
+    - where is the office of aditya shankar sandupatla?
+
+    - the office Sandupatla? Shankar Where is of Aditya
+
+    - Where is the office of aditya shankar sandupatla?'
+- intent: faculty_anup_shukla
+  examples: '- office is the Anup of Where Shukla?
+
+    - Where is the office of anup shukla?
+
+    - Where is the office of Anup Shukla?
+
+    - where is the office of anup shukla?'
+- intent: faculty_srishilan_c
+  examples: '- where is the office of srishilan c?
+
+    - Where is the office of Srishilan C?
+
+    - Where is the office of srishilan c?
+
+    - Where is of C? the office Srishilan'
+- intent: faculty_ashutosh_yadav
+  examples: '- where is the office of ashutosh yadav?
+
+    - Where is the office of Ashutosh Yadav?
+
+    - Where is the office of ashutosh yadav?
+
+    - the is office Where Ashutosh of Yadav?'
+- intent: faculty_suman_sarkar
+  examples: '- where is the office of suman sarkar?
+
+    - Where is the office of suman sarkar?
+
+    - Sarkar? Suman the Where is office of
+
+    - Where is the office of Suman Sarkar?'
+- intent: faculty_mir_faizan_ul_haq
+  examples: '- Where is the office of Mir Faizan Ul Haq?
+
+    - Faizan Haq? office the of Mir Ul Where is
+
+    - where is the office of mir faizan ul haq?
+
+    - Where is the office of mir faizan ul haq?'
+- intent: faculty_yamuna_prasad
+  examples: '- Where is the office of yamuna prasad?
+
+    - Where is the office of Yamuna Prasad?
+
+    - where is the office of yamuna prasad?
+
+    - of Prasad? Yamuna is office the Where'
+- intent: faculty_akash_awale
+  examples: '- office Awale? the Akash of Where is
+
+    - where is the office of akash awale?
+
+    - Where is the office of Akash Awale?
+
+    - Where is the office of akash awale?'
+- intent: faculty_karan_nathwani
+  examples: '- Where office Nathwani? Karan is of the
+
+    - Where is the office of karan nathwani?
+
+    - Where is the office of Karan Nathwani?
+
+    - where is the office of karan nathwani?'
+- intent: faculty_rimen_jamata
+  examples: '- Where is the office of Rimen Jamata?
+
+    - Rimen of the Jamata? is office Where
+
+    - Where is the office of rimen jamata?
+
+    - where is the office of rimen jamata?'
+- intent: faculty_ankur_bansal
+  examples: '- Where is the office of Ankur Bansal?
+
+    - where is the office of ankur bansal?
+
+    - Where is the office of ankur bansal?
+
+    - the Bansal? Ankur office is Where of'
+- intent: faculty_dr_arun_kumar_verma
+  examples: '- the Kumar Where is Dr. Arun Verma? office of
+
+    - Where is the office of dr. arun kumar verma?
+
+    - Where is the office of Dr. Arun Kumar Verma?
+
+    - where is the office of dr. arun kumar verma?'
+- intent: faculty_kanchrala_harikrishna
+  examples: '- Where is the office of kanchrala harikrishna?
+
+    - Where is the office of Kanchrala Harikrishna?
+
+    - office Where of Kanchrala is the Harikrishna?
+
+    - where is the office of kanchrala harikrishna?'
+- intent: faculty_nitin_joshi
+  examples: '- where is the office of nitin joshi?
+
+    - Where is the office of nitin joshi?
+
+    - Where is the office of Nitin Joshi?
+
+    - the office Nitin is Joshi? of Where'
+- intent: faculty_srinivasan_n
+  examples: '- Where is the office of Srinivasan N?
+
+    - is of Srinivasan the Where N? office
+
+    - Where is the office of srinivasan n?
+
+    - where is the office of srinivasan n?'
+- intent: faculty_sameer_kumar_sarma_pachalla
+  examples: '- Where is the office of Sameer Kumar Sarma Pachalla?
+
+    - office Sarma Kumar Sameer is of Pachalla? the Where
+
+    - Where is the office of sameer kumar sarma pachalla?
+
+    - where is the office of sameer kumar sarma pachalla?'
+- intent: faculty_pratik_kumar
+  examples: '- of office is Where Kumar? Pratik the
+
+    - Where is the office of Pratik Kumar?
+
+    - Where is the office of pratik kumar?
+
+    - where is the office of pratik kumar?'
+- intent: faculty_sahil_kalra
+  examples: '- Where is the office of Sahil Kalra?
+
+    - where is the office of sahil kalra?
+
+    - the office of is Sahil Kalra? Where
+
+    - Where is the office of sahil kalra?'
+- intent: faculty_ravikant_saini
+  examples: '- where is the office of ravikant saini?
+
+    - Where is the office of ravikant saini?
+
+    - Where is the office of Ravikant Saini?
+
+    - Ravikant Where of is Saini? the office'
+- intent: faculty_suman_banerjee
+  examples: '- Where is the office of suman banerjee?
+
+    - Where is the office of Suman Banerjee?
+
+    - where is the office of suman banerjee?
+
+    - is the office Where Suman Banerjee? of'
+- intent: faculty_nalin_kumar_sharma
+  examples: '- where is the office of nalin kumar sharma?
+
+    - the Where is Nalin office of Kumar Sharma?
+
+    - Where is the office of nalin kumar sharma?
+
+    - Where is the office of Nalin Kumar Sharma?'
+- intent: faculty_chembolu_vinay
+  examples: '- where is the office of chembolu vinay?
+
+    - Where is the office of chembolu vinay?
+
+    - Chembolu the is office Vinay? Where of
+
+    - Where is the office of Chembolu Vinay?'
+- intent: faculty_kushmanda_saurav
+  examples: '- Where is the office of kushmanda saurav?
+
+    - where is the office of kushmanda saurav?
+
+    - Where is the office of Kushmanda Saurav?
+
+    - Kushmanda of the Where office is Saurav?'
+- intent: shikha_malhotra
+  examples: '- who is shikha malhotra?
+
+    - Assistant Registrar contact?
+
+    - can you explain who is shikha malhotra??
+
+    - Who Shikha is Malhotra?
+
+    - Who is shikha malhotra?
+
+    - you Malhotra? Shikha contact Can explain
+
+    - What do you know about who is Shikha Malhotra??'
+- intent: meena_sharma
+  examples: '- Details about contact Meena Sharma?
+
+    - Contact Meena Sharma?
+
+    - details about contact meena sharma
+
+    - Details about contact Meena Sharma
+
+    - who is meena sharma?
+
+    - Senior Assistant contact details?
+
+    - Meena sharma'
+- intent: ripul_vaid
+  examples: '- who is ripul vaid?
+
+    - contact ripul vaid
+
+    - Section Officer contact details?
+
+    - Contact ripul vaid
+
+    - Who is ripul vaid?
+
+    - section officer contact details
+
+    - ripul vaid'
+- intent: sahil_dogra
+  examples: '- contact sahil dogra
+
+    - Who is Sahil Dogra?
+
+    - Can you explain contact sahil dogra?
+
+    - who is sahil dogra?
+
+    - What do you know about Sahil Dogra?
+
+    - Contact Sahil Dogra?
+
+    - Senior Assistant contact details?'
+- intent: shubham_gupta
+  examples: '- What do you Shubham Gupta? know about
+
+    - Shubham Contact Gupta
+
+    - Contact Shubham Gupta
+
+    - Assistant Senior contact details
+
+    - contact Can you explain Gupta? Shubham
+
+    - What do you know about shubham gupta?
+
+    - Senior Assistant contact details?'
+- intent: alumni_news_events
+  examples: '- I want to learn about what are the latest alumni events?
+
+    - any recent alumni news?
+
+    - me alumni latest news the Tell about
+
+    - Share some alumni news updates
+
+    - some Share news updates alumni
+
+    - Share some alumni news updates?
+
+    - alumni events?'
+- intent: alumni_dean_message
+  examples: '- What is the Dean''s message for alumni?
+
+    - Message from the Dean regarding alumni?
+
+    - Who is the dean of alumni affairs?
+
+    - can you explain what does the dean say about alumni relations??
+
+    - relations Dean''s Share alumni message the for
+
+    - share the dean''s message for alumni relations
+
+    - Message from the dean regarding alumni'
+- intent: alumni_associate_dean_message
+  examples: '- message from the associate dean for alumni
+
+    - share the associate dean''s note about alumni
+
+    - What is the associate dean''s message for alumni?
+
+    - Share the associate dean''s note about alumni
+
+    - the alumni note about Associate Share Dean''s
+
+    - message the Associate What for alumni? is Dean''s
+
+    - Who is the Associate Dean of Alumni Affairs?'
+- intent: alumni_team
+  examples: '- Tell me about the Alumni Affairs team?
+
+    - alumni team?
+
+    - Affairs Alumni Office team
+
+    - who is on the alumni relations team?
+
+    - Alumni Affairs Office team
+
+    - List the members of the Alumni Affairs Office
+
+    - Alumni team'
+- intent: alumni_services
+  examples: '- alumni services
+
+    - What services are available for alumni?
+
+    - what services are available for alumni?
+
+    - services Alumni support
+
+    - List offered services to alumni the
+
+    - How can alumni request support?
+
+    - List the services offered to alumni?'
+- intent: alumni_contact
+  examples: '- Contact details for alumni support?
+
+    - how do i contact the alumni office?
+
+    - What is the contact information for alumni relations?
+
+    - contact details for alumni support
+
+    - how can i reach the alumni affairs office?
+
+    - alumni contact
+
+    - How do I contact the Alumni Office?'
+- intent: academic_affairs_dean
+  examples: '- Name of the Dean of Academics at IIT Jammu?
+
+    - dean academic affairs?
+
+    - Name of the Dean of Academics at IIT Jammu
+
+    - dean academic affairs
+
+    - contact information? the What Dean''s is
+
+    - Dean academic affairs
+
+    - Who is the Dean of Academic Affairs at IIT Jammu?'
+- intent: academic_affairs_associate_dean_research
+  examples: '- How can i contact the associate dean for research?
+
+    - Associate for Programs Research at is Dean IIT Jammu? the Who
+
+    - how can i contact the associate dean for research?
+
+    - academic affairs research dean
+
+    - Information about the associate dean for research programs
+
+    - Information about the Associate Dean for Research Programs?
+
+    - information about the associate dean for research programs'
+- intent: academic_affairs_associate_dean_curriculum
+  examples: '- for Details the Associate about Dean Curriculum
+
+    - Who is the associate dean for curriculum at iit jammu?
+
+    - I want to learn about who is the Associate Dean for Curriculum at IIT Jammu
+
+    - Contact information for Associate Dean Curriculum (UG, PG)?
+
+    - contact information for associate dean curriculum (ug, pg)
+
+    - what do you know about the associate dean for curriculum?
+
+    - Contact information for associate dean curriculum (ug, pg)'
+- intent: academic_affairs_deputy_registrar
+  examples: '- What do you know about the deputy registrar for academic affairs?
+
+    - IIT at Who Registrar is Jammu? Deputy the
+
+    - Deputy registrar
+
+    - Contact details of the deputy registrar
+
+    - Academic for Registrar of the Deputy Affairs Name
+
+    - What do you know about the Deputy Registrar for Academic Affairs?
+
+    - Contact details of the Deputy Registrar?'
+- intent: academic_affairs_staff_abhishek
+  examples: '- Affairs for details Contact in Academic Abhishek
+
+    - what do you know about abhishek at iit jammu?
+
+    - Abhishek Jammu is IIT Details at about who
+
+    - Contact details for Abhishek in Academic Affairs
+
+    - Details about who is abhishek at iit jammu
+
+    - who is abhishek at iit jammu?
+
+    - Contact details for Abhishek in Academic Affairs?'
+- intent: btech_civil_engineering_courses
+  examples: '- the me Engineering. Civil B.Tech Tell for subject distribution
+
+    - what are the courses for b.tech civil engineering?
+
+    - what is the curriculum of b.tech civil engineering?
+
+    - covered B.Tech Which subjects Engineering in each Civil semester? are
+
+    - give me the syllabus for civil engineering b.tech program.
+
+    - Btech civil courses
+
+    - Can you provide the semester-wise course structure for B.Tech Civil?'
+- intent: btech_chemical_engineering_courses
+  examples: '- btech chemical courses
+
+    - chemical btech courses
+
+    - tell me the subject distribution for b.tech chemical engineering.
+
+    - Btech chemical courses
+
+    - what is the curriculum of b.tech chemical engineering?
+
+    - Which Engineering subjects each semester? are covered Chemical B.Tech in
+
+    - What are the courses for b.tech chemical engineering?'
+- intent: btech_cse_engineering_courses
+  examples: '- can you provide the semester-wise course structure for b.tech cse?
+
+    - Tell me the subject distribution for B.Tech Computer Science Engineering.?
+
+    - which subjects are covered in b.tech computer science each semester?
+
+    - What is the curriculum of B.Tech Computer Science Engineering?
+
+    - CSE? provide the you structure B.Tech semester-wise Can course for
+
+    - me Computer program. the for Give syllabus Engineering B.Tech Science
+
+    - What are the courses for B.Tech Computer Science Engineering?'
+- intent: mechanical_btech_courses
+  examples: '- mechanical courses
+
+    - What are the courses in mechanical engineering?
+
+    - what are the courses in mechanical engineering?
+
+    - mechanical courses?
+
+    - Mechanical courses
+
+    - mechanical What engineering? the in are courses'
+- intent: mathematics_btech_courses
+  examples: '- Mathematics courses btech
+
+    - mathematics courses btech
+
+    - what are the courses in mathematics and computing?
+
+    - mathematics courses
+
+    - mathematics courses btech?
+
+    - What are the courses in mathematics and computing?
+
+    - mathematics courses?'
+- intent: ee_btech_courses_semester_wise
+  examples: '- Can you provide a semester-wise breakdown of ee btech courses?
+
+    - How are the EE BTech courses structured semester-wise?
+
+    - how are the ee btech courses structured semester-wise?
+
+    - btech electrical courses
+
+    - Btech electrical courses
+
+    - the Electrical What in Engineering offered semester-wise? courses are BTech
+
+    - btech electrical courses?'
+- intent: materials_btech_courses_semester_wise
+  examples: '- What subjects are included in each semester of materials btech?
+
+    - semester-wise? Materials BTech of List courses
+
+    - How are the materials btech courses structured semester-wise?
+
+    - materials btech courses?
+
+    - How are the Materials BTech courses structured semester-wise?
+
+    - are semester in subjects each BTech? included of Materials What
+
+    - materials btech courses'
+- intent: btech_fullform
+  examples: '- Explain BTech full form.?
+
+    - explain btech full form.
+
+    - What does btech stand for?
+
+    - Explain btech full form.
+
+    - BTech form. Explain full
+
+    - What does BTech stand for?
+
+    - stand BTech does for? What'
+- intent: cgpa_fullform
+  examples: '- What is the full form of CGPA?
+
+    - CGPA form. Explain full
+
+    - Explain CGPA full form.?
+
+    - explain cgpa full form.
+
+    - What is the full form of cgpa?
+
+    - Explain cgpa full form.
+
+    - Explain CGPA full form.'
+- intent: ug_programmes
+  examples: '- What are the BTech programmes available at IIT Jammu?
+
+    - list the ug programmes at iit jammu.
+
+    - tell me about the ug courses at iit jammu.
+
+    - Tell me about the UG courses at IIT Jammu.?
+
+    - List the UG programmes at IIT Jammu.?
+
+    - what are the btech programmes available at iit jammu?
+
+    - What IIT at are Jammu? available BTech programmes the'
+- intent: pg_programmes
+  examples: '- list the pg courses at iit jammu.
+
+    - List the PG courses at IIT Jammu.
+
+    - What are the mtech programmes available at iit jammu?
+
+    - What postgraduate programmes are offered by IIT Jammu?
+
+    - What are the MTech programmes available at IIT Jammu?
+
+    - Tell me about the msc and ms(r) courses at iit jammu.
+
+    - pg programmes?'
+- intent: phd_programmes
+  examples: '- Jammu. the PhD IIT at departments offering List
+
+    - Jammu? areas for IIT What the research PhD are at
+
+    - list the departments offering phd at iit jammu.
+
+    - Tell me about the PhD courses at IIT Jammu.?
+
+    - What are the research areas for phd at iit jammu?
+
+    - phd programmes?
+
+    - What PhD programmes are offered by IIT Jammu?'
+- intent: academic_administration
+  examples: '- adminisration affairs academic
+
+    - IIT oversees affairs at Who academic Jammu?
+
+    - who oversees academic affairs at iit jammu?
+
+    - Who oversees academic affairs at IIT Jammu?
+
+    - Explain the academic affairs administration at IIT Jammu.?
+
+    - academic affairs adminisration?
+
+    - Academic affairs adminisration'
+- intent: btech_programmes_admission
+  examples: '- what is the admission process for btech at iit jammu?
+
+    - tell me about the btech programmes and admission process at iit jammu.
+
+    - How does the BTech admission procedure work at IIT Jammu?
+
+    - how does the btech admission procedure work at iit jammu?
+
+    - Jammu? for IIT admission at process What the is BTech
+
+    - admission process btech
+
+    - What is the admission process for BTech at IIT Jammu?'
+- intent: semester_system
+  examples: '- what is the duration of a semester at iit jammu?
+
+    - about the Tell me semester system at Jammu. IIT
+
+    - Explain the academic calendar of IIT Jammu.?
+
+    - academic calendar
+
+    - explain the academic calendar of iit jammu.
+
+    - semester system?
+
+    - Does IIT Jammu have a summer term?'
+- intent: schedule_and_hostel
+  examples: '- hostels vacate vacation? to summer have Do students during
+
+    - are hostel vacation What at IIT Jammu? the during summer rules
+
+    - When does the academic year start at iit jammu?
+
+    - hostel guidelines?
+
+    - Hostel guidelines
+
+    - when does the academic year start at iit jammu?
+
+    - can undergraduate students stay in the hostel during summer vacation?'
+- intent: timetable
+  examples: '- timetable When IIT is for each at released the Jammu? semester
+
+    - timetable
+
+    - how can i check my class schedule at iit jammu?
+
+    - timetable?
+
+    - can find Jammu I IIT the timetable? Where
+
+    - when is the timetable for each semester released at iit jammu?
+
+    - is the iit jammu semester timetable available online?'
+- intent: fees
+  examples: '- is fee the What structure?
+
+    - is fee payment required for course registration?
+
+    - course required registration? Is fee payment for
+
+    - where can i find fee details?
+
+    - Where can i find fee details?
+
+    - What is the fee structure?
+
+    - to update paying fees? after my payment status How'
+- intent: departmental_ug_committees
+  examples: '- What is the Departmental Undergraduate Committee?
+
+    - What does dugc do at iit jammu?
+
+    - who manages undergraduate academic matters?
+
+    - what is the role of the ug committee in departments?
+
+    - what does dugc do at iit jammu?
+
+    - What is the role of the ug committee in departments?
+
+    - What at do IIT DUGC does Jammu?'
+- intent: senate_undergraduate_board
+  examples: '- what is the role of the sugb in undergraduate academics?
+
+    - Who oversees ug academic matters?
+
+    - what is the senate undergraduate board?
+
+    - Who are the members of the SUGB?
+
+    - What is the Senate Undergraduate Board?
+
+    - What does sugb do?
+
+    - What is the role of the sugb in undergraduate academics?'
+- intent: faculty_advisor
+  examples: '- provides Who students? academic guidance to
+
+    - Who is the faculty advisor?
+
+    - What is the role of a faculty advisor?
+
+    - What does a faculty advisor do?
+
+    - Who is the Faculty Advisor?
+
+    - What does a Faculty Advisor do?
+
+    - students helps with Who registration? course'
+- intent: new_undergraduate_courses
+  examples: '- what is the process for adding a new undergraduate course?
+
+    - How curricular modifications are made?
+
+    - UG course Who new proposals? reviews
+
+    - approves new UG Who courses?
+
+    - who approves new ug courses?
+
+    - What is the process for adding a new undergraduate course?
+
+    - Who approves new UG courses?'
+- intent: undergraduate_student_requests
+  examples: '- students academic matters? appeal Where can
+
+    - how do students approach sugb?
+
+    - students SUGB? How do approach
+
+    - How can undergraduate students submit requests?
+
+    - students submit can requests? How undergraduate
+
+    - Who handles undergraduate student appeals?
+
+    - where can students appeal academic matters?'
+- intent: undergraduate_issue_escalation
+  examples: '- a issue? if student What happens cannot SUGB resolve
+
+    - if no on a student clarity What there is issue?
+
+    - academic are issues unresolved sent? Where
+
+    - How are student issues escalated?
+
+    - how are student issues escalated?
+
+    - issues escalated? are student How
+
+    - handles undergraduate issues? academic Who complex'
+- intent: department_pg_committee
+  examples: '- courses? postgraduate oversees Who
+
+    - what is the departmental postgraduate committee?
+
+    - Who manages PG academic matters?
+
+    - Who oversees postgraduate courses?
+
+    - academic manages matters? Who PG
+
+    - who manages pg academic matters?
+
+    - How are postgraduate rules administered?'
+- intent: senate_postgraduate_board
+  examples: '- What does spgb do?
+
+    - Who are the members of the senate postgraduate board?
+
+    - Who oversees PG academic matters?
+
+    - SPGB do? does What
+
+    - What does SPGB do?
+
+    - who are the members of the senate postgraduate board?
+
+    - who oversees pg academic matters?'
+- intent: programme_coordinator
+  examples: '- What is the responsibility of a programme coordinator?
+
+    - What is the role of a programme coordinator?
+
+    - what is the role of a programme coordinator?
+
+    - What is the responsibility of a Programme Coordinator?
+
+    - who helps pg students with academic matters?
+
+    - Who helps pg students with academic matters?
+
+    - PG Who students academic matters? helps with'
+- intent: new_postgraduate_courses
+  examples: '- Who reviews new PG course proposals?
+
+    - what is the process for adding a new postgraduate course?
+
+    - how are curricular modifications made for postgraduate courses?
+
+    - new postgraduate courses How introduced? are
+
+    - How are for made postgraduate courses? curricular modifications
+
+    - who reviews new pg course proposals?
+
+    - What the process new is adding a postgraduate for course?'
+- intent: postgraduate_student_requests
+  examples: '- Where can pg students appeal academic matters?
+
+    - approach do students PG SPGB? How
+
+    - the requests process and PG in appeals student programs? What for is
+
+    - who handles postgraduate student appeals?
+
+    - Who handles postgraduate student appeals?
+
+    - how do pg students approach spgb?
+
+    - students can How submit postgraduate requests?'
+- intent: escalation_of_postgraduate_student_requests
+  examples: '- Who handles complex postgraduate academic issues?
+
+    - there issue? no on a clarity student What if is PG
+
+    - What if there is no clarity on a PG student issue?
+
+    - What if there is no clarity on a pg student issue?
+
+    - how are postgraduate student issues escalated?
+
+    - How are postgraduate student issues escalated?
+
+    - handles issues? academic Who complex postgraduate'
+- intent: postgraduate_semester_drop
+  examples: '- Can a postgraduate student drop a semester?
+
+    - a a postgraduate semester? student Can drop
+
+    - Under what circumstances can a pg student drop a semester?
+
+    - What is the process for a PG semester drop?
+
+    - Can a student take a break from their postgraduate program?
+
+    - what is the process for a pg semester drop?
+
+    - What is the process for a pg semester drop?'
+- intent: phd_students
+  examples: '- What is the procedure for phd students to resolve issues?
+
+    - How are PhD students advised?
+
+    - PhD to resolve is for issues? the procedure students What
+
+    - How do PhD students handle academic issues?
+
+    - what is the procedure for phd students to resolve issues?
+
+    - what is the role of a phd supervisor?
+
+    - What is the role of a PhD supervisor?'
+- intent: curricular_credits
+  examples: '- you the distribution the credit for Can explain B.Tech program?
+
+    - What are the required credits for each semester?
+
+    - credits in B.Tech program? the the What are categories of
+
+    - what are the required credits for each semester?
+
+    - What are the categories of credits in the b.tech program?
+
+    - Can you explain the credit distribution for the B.Tech program?
+
+    - What are the categories of credits in the B.Tech program?'
+- intent: credit_load_flexibility
+  examples: '- What is the credit flexibility offered for high-performing students?
+
+    - what is the credit flexibility offered for high-performing students?
+
+    - how does iit jammu manage credit load for students with different cgpa levels?
+
+    - can students take more credits than usual if they have a high cgpa?
+
+    - is high-performing What credit the offered for flexibility students?
+
+    - How does iit jammu manage credit load for students with different cgpa levels?
+
+    - How are credits managed for students with backlogs?'
+- intent: course_evaluation
+  examples: '- are grade? into factored tests and How assignments the class
+
+    - how are class tests and assignments factored into the grade?
+
+    - UG 2022 are evaluated students curriculum courses? How in
+
+    - How are students evaluated in ug 2022 curriculum courses?
+
+    - grade to in components final the contribute a What course?
+
+    - what components contribute to the final grade in a course?
+
+    - the What undergraduate is method for evaluation courses?'
+- intent: course_registration
+  examples: '- How do i register for courses at iit jammu?
+
+    - how do i register for courses at iit jammu?
+
+    - When does course registration start at IIT Jammu?
+
+    - Can i audit a course at iit jammu?
+
+    - When does course registration start at iit jammu?
+
+    - Can course a at I IIT audit Jammu?
+
+    - How add I drop or course? do a'
+- intent: course_withdrawal
+  examples: '- Can i withdraw from a course mid-semester?
+
+    - what are the rules for course withdrawal?
+
+    - how can i drop a course after registration?
+
+    - How can i drop a course after registration?
+
+    - what is the process to withdraw from a course?
+
+    - How can I drop a course after registration?
+
+    - What is the process to withdraw from a course?'
+- intent: backlog_courses
+  examples: '- What happens if i fail a course at iit jammu?
+
+    - Can a failed I reattempt course?
+
+    - what are the rules for backlog courses?
+
+    - How are backlog courses handled?
+
+    - What are the rules for backlog courses?
+
+    - if fail at course Jammu? I a What IIT happens
+
+    - Can i reattempt a failed course?'
+- intent: summer_term
+  examples: '- summer term
+
+    - What is the summer term at iit jammu?
+
+    - Does IIT summer Jammu courses? offer
+
+    - What is the summer term at IIT Jammu?
+
+    - how long is the summer term at iit jammu?
+
+    - Does iit jammu offer summer courses?
+
+    - what is the summer term at iit jammu?'
+- intent: attendance_policy
+  examples: '- how much attendance is required for a course?
+
+    - Can I get relaxation in attendance?
+
+    - is the at Jammu? IIT attendance What policy
+
+    - the minimum What attendance requirement? is
+
+    - Can i get relaxation in attendance?
+
+    - attendance criteria
+
+    - Attendance criteria'
+- intent: grading_system
+  examples: '- How does the grading system work at iit jammu?
+
+    - How are grades converted to CGPA?
+
+    - What are the grade points at IIT Jammu?
+
+    - How does the grading system work at IIT Jammu?
+
+    - to grades are CGPA? How converted
+
+    - how are grades converted to cgpa?
+
+    - what are the grade points at iit jammu?'
+- intent: semester_freeze
+  examples: '- What happens if i need to pause my studies?
+
+    - Can I take a medical break from IIT Jammu?
+
+    - How can I take a gap semester?
+
+    - Can i take a medical break from iit jammu?
+
+    - Can i take a semester break at iit jammu?
+
+    - IIT I a from medical break take Can Jammu?
+
+    - my pause if need to happens I What studies?'
+- intent: change_branch
+  examples: '- how can i change my branch at iit jammu?
+
+    - when can i apply for a branch change?
+
+    - When can I apply for a branch change?
+
+    - How can I change my branch at IIT Jammu?
+
+    - can i change from mechanical to cse at iit jammu?
+
+    - How change my branch IIT I Jammu? can at
+
+    - How can i change my branch at iit jammu?'
+- intent: internship_policy
+  examples: '- How do I apply for an internship?
+
+    - When can students do an internship?
+
+    - for I apply do internship? How an
+
+    - the internship rules What Jammu? are at IIT
+
+    - What are the internship rules at iit jammu?
+
+    - What are the internship rules at IIT Jammu?
+
+    - what are the internship rules at iit jammu?'
+- intent: ug_merit_cum_means_scholarship
+  examples: '- can i apply for mcm if i have a backlog?
+
+    - How scholarship amount? the much is MCM
+
+    - ug scholarship mcm
+
+    - Can i apply for mcm if i have a backlog?
+
+    - who is eligible for the mcm scholarship?
+
+    - Can I apply for MCM if I have a backlog?
+
+    - is mcm available for all categories?'
+- intent: ug_free_messing_scholarship
+  examples: '- Is there a cgpa requirement for free messing?
+
+    - Ug free mess scholarship
+
+    - can i get free messing if my family income is above rs. 4.50 lakh?
+
+    - is there a cgpa requirement for free messing?
+
+    - What is the free messing scholarship at iit jammu?
+
+    - Does IIT Jammu provide free mess for SC/ST students?
+
+    - ug free mess scholarship'
+- intent: ug_freeship_scholarship
+  examples: '- can i apply for both mcm and freeship?
+
+    - is eligible Who for Freeship?
+
+    - Who is eligible for freeship?
+
+    - Can I apply for both MCM and Freeship?
+
+    - Is tuition fee remission available for general/obc/ews students?
+
+    - who is eligible for freeship?
+
+    - How many students get tuition fee remission?'
+- intent: ug_quest_fee_waiver
+  examples: '- where can i find more details about quest at iit jammu?
+
+    - How much fee is waived under quest?
+
+    - How much fee is waived under QUEST?
+
+    - Does iit jammu offer full tuition fee waivers?
+
+    - Who is eligible for the quest tuition waiver?
+
+    - much is How under fee waived QUEST?
+
+    - What is the quest fee waiver at iit jammu?'
+- intent: eligibility_mtech_fellowship
+  examples: '- the Do MTech a higher stipend? students under category RA receive
+
+    - what is the fellowship amount for mtech students?
+
+    - periodically? fellowship amount the revised Is MTech
+
+    - is the mtech fellowship amount revised periodically?
+
+    - what is the duration of the mtech fellowship?
+
+    - What is the duration of the MTech fellowship?
+
+    - What is the fellowship amount for mtech students?'
+- intent: eligibility_phd_assistantship
+  examples: '- What is the PhD assistantship for full-time students?
+
+    - Can a PhD student continue their programme without fellowship?
+
+    - how much teaching/research assistance is required for phd students?
+
+    - what happens after submission of the phd thesis?
+
+    - are externally funded phd students eligible for institute assistantship?
+
+    - can phd students extend their assistantship beyond 5 years?
+
+    - How much teaching/research assistance is required for phd students?'
+- intent: travel_allowance_contingency_grant
+  examples: '- how can students apply for travel allowance for extracurricular activities?
+
+    - Can PhD students avail financial support for workshops or internships?
+
+    - can phd students avail financial support for workshops or internships?
+
+    - what activities are covered under the travel allowance and contingency grant?
+
+    - Can phd students avail financial support for workshops or internships?
+
+    - Travel What covered are Grant? activities the Contingency under and Allowance
+
+    - What is the Travel Allowance and Contingency Grant for students?'
+- intent: euler_earn_while_you_learn
+  examples: '- the What under Earn While You Learn available Scheme? tasks are
+
+    - how can i participate in the euler program at iit jammu?
+
+    - Can apply allowances? without scholarships for subsistence students
+
+    - Euler programme
+
+    - What is the EULER scheme at IIT Jammu?
+
+    - What tasks are available under the earn while you learn scheme?
+
+    - is financial assistance available for students working on institute tasks?'
+- intent: president_gold_medal_ug_students
+  examples: '- What is the President Gold Medal for UG students?
+
+    - how is the president gold medal awarded at iit jammu?
+
+    - What President the Gold for Medal? the criteria are
+
+    - ug president gold medal
+
+    - the What for awarding is the President Gold Medal? process
+
+    - Gold is IIT Medal How awarded at Jammu? the President
+
+    - How is the President Gold Medal awarded at IIT Jammu?'
+- intent: directors_gold_medal_ug_students
+  examples: '- Medal? the Gold What are Director’s for the criteria
+
+    - How is the director’s gold medal awarded at iit jammu?
+
+    - Gold receives Medal? the Who Director’s
+
+    - What is the process for awarding the Director’s Gold Medal?
+
+    - What is the Director’s Gold Medal for UG students?
+
+    - Who receives the Director’s Gold Medal?
+
+    - what are the criteria for the director’s gold medal?'
+- intent: institute_silver_medal_ug_students
+  examples: '- who receives the institute silver medal?
+
+    - What are the criteria for the Institute Silver Medal?
+
+    - ug institute silver medal
+
+    - How is the Institute Silver Medal awarded at IIT Jammu?
+
+    - ug institute silver medal?
+
+    - what is the process for awarding the institute silver medal?
+
+    - How is the institute silver medal awarded at iit jammu?'
+- intent: prof_ashok_ahuja_steel_structures_award
+  examples: '- the receives Ahuja Who Prof Ashok Award? Structures K Steel
+
+    - What is the process for awarding the prof ashok k ahuja steel structures award?
+
+    - How is the Prof Ashok K Ahuja Steel Structures Award awarded?
+
+    - steel structures award
+
+    - What is the process for awarding the Prof Ashok K Ahuja Steel Structures Award?
+
+    - Who receives the Prof Ashok K Ahuja Steel Structures Award?
+
+    - how is the prof ashok k ahuja steel structures award awarded?'
+- intent: certificates_to_encourage_currently_enrolled_students
+  examples: '- academic certificate
+
+    - academic certificate?
+
+    - who receives the certificate to encourage currently enrolled students?
+
+    - What is the certificate to encourage currently enrolled students?
+
+    - how are the certificates to encourage currently enrolled students awarded?
+
+    - encourage is certificate to What currently students? enrolled the
+
+    - How are the certificates to encourage currently enrolled students awarded?'
+- intent: institute_gold_silver_medal_mtech
+  examples: '- how is the institute silver medal awarded to mtech students?
+
+    - what are the criteria for the institute gold medal for mtech students?
+
+    - How is the institute gold medal awarded to mtech students?
+
+    - who gets the institute gold medal for mtech students?
+
+    - what is the institute silver medal for mtech students?
+
+    - what are the criteria for the institute silver medal for mtech students?
+
+    - What are the criteria for the Institute Gold Medal for MTech students?'
+- intent: outstanding_doctoral_student_award_phd
+  examples: '- Student Award Outstanding What criteria PhD the for for the Doctoral
+    are students?
+
+    - students the Student Doctoral for Award How given? Outstanding PhD is
+
+    - What are the criteria for the outstanding doctoral student award for phd students?
+
+    - Doctoral the a Student earn can student Award? How PhD Outstanding
+
+    - what is the outstanding doctoral student award for phd students?
+
+    - What is the outstanding doctoral student award for phd students?
+
+    - who gets the outstanding doctoral student award for phd students?'
+- intent: library_iit_jammu_location
+  examples: '- library location?
+
+    - about library
+
+    - About library
+
+    - is the address the What of library?
+
+    - Where is the library located?
+
+    - about library?
+
+    - the located? is library Where'
+- intent: library_iit_jammu_contact
+  examples: '- How can I contact the library?
+
+    - library contact
+
+    - library contact?
+
+    - can the How I library? contact
+
+    - Library contact
+
+    - what is the contact number of the library?
+
+    - What the contact library? number is of the'
+- intent: library_iit_jammu_opening_hours
+  examples: '- What are the library''s opening hours?
+
+    - Library open
+
+    - what are the library''s opening hours?
+
+    - when is the library open?
+
+    - hours? the What library''s are opening
+
+    - the When is open? library
+
+    - When is the library open?'
+- intent: library_iit_jammu_circulation_timing
+  examples: '- what are the library circulation timings?
+
+    - when can i borrow books?
+
+    - library circulation timing?
+
+    - When I borrow books? can
+
+    - When can I borrow books?
+
+    - library circulation timing
+
+    - Library circulation timing'
+- intent: library_iit_jammu_faculty_borrowing_policy
+  examples: '- how many books can faculty borrow from library?
+
+    - policy for library faculty? What is the borrowing
+
+    - what is the library borrowing policy for faculty?
+
+    - from faculty books can borrow How many library?
+
+    - What is the library borrowing policy for faculty?
+
+    - faculty borrow policy library?
+
+    - borrow faculty policy library'
+- intent: library_iit_jammu_phd_borrowing_policy
+  examples: '- phd students borrow
+
+    - how many books can phd students borrow from library?
+
+    - students? PhD What is policy the library for borrowing
+
+    - students phd borrow
+
+    - phd students borrow?
+
+    - what is the library borrowing policy for phd students?
+
+    - How many books can PhD students borrow from library?'
+- intent: library_iit_jammu_mtech_borrowing_policy
+  examples: '- What is the borrowing policy for m. tech students in library?
+
+    - how many books can m. tech students borrow from library?
+
+    - How many books can M. Tech students borrow from library?
+
+    - How many books can m. tech students borrow from library?
+
+    - mtech library policy
+
+    - What is the borrowing policy for M. Tech students in library?
+
+    - can borrow from books students many M. How Tech library?'
+- intent: library_iit_jammu_btech_borrowing_policy
+  examples: '- How many books can b. tech students borrow from library?
+
+    - policy btech borrow students
+
+    - How many books can B. Tech students borrow from library?
+
+    - How books library? borrow from students can B. many Tech
+
+    - What is the library borrowing policy for b. tech students?
+
+    - how many books can b. tech students borrow from library?
+
+    - what is the library borrowing policy for b. tech students?'
+- intent: library_iit_jammu_project_assistant_borrowing_policy
+  examples: '- how many library books can project assistants borrow?
+
+    - How many library books can project assistants borrow?
+
+    - borrowing is Project or the Assistants? library for policy Teaching What
+
+    - what is the library borrowing policy for project or teaching assistants?
+
+    - What is the library borrowing policy for project or teaching assistants?
+
+    - How books many library project can assistants borrow?
+
+    - What is the library borrowing policy for Project or Teaching Assistants?'
+- intent: library_iit_jammu_staff_borrowing_policy
+  examples: '- How many library books can staff borrow?
+
+    - what is the library borrowing policy for staff members?
+
+    - many borrow? library can How books staff
+
+    - how many library books can staff borrow?
+
+    - the staff is library policy borrowing members? for What
+
+    - What is the library borrowing policy for staff members?'
+- intent: library_iit_jammu_hindi_books_policy
+  examples: '- How many hindi books can i borrow from library?
+
+    - books many can How borrow from library? Hindi I
+
+    - the What library policy borrowing Hindi books? for is
+
+    - how many hindi books can i borrow from library?
+
+    - How many Hindi books can I borrow from library?
+
+    - What is the library borrowing policy for Hindi books?
+
+    - What is the library borrowing policy for hindi books?'
+- intent: library_iit_jammu_resources
+  examples: '- What e-books can I access from library?
+
+    - what online journals are available in library?
+
+    - what e-books can i access from library?
+
+    - What online journals are available in library?
+
+    - what e-resources does the library have?
+
+    - e-books What from library? can I access
+
+    - available journals in What library? online are'
+- intent: library_iit_jammu_research_assistance_tools
+  examples: '- Does the library provide research tools?
+
+    - does the library provide research tools?
+
+    - What research assistance tools are available in the library?
+
+    - what research assistance tools are available in the library?
+
+    - assistance are available the in library? What research tools
+
+    - Does tools? research library provide the'
+- intent: library_iit_jammu_seating_arrangements
+  examples: '- When can I use the seating in the library?
+
+    - library seating arrangement?
+
+    - library seating arrangement
+
+    - When can i use the seating in the library?
+
+    - library? the seating arrangement the at ready Is
+
+    - when can i use the seating in the library?
+
+    - Is the seating arrangement ready at the library?'
+- intent: library_iit_jammu_updates
+  examples: '- Tell me about the library setup progress
+
+    - Tell me about the library setup progress?
+
+    - What are the latest updates in the library
+
+    - I want to know latest updates in the library?
+
+    - tell me about the library setup progress
+
+    - i want to know latest updates in the library
+
+    - the I know want latest to library updates in'
+- intent: medical_center_intro
+  examples: '- What is the Medical Centre?
+
+    - What Medical the is Centre?
+
+    - What is the medical centre?
+
+    - Tell me about the Medical Centre?
+
+    - What facilities does the Medical Centre offer?
+
+    - what is the medical centre?
+
+    - tell me about the medical centre'
+- intent: medical_center_contact
+  examples: '- What is the phone number of the Medical Centre?
+
+    - out reach to the to How Medical Centre?
+
+    - Medical Centre? is the email of What the
+
+    - what is the phone number of the medical centre?
+
+    - How to reach out to the medical centre?
+
+    - What is the email of the medical centre?
+
+    - how can i contact the medical centre?'
+- intent: medical_center_facilities
+  examples: '- what services does the medical centre provide?
+
+    - List the facilities offered at the Health and Wellness Center
+
+    - What are the facilities at the medical centre?
+
+    - List the facilities offered at the Health and Wellness Center?
+
+    - the Centre does What services Medical provide?
+
+    - What services does the Medical Centre provide?
+
+    - what are the facilities at the medical centre?'
+- intent: doctor_karunika
+  examples: '- What qualifications does Dr. Karunika have?
+
+    - Tell me about Dr. Karunika
+
+    - Dr. me Tell about Karunika
+
+    - tell me about dr. karunika
+
+    - How can I contact Dr. Karunika?
+
+    - Tell me about dr. karunika
+
+    - does What Dr. Karunika have? qualifications'
+- intent: doctor_vikram_singh
+  examples: '- How can i contact dr. vikram singh?
+
+    - what qualifications does dr. vikram singh have?
+
+    - qualifications Dr. Vikram What does Singh have?
+
+    - What qualifications does Dr. Vikram Singh have?
+
+    - What qualifications does dr. vikram singh have?
+
+    - Tell me about dr. vikram singh
+
+    - how can i contact dr. vikram singh?'
+- intent: doctor_priya
+  examples: '- Tell me about Dr. Priya
+
+    - Who is dr. priya?
+
+    - What qualifications does Dr. Priya have?
+
+    - who is dr. priya?
+
+    - tell me about dr. priya
+
+    - Who is Dr. Priya?
+
+    - how can i contact dr. priya?'
+- intent: doctor_bidisha
+  examples: '- Tell me about dr. bidisha
+
+    - me about Bidisha Tell Dr.
+
+    - contact Bidisha? can I Dr. How
+
+    - how can i contact dr. bidisha?
+
+    - tell me about dr. bidisha
+
+    - What qualifications does Dr. Bidisha have?
+
+    - Who is dr. bidisha?'
+- intent: doctor_pranav_gupta
+  examples: '- Who is Dr. Pranav Gupta?
+
+    - Tell me about Dr. Pranav Gupta
+
+    - What qualifications does dr. pranav gupta have?
+
+    - tell me about dr. pranav gupta
+
+    - contact can Dr. How I Gupta? Pranav
+
+    - what qualifications does dr. pranav gupta have?
+
+    - How can I contact Dr. Pranav Gupta?'
+- intent: doctor_rohit_bhatiya
+  examples: '- who is dr. rohit bhatiya?
+
+    - Who is Dr. Rohit Bhatiya?
+
+    - Tell me about Dr. Rohit Bhatiya?
+
+    - Tell me about dr. rohit bhatiya
+
+    - what is the role of dr. rohit bhatiya?
+
+    - What is the role of Dr. Rohit Bhatiya?
+
+    - Dr. about Rohit me Tell Bhatiya'
+- intent: medical_center_location
+  examples: '- Tell me the address of the medical centre
+
+    - what is the address of the health and wellness center?
+
+    - Where is the Medical Centre located?
+
+    - Where is the medical centre located?
+
+    - Tell me the address of the Medical Centre
+
+    - location medical center?
+
+    - Tell me the address of the Medical Centre?'
+- intent: research_and_consultancy_section
+  examples: '- at and Consultancy Research Jammu IIT
+
+    - research and consultancy at iit jammu
+
+    - what is the research and consultancy section?
+
+    - Research and Consultancy at IIT Jammu?
+
+    - tell me about the research and consultancy section
+
+    - Research and Consultancy at IIT Jammu
+
+    - Research Consultancy Section? is What the and'
+- intent: research_and_consultancy_message
+  examples: '- Tell me about the message for Research and Consultancy?
+
+    - What is the message from Research and Consultancy?
+
+    - What is the message from research and consultancy?
+
+    - What does the Research and Consultancy section say?
+
+    - What does the research and consultancy section say?
+
+    - what is the message from research and consultancy?
+
+    - the Consultancy? What is and Research message from'
+- intent: research_and_consultancy_deputy_registrar
+  examples: '- Tell me about the Deputy Registrar
+
+    - the Research Who is Registrar for and Deputy Consultancy?
+
+    - who is the deputy registrar for research and consultancy?
+
+    - Registrar about Tell the Deputy me
+
+    - Tell me about the deputy registrar
+
+    - who heads the research and consultancy?
+
+    - Who heads the research and consultancy?'
+- intent: research_and_consultancy_objectives
+  examples: '- the of Research Consultancy the are What and section? goals
+
+    - Tell of Research about the objectives and me Consultancy
+
+    - What are the goals of the research and consultancy section?
+
+    - Tell me about the objectives of Research and Consultancy?
+
+    - what are the goals of the research and consultancy section?
+
+    - What are the objectives of the research and consultancy section?
+
+    - Tell me about the objectives of research and consultancy'
+- intent: research_and_consultancy_main_functions
+  examples: '- What does the Research and Consultancy section handle?
+
+    - What does the research and consultancy section handle?
+
+    - tell me about the main functions of research and consultancy
+
+    - What are the main functions of the research and consultancy section?
+
+    - Tell me about the main functions of Research and Consultancy
+
+    - the What are of Research Consultancy Section? main functions and the
+
+    - and main Tell about Consultancy Research me the functions of'
+- intent: research_and_consultancy_team_deputy_registrar
+  examples: '- Who is cdr avinash barthwal?
+
+    - who is cdr avinash barthwal?
+
+    - What is the role of Cdr Avinash Barthwal?
+
+    - what is the role of cdr avinash barthwal?
+
+    - Tell me about Cdr Avinash Barthwal?
+
+    - is Cdr Barthwal? Who Avinash
+
+    - Cdr What the Avinash is Barthwal? role of'
+- intent: security_staff
+  examples: '- Who is the security officer?
+
+    - officer security the Tell me about
+
+    - tell me about the security officer
+
+    - Who Officer? Security is the
+
+    - Tell me about the security officer
+
+    - what is the contact for the security officer?
+
+    - Tell me about the security officer?'
+- intent: security_contact
+  examples: '- the I security contact team? How can
+
+    - What is the contact number for security?
+
+    - is contact number security? What the for
+
+    - contact security Give team''s details. the me
+
+    - what is the contact number for security?
+
+    - give me the security team''s contact details.
+
+    - Give me the security team''s contact details.?'
+- intent: security_officer_email
+  examples: '- what is the email of the security officer?
+
+    - How can I contact the security officer?
+
+    - officer? How security the I can contact
+
+    - What the the Security Officer? email for is contact
+
+    - How can i contact the security officer?
+
+    - what is the contact email for the security officer?
+
+    - What is the contact email for the security officer?'
+- intent: student_affairs_section
+  examples: '- Student affairs at iit jammu
+
+    - student affairs at iit jammu
+
+    - Student Affairs at IIT Jammu?
+
+    - Student Affairs at IIT Jammu
+
+    - Student Affairs at Jammu IIT
+
+    - Affairs is Student Section? the What
+
+    - Affairs Section the about me Tell Student'
+- intent: student_affairs_message
+  examples: '- What does the Student Affairs section say?
+
+    - What is the message from the student affairs office?
+
+    - tell me about the message for student affairs
+
+    - Tell me about the message for Student Affairs?
+
+    - what is the message from the student affairs office?
+
+    - What is the message from the Student Affairs Office?
+
+    - what does the student affairs section say?'
+- intent: hostel_life
+  examples: '- hostel life?
+
+    - What is the hostel experience like?
+
+    - What hostel the like? is experience
+
+    - Tell me about the hostel life at IIT Jammu
+
+    - Tell me about the hostel life at iit jammu
+
+    - Tell me about the hostel life at IIT Jammu?
+
+    - How is the campus hostel at iit jammu?'
+- intent: mess_facilities
+  examples: '- the Jammu? mess IIT are facilities at What
+
+    - Tell me about the mess at IIT Jammu?
+
+    - What are the mess facilities at IIT Jammu?
+
+    - what are the mess facilities at iit jammu?
+
+    - what food options are available at iit jammu?
+
+    - Mess facilities
+
+    - mess facility?'
+- intent: student_activities
+  examples: '- What Jammu? at activities are IIT student available
+
+    - Tell me about student activities at IIT Jammu
+
+    - What student activities are available at IIT Jammu?
+
+    - what student activities are available at iit jammu?
+
+    - What extracurricular activities can students engage in?
+
+    - at IIT about Tell student Jammu me activities
+
+    - extracurricular can students engage activities What in?'
+- intent: sports_facilities
+  examples: '- at IIT about Tell me sports Jammu
+
+    - facilities available at are IIT sports Jammu? What
+
+    - Tell me about sports at IIT Jammu
+
+    - sport facilities?
+
+    - Tell me about sports at IIT Jammu?
+
+    - sport facility?
+
+    - What sports are offered at iit jammu?'
+- intent: student_affairs_office
+  examples: '- Tell me about the student affairs office
+
+    - Affairs me Tell the Office about Student
+
+    - Tell me about the Student Affairs Office?
+
+    - what is the role of the student affairs office?
+
+    - Tell me about the Student Affairs Office
+
+    - What does the student affairs office do?
+
+    - tell me about the student affairs office'
+- intent: student_affairs_team_sartaj_ul_hasan
+  examples: '- is Who Hasan? Sartaj Ul
+
+    - Who is Sartaj Ul Hasan?
+
+    - Tell me about Sartaj Ul Hasan
+
+    - Tell me about sartaj ul hasan
+
+    - who is sartaj ul hasan?
+
+    - What is sartaj ul hasan''s role?
+
+    - What role? is Ul Hasan''s Sartaj'
+- intent: semester_schedule
+  examples: '- Semester schedule
+
+    - timetable?
+
+    - timetable
+
+    - semester schedule
+
+    - semester schedule?
+
+    - Timetable'
