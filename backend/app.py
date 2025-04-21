@@ -3,6 +3,9 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
 from deep_translator import GoogleTranslator
+import subprocess
+import threading
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable Cross-Origin Resource Sharing (CORS) to allow your React app to communicate with Flask
@@ -50,6 +53,18 @@ def predict():
     except Exception as e:
         print("Error:", e)
         return jsonify({"error": str(e)}), 500
+    
+
+# add scipt to run rasa and flask app with one command
+def run_rasa_shell():
+    # Get the absolute directory where this script is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    print(f"Running Rasa shell in directory: {current_dir}")
+    subprocess.call(["rasa", "shell"], cwd=current_dir, shell=True)
 
 if __name__ == "__main__":
+    # Start Rasa shell in a background thread
+    threading.Thread(target=run_rasa_shell).start()
+
+    # Start Flask server
     app.run(debug=True, port=8080)

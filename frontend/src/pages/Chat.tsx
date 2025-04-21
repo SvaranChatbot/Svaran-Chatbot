@@ -1,6 +1,3 @@
-// Initially created by Kunal Sharma 2023UMA0221 Mathematics and Computing
-// Updated by Ronak Bagri 2023UMA0233 Mathematics and Computing for backend intergation and language support
-
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/chat.css';
@@ -18,7 +15,10 @@ const LANGUAGES = [
   { code: 'gu', name: 'Gujarati' },
   { code: 'pa', name: 'Punjabi' },
   { code: 'ur', name: 'Urdu' }
-]; //update By Ronak Bagri (2023uma0233)
+];
+
+// Define backend URL here
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL; // Update this whenever needed
 
 function Chat() {
   const [messages, setMessages] = useState<Array<{ text: string; sender: 'user' | 'bot'; timestamp: Date }>>([
@@ -30,8 +30,8 @@ function Chat() {
   ]);
   const [inputMessage, setInputMessage] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [language, setLanguage] = useState('en');//update By Ronak Bagri (2023uma0233)
-  const [shouldScroll, setShouldScroll] = useState(false);//update By Ronak Bagri (2023uma0233)
+  const [language, setLanguage] = useState('en');
+  const [shouldScroll, setShouldScroll] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
@@ -53,10 +53,10 @@ function Chat() {
   }, [windowHeight]);
 
   useEffect(() => {
-    axios.post('http://localhost:8080/set_language', { language })
+    axios.post(`${BACKEND_URL}/set_language`, { language })
       .then(res => console.log(res.data))
       .catch(err => console.error('Error setting language:', err));
-  }, [language]);//update By Ronak Bagri (2023uma0233)
+  }, [language]);
 
   const handleSend = async () => {
     if (inputMessage.trim() === '') return;
@@ -73,7 +73,7 @@ function Chat() {
     setShouldScroll(true);
 
     try {
-      const res = await axios.post('http://localhost:8080/predict', { message: inputMessage });
+      const res = await axios.post(`${BACKEND_URL}/predict`, { message: inputMessage });
       const botMessage = {
         text: res.data.answer,
         sender: 'bot' as const,
@@ -92,7 +92,7 @@ function Chat() {
     } finally {
       setIsTyping(false);
     }
-  };//update By Ronak Bagri (2023uma0233)
+  };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -164,7 +164,6 @@ function Chat() {
             </div>
           )}
 
-          {/* Scroll to latest message update By Ronak Bagri (2023uma0233) */}
           <div ref={messagesEndRef} />
         </div>
 
