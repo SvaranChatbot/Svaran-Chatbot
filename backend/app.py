@@ -52,15 +52,7 @@ def predict():
         print("Error:", e)
         return jsonify({"error": str(e)}), 500
 
-def run_rasa_shell():
-    # updated by kunal sharma
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    print(f"Running Rasa shell in directory: {current_dir}")
-    subprocess.call(["rasa", "shell"], cwd=current_dir, shell=True)
-
 if __name__ == "__main__":
-    # updated by kunal sharma
-    threading.Thread(target=run_rasa_shell).start()
 
     # Start Flask server
     app.run(debug=True, port=8080)
