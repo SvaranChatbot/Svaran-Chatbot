@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Senior Assistant contact details",
+    "intent": "meena_sharma",
+    "intent_prediction": {
+      "name": "sahil_dogra",
+      "confidence": 0.4248243570327759
+    }
+  },
+  {
+    "text": "Senior Assistant contact details",
+    "intent": "shubham_gupta",
+    "intent_prediction": {
+      "name": "sahil_dogra",
+      "confidence": 0.4248243570327759
+    }
+  },
+  {
+    "text": "Tell me about the Deputy Registrar",
+    "intent": "research_and_consultancy_deputy_registrar",
+    "intent_prediction": {
+      "name": "academic_affairs_deputy_registrar",
+      "confidence": 0.4317626655101776
+    }
+  },
+  {
+    "text": "timetable",
+    "intent": "semester_schedule",
+    "intent_prediction": {
+      "name": "timetable",
+      "confidence": 0.561602771282196
+    }
+  }
+]
