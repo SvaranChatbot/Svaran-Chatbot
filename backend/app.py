@@ -1,5 +1,4 @@
 # update By Ronak Bagri (2023uma0233)
-# update by kunal Sharma (2023uma0221)
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import requests
@@ -9,10 +8,11 @@ import threading
 import os
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app)  # Enable Cross-Origin Resource Sharing (CORS) to allow your React app to communicate with Flask
 
-user_language = "en"
-RASA_URL = "http://localhost:5005/webhooks/rest/webhook" 
+user_language = "en"  # default language
+RASA_URL = "http://localhost:5005/webhooks/rest/webhook"  # Rasa API Endpoint
+
 @app.route('/set_language', methods=['POST'])
 def set_language():
     global user_language
@@ -31,9 +31,11 @@ def predict():
         return jsonify({"error": "Message is required!"}), 400
 
     try:
+        # Translate user input to English
         input_en = GoogleTranslator(source=user_language, target='en').translate(user_text)
         print(f"User: {user_text} -> English: {input_en}")
 
+        # Send to Rasa
         rasa_response = requests.post(RASA_URL, json={"sender": "user", "message": input_en})
         if rasa_response.status_code != 200:
             return jsonify({"error": "Error communicating with Rasa"}), 500
@@ -52,7 +54,15 @@ def predict():
         print("Error:", e)
         return jsonify({"error": str(e)}), 500
 
+def run_rasa_shell():
+    # Get the absolute directory where this script is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    print(f"Running Rasa shell in directory: {current_dir}")
+    subprocess.call(["rasa", "shell"], cwd=current_dir, shell=True)
+
 if __name__ == "__main__":
+    # Start Rasa shell in a background thread
+    threading.Thread(target=run_rasa_shell).start()
 
     # Start Flask server
     app.run(debug=True, port=8080)
