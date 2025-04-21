@@ -221,7 +221,7 @@
 @media (max-width: 480px) {
   .chat-container {
     height: calc(100vh - 120px);
-    margin: 10px 0;
+    margin: 10px 7px;
   }
 
   .chat-avatar {

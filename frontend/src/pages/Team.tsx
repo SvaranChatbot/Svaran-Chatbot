@@ -29,10 +29,10 @@ const TeamPage: React.FC = () => {
   const teamMembers: TeamMember[] = [
     {
       name: "Kunal Sharma",
-      role: "Web Developer",
+      role: "Frontend Developer",
       image: kunalImg,
       contributions: [
-        "Website Development",
+        "Website Frontend Development",
         "React Component Development",
         "UI/UX Design",
       ],
@@ -42,11 +42,11 @@ const TeamPage: React.FC = () => {
     },
     {
       name: "Ronak Bagri",
-      role: "Mobile Developer",
+      role: "Full Stack Developer",
       image: ronakImg,
       contributions: [
-        "Mobile App Development",
-        "Backend Development",
+        "Backend Development and Integration",
+        "Mobile App Development using ReactNative",
         "API Integration",
       ],
       linkedin: "https://linkedin.com/in/ronakbagri",
