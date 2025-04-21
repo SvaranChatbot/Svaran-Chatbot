@@ -18,7 +18,7 @@ const LANGUAGES = [
 ];
 
 // Define backend URL here
-const BACKEND_URL = 'https://slug-comic-albacore.ngrok-free.app'; // Update this whenever needed
+const BACKEND_URL = 'https://working-proven-chicken.ngrok-free.app'; // Update this whenever needed
 
 function Chat() {
   const [messages, setMessages] = useState<Array<{ text: string; sender: 'user' | 'bot'; timestamp: Date }>>([
