@@ -36,9 +36,9 @@ const TeamPage: React.FC = () => {
         "React Component Development",
         "UI/UX Design",
       ],
-      linkedin: "https://linkedin.com/in/kunalsharma",
-      github: "https://github.com/kunalsharma",
-      email: "kunal.sharma@example.com"
+      linkedin: "https://linkedin.com/in/ks-iitjmu",
+      github: "https://github.com/ks-iitjmu",
+      email: "2023uma0221@iitjammu.ac.in"
     },
     {
       name: "Ronak Bagri",
@@ -51,7 +51,7 @@ const TeamPage: React.FC = () => {
       ],
       linkedin: "https://linkedin.com/in/ronakbagri",
       github: "https://github.com/ronakbagri",
-      email: "ronak.bagri@example.com"
+      email: "2023uma0233@iitjammu.ac.in"
     },
     {
       name: "Sumit Chaudhary",
@@ -62,9 +62,9 @@ const TeamPage: React.FC = () => {
         "Rasa Integration",
         "Algorithm Optimization"
       ],
-      linkedin: "https://linkedin.com/in/sumitchaudhary",
-      github: "https://github.com/sumitchaudhary",
-      email: "sumit.chaudhary@example.com"
+      linkedin: "https://www.linkedin.com/in/sumit-chaudhary-857855281/",
+      github: "https://github.com/git-sumitchaudhary",
+      email: "2023ume0277@iitjammu.ac.in"
     },
     {
       name: "Krupa Bawane",
@@ -75,9 +75,9 @@ const TeamPage: React.FC = () => {
         "Integration Testing",
         "Documentation"
       ],
-      linkedin: "https://linkedin.com/in/krupabawane",
-      github: "https://github.com/krupabawane",
-      email: "krupa.bawane@example.com"
+      linkedin: "https://www.linkedin.com/in/krupa-bawane-00285a282/",
+      github: "https://github.com/KrupaBawane",
+      email: "2023uma0220@iitjammu.ac.in"
     }
   ];
 
