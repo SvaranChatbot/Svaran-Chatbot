@@ -42,7 +42,17 @@ def predict():
 
         rasa_data = rasa_response.json()
         if not rasa_data:
-            return jsonify({"answer": "Sorry, I didn't get that."})
+            return jsonify({
+                "answer": "Sorry, I am trained on limited data. You may ask general FAQs like:\n"
+                          "1) About semester-wise B.Tech course structure (Electrical, CSE, Materials etc)\n"
+                          "2) About office location and availability timings of faculties\n"
+                          "3) About medical center at IIT JAMMU\n"
+                          "4) About library timings and borrowing policy for B.Tech/M.Tech students\n"
+                          "5) Programmes offered under UG curriculum\n"
+                          "6) Programmes offered under PG curriculum\n"
+                          "7) Programmes offered under PhD curriculum\n"
+                          "8) Grading system at IIT JAMMU"
+            })
 
         bot_reply_en = rasa_data[0].get("text", "")
         bot_reply_translated = GoogleTranslator(source='en', target=user_language).translate(bot_reply_en)
@@ -55,7 +65,7 @@ def predict():
         return jsonify({"error": str(e)}), 500
     
 
-# add scipt to run rasa and flask app with one command
+# add script to run rasa and flask app with one command
 def run_rasa_shell():
     # Get the absolute directory where this script is located
     current_dir = os.path.dirname(os.path.abspath(__file__))
