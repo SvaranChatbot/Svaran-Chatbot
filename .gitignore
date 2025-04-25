@@ -1,3 +1,4 @@
 backend/models/
 backend/.rasa/
 venv
+myvenv
