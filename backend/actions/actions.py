@@ -25,128 +25,13 @@
 # #         dispatcher.utter_message(text="Hello World!")
 # #
 # #         return []
-
-
-
-
-#initial testing dynamic feature
-
-# import json
-# from typing import Any, Text, Dict, List
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-
-# class ActionListMaterialCourses(Action):
-#     def name(self) -> Text:
-#         return "action_list_material_courses"
-
-#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         # Load JSON data
-#         with open("C:\\Users\\user\\Desktop\\rasa\\demo1\\actions\\courses.json", "r") as file:
-#             data = json.load(file)
-
-#         # Get Material Engineering courses
-#         courses = data.get("material_courses", [])
-
-#         # Create response
-#         if courses:
-#             response = "Here are the semester-wise courses for Material Engineering:\n" + "\n".join(f"- {course}" for course in courses)
-#         else:
-#             response = "No courses found in the database."
-
-#         dispatcher.utter_message(text=response)
-#         return []
-    
-# class ActionListMaterialCourses(Action):
-    
-#     def name(self) -> Text:
-#         return "action_director"
-
-#     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#         # Load JSON data
-#         with open("C:\\Users\\user\\Desktop\\rasa\\demo1\\actions\\courses.json", "r") as file:
-#             data = json.load(file)
-
-        
-#         courses = data.get("director", [])
-
-#         # Create response
-#         if courses:
-#             response =  "\n".join(f"- {course}" for course in courses)
-#         else:
-#             response = "No courses found in the database."
-
-#         dispatcher.utter_message(text=response)
-#         return []
-
-
-
 import json
 import os
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-#llm integration (work still in progress)
 
-# import openai
-# import uuid
-# openai.api_key="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"
-
-# class ActionBookTicket(Action):
-
-#     def name(self) ->Text:
-#         return "action_book_ticket"
-    
-#     def run(self,dispatcher:CollectingDispatcher,
-#             tracker:Tracker,
-#             domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
-#         city=tracker.get_slot("destination")
-
-#         dispatcher.utter_message(text="I have booked a ticket for you")
-
-#         return []
-
-
-
-#implementation of forms inside chat and some room booking for parents
-
-
-# from rasa_sdk import Tracker,ValidationAction
-# from rasa_sdk.types import DomainDict
-
-# class ValidatePredefinedSlots(ValidationAction):
-
-#     def validate_phone(
-#         self,
-#         slot_value: Any,
-#         dispatcher: CollectingDispatcher,
-#         tracker: Tracker,
-#         domain: DomainDict,
-#     ) -> Dict[Text,Any]:
-#         phone= slot_value.replace('-','')
-
-#         return {"phone":phone}
-
-
-# class ActionFallBack(Action):
-#     def name(self) -> Text:
-#         return "action_out_of_scope"
-
-#     def run(self,dispatcher: CollectingDispatcher,
-#              tracker:Tracker,
-#              domain: Dict[Text,Any]) -> List[Dict[Text,Any]]:
-#         print(tracker)
-#         query= tracker.latest_message['text']
-#         response=openai.ChatCompletion.create(
-#             model="gpt-4o-mini",
-#             messages=[
-#                 {"role":"system","content":"You are a helpful assistant"},
-#                 {"role":"user","content":query}
-#             ]
-#         )
-#         dispatcher.utter_message(text=response.choices[0]['message']['content'])
-#         return []
 
 class ActionFetchData(Action):
     def name(self) -> Text:

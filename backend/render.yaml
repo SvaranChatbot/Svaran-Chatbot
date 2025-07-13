@@ -1,0 +1,52 @@
+# render.yaml
+# This file defines the services for deploying a Rasa chatbot on Render.
+# It creates two separate web services: one for the Rasa server and one for the action server.
+
+services:
+  #--------------------------------#
+  # Service 1: The main Rasa Server #
+  #--------------------------------#
+  - type: web
+    name: rasa-server
+    env: python
+    # Choose a plan that fits your needs. 'Starter' is good for development.
+    # For production, consider a paid plan for more resources.
+    plan: starter
+    # Region can be changed to be closer to your users.
+    # Options: oregon, frankfurt, ohio, singapore
+    region: oregon
+    # This command runs when you first deploy or when you push new code.
+    # It installs all the Python packages listed in your requirements.txt file.
+    buildCommand: "pip install -r requirements.txt"
+    # This is the command that starts your Rasa server after the build is complete.
+    # --enable-api: Exposes the REST API.
+    # --cors "*": Allows any website to connect to your chatbot (adjust for production).
+    # --debug: Provides detailed logs, which is helpful for troubleshooting. Remove for production.
+    startCommand: "rasa run --model models --enable-api --cors \"*\" --debug"
+    # Render uses this path to check if your service is running correctly.
+    healthCheckPath: "/health"
+    envVars:
+      # Disables telemetry data collection from Rasa.
+      - key: RASA_TELEMETRY_ENABLED
+        value: false
+
+  #-----------------------------------#
+  # Service 2: The Rasa Action Server #
+  #-----------------------------------#
+  - type: web
+    name: action-server
+    env: python
+    plan: starter
+    region: oregon
+    # The same requirements.txt can be used if your actions don't have extra dependencies.
+    # If they do, create a separate requirements_actions.txt and use that here.
+    buildCommand: "pip install -r requirements.txt"
+    # This command starts the action server, which runs your custom Python code.
+    # --debug: Provides detailed logs. Remove for production.
+    startCommand: "rasa run actions --debug"
+    # The action server also has a health endpoint for Render to monitor.
+    healthCheckPath: "/health"
+    envVars:
+      # Disables telemetry data collection from Rasa.
+      - key: RASA_TELEMETRY_ENABLED
+        value: false
