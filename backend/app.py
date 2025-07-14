@@ -64,13 +64,18 @@ def predict():
         return jsonify({"error": str(e)}), 500
     
 
-# add scipt to run rasa and flask app with one command
+#add scipt to run rasa and flask app with one command
 def run_rasa_shell():
     current_dir = os.path.dirname(os.path.abspath(__file__))
     print(f"Running Rasa shell in directory: {current_dir}")
     subprocess.call(["rasa", "shell"], cwd=current_dir, shell=True)
 
+
+
+
+
 if __name__ == "__main__":
     threading.Thread(target=run_rasa_shell).start()
 
     app.run(debug=True, port=8080)
+

@@ -1,5 +1,3 @@
-/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
-
 import React, { useState } from 'react';
 import '../styles/contact.css';
 

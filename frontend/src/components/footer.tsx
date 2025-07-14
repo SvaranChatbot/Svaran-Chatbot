@@ -1,5 +1,3 @@
-// Kunal Sharma 2023UMA0221 Mathematics and Computing
-
 import React, { useEffect } from 'react';
 import '../styles/footer.css';
 
@@ -34,7 +32,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Elfsight widget Added by Ronak Bagri 2023UMA0233*/}
+        
         <div className="elfsight-widget-container" style={{ marginTop: '1rem', width: '100%' }}>
           <div className="elfsight-app-7b827b35-2742-4405-878f-07f7f740beab" data-elfsight-app-lazy></div>
         </div>

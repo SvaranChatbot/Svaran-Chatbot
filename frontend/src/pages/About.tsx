@@ -1,5 +1,3 @@
-/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
-
 import '../styles/about.css';
 
 function About() {

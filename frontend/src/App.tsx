@@ -1,5 +1,3 @@
-/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';

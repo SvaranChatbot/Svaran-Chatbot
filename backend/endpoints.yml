@@ -12,12 +12,12 @@
 
 
 #for frontend
-# action_endpoint:
-#   url: "http://localhost:5173/webhooks/rest/webhook" # The URL of the action server.
+action_endpoint:
+  url: "http://localhost:5173/webhooks/rest/webhook" # The URL of the action server.
 
 #for deployment
-action_endpoint:
-  url: "http://action-server:5055/webhook"
+# action_endpoint:
+#   url: "http://action-server:5055/webhook"
 # The URL of the action server.
 
 # Tracker store which is used to store the conversations.

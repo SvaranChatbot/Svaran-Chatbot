@@ -1,5 +1,3 @@
-/* Kunal Sharma 2023UMA0221 Mathematics and Computing */
-
 import React from 'react';
 import '../styles/team.css';
 import professorImg from '../assets/1521176440492.jpg';
@@ -10,7 +8,6 @@ import krupaImg from '../assets/WhatsApp Image 2025-04-19 at 14.55.16_b2df5500.j
 
 interface TeamMember {
   name: string;
-  role: string;
   image: string;
   contributions: string[];
   linkedin?: string;
@@ -28,8 +25,20 @@ const TeamPage: React.FC = () => {
 
   const teamMembers: TeamMember[] = [
     {
+      name: "Sumit Chaudhary",
+      image: sumitImg,
+      contributions: [
+        "Model Training",
+        "Rasa Integration",
+        "Dynamic Real Time Data Retreival",
+        "Multilingual Feature"
+      ],
+      linkedin: "https://www.linkedin.com/in/sumit-chaudhary-857855281/",
+      github: "https://github.com/git-sumitchaudhary",
+      email: "2023ume0277@iitjammu.ac.in"
+    },
+    {
       name: "Kunal Sharma",
-      role: "Frontend Developer",
       image: kunalImg,
       contributions: [
         "Website Frontend Development",
@@ -42,7 +51,6 @@ const TeamPage: React.FC = () => {
     },
     {
       name: "Ronak Bagri",
-      role: "Full Stack Developer",
       image: ronakImg,
       contributions: [
         "Backend Development and Integration",
@@ -54,21 +62,7 @@ const TeamPage: React.FC = () => {
       email: "2023uma0233@iitjammu.ac.in"
     },
     {
-      name: "Sumit Chaudhary",
-      role: "ML Engineer",
-      image: sumitImg,
-      contributions: [
-        "Model Training",
-        "Rasa Integration",
-        "Algorithm Optimization"
-      ],
-      linkedin: "https://www.linkedin.com/in/sumit-chaudhary-857855281/",
-      github: "https://github.com/git-sumitchaudhary",
-      email: "2023ume0277@iitjammu.ac.in"
-    },
-    {
       name: "Krupa Bawane",
-      role: "Data Engineer",
       image: krupaImg,
       contributions: [
         "Data Cleaning",

@@ -1,5 +1,3 @@
-// Kunal Sharma 2023UMA0221 Mathematics and Computing
-
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/header.css';
 import icon from "../assets/icon.png"
