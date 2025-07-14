@@ -106,7 +106,6 @@ const TeamPage: React.FC = () => {
               </div>
               <div className="member-info">
                 <h3>{member.name}</h3>
-                <p className="role">{member.role}</p>
                 <div className="contributions">
                   <h4>Contributions:</h4>
                   <ul>
